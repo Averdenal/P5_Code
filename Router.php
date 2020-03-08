@@ -1,5 +1,4 @@
 <?php
-
 class Router
 {
     public $listRoute =[];
@@ -8,7 +7,6 @@ class Router
 
     public function __construct()
     {   
-        $this->_userManager = new UserManager();
         $jsons = $this->selectDataRoute();
         foreach($jsons as $json){
             $this->listRoute[] = new Route($json); 
