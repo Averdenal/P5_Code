@@ -1,0 +1,4 @@
+{
+    "basepath":"/P4_Code_2",
+    "listAutoloadFolder":["controllers/","models/","models/exceptions/",""]
+}
