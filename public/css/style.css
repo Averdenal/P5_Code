@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
+
+*,*::before,*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+*::before,*::after {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+select {
+  appearance: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
+  margin: 0;
+}
+
+/*****************************************************************************/
+.header, .header .header_Action{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.header{
+    height: 80px;
+    background-color: #615dfa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+}
+.header .header_Action .header_Text {
+    margin-left: 26px;
+    color: #fff;
+    font-family: Titillium Web,sans-serif;
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.navigation{
+    height: 80px;
+}
+.navigation .menu_Main{
+    display: flex;
+}
+.navigation .menu_Main .menu_Main_Item{
+    position: relative;
+}
+.navigation .menu_Main .menu_Main_Item .menu_Main_Item_Link{
+    padding: 0 24px;
+    display: block;
+    color: #fff;
+    font-size: .75rem;
+    font-weight: 700;
+    line-height: 80px;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
