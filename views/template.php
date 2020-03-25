@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= CSS ?>style.css">
     <title><?= $titlePage ?></title>
 </head>
@@ -12,17 +13,47 @@
     <header class="header">
         <div class="header_Action">
             <div class="logo"></div>
-            <div class="header_Text">GOA</div>
+            <div class="header_Text">Getting Out Again</div>
         </div>
         <div class="header_Action">
             <div></div>
             <nav class="navigation">
                 <ul class="menu_Main">
+                    <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link icons" id="link_Sub_Menu"></a></li>
                     <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link">HOME</a></li>
                     <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link">HOME</a></li>
-                    <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link">HOME</a></li>
+                    <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link">...</a></li>
                 </ul>
             </nav>
+        </div>
+        <div class="header_Action">
+            <div class="interactive_Input">
+                <input type="text">
+                <div class="interactive_Input_Icon_Wrap icons search_Icon"></div>
+            </div>
+            
+        </div>
+        <div class="header_Action">
+            <div class="progress_Stat">
+                <div class="bar-progress-wrap">
+                    <p class="bar-progress-info">Next: <span class="bar-progress-text">38<span class="bar-progress-unit">exp</span></span></p>
+                </div>
+                <div id="logged-user-level" class="progress-stat-bar" style="width: 110px; height: 4px; position: relative;">
+                    <canvas width="110" height="4" style="position: absolute;top: 0px;left: 0px;background-color: #f0f8ff73;"></canvas>
+                    <canvas width="80" height="4" style="position: absolute;top: 0px;left: 0px;background-color: #7fff0099;"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="header_Action">
+            <div class="action-list">
+                <div class="action-list-item icons" id="market"></div>
+                <div class="action-list-item icons" id="friends"></div>
+                <div class="action-list-item icons" id="messages"></div>
+                <div class="action-list-item icons" id="notifs"></div>
+            </div>
+            <div>
+                <div class="action-item icons" id="param"></div>
+            </div>
         </div>
     </header>
    

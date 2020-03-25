@@ -19,7 +19,7 @@ ul, ol {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 select {
@@ -29,7 +29,11 @@ select {
 h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   margin: 0;
 }
-
+.icons{
+  font-family:'FontAwesome';
+  font-size: 1.3rem;
+  color: white;
+}
 /*****************************************************************************/
 .header, .header .header_Action{
     display: flex;
@@ -46,10 +50,10 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
     z-index: 10000;
 }
 .header .header_Action .header_Text {
-    margin-left: 26px;
+    margin: auto;
     color: #fff;
     font-family: Titillium Web,sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -71,4 +75,118 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
     line-height: 80px;
     cursor: pointer;
     transition: color .2s ease-in-out;
+}
+#link_Sub_Menu::before{
+  font-size: 1.2rem;
+  content: "\f0c9";
+}
+.header .header_Action .progress_Stat {
+  width: 110px;
+  margin: auto;
+}
+.progress_Stat .bar-progress-wrap .bar-progress-info {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.progress_Stat .bar-progress-wrap .bar-progress-unit {
+  margin-left: 3px;
+  text-transform: uppercase;
+}
+.header .action-list {
+  height: 80px;
+}
+.action-list {
+  display: flex;
+  padding: 0 18px;
+  position: relative;
+}
+.action-list:before {
+  right: 0;
+}
+.header .action-list:after, .header .action-list:before {
+  top: 24px;
+}
+.action-list:after, .action-list:before {
+  content: "";
+  width: 1px;
+  height: 32px;
+  background-color: #dedeea;
+  position: absolute;
+}
+.action-list .action-list-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 14px;
+  cursor: pointer;
+}
+#market::before{
+  content: "\f290";
+}
+#friends::before{
+  content: "\f0c0";
+}
+#messages::before{
+  content: "\f086";
+}
+#notifs::before{
+  content: "\f0f3";
+}
+.header .action-item {
+  width: 80px;
+  height: 80px;
+}
+.action-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#param::before{
+  content: "\f085";
+}
+.interactive_Input {
+  width: 500px;
+  height: 52px;
+  position: relative;
+}
+.interactive_Input .interactive_Input_Icon_Wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+}
+.search_Icon::before{
+  content:"\f002"
+}
+.interactive_Input input {
+  height: 100%;
+  padding-right: 60px!important;
+}
+input[type=password], input[type=text] {
+  height: 54px;
+  padding: 0 18px;
+}
+input[type=password], input[type=text], select, textarea {
+  background-color: rgba(18, 26, 136, 0.452);
+  color: white;
+  transition: border-color .2s ease-in-out;
+}
+button, input[type=password], input[type=text], select, textarea {
+  width: 100%;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+button, input[type=password], input[type=text], label, select, textarea {
+  font-family: Rajdhani,sans-serif;
 }
