@@ -43,6 +43,7 @@
                     <canvas width="80" height="4" style="position: absolute;top: 0px;left: 0px;background-color: #7fff0099;"></canvas>
                 </div>
             </div>
+            <div class="info_Lvl"><p>Level</p><Span>3</Span></div>
         </div>
         <div class="header_Action">
             <div class="action-list">
@@ -56,7 +57,17 @@
             </div>
         </div>
     </header>
-   
+
+    <aside class="sidebar left">
+        <div class="avatar">
+            <span class="onligne"></span>
+            <img src="<?= IMAGES ?>avatars/avatar02.jpg" alt="" srcset="">
+            <span class="lvl_avatar">15</span>
+        </div>
+    </aside>
+    <div class="content-grid">ssss</div>
+    <aside class="sidebar right">ssss</aside>
+
     <footer>
     </footer>
 

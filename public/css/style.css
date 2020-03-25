@@ -34,7 +34,9 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   font-size: 1.3rem;
   color: white;
 }
-/*****************************************************************************/
+/************************************************************************************************************/
+/************************************************** header **************************************************/
+/************************************************************************************************************/
 .header, .header .header_Action{
     display: flex;
     align-items: center;
@@ -95,6 +97,14 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
 .progress_Stat .bar-progress-wrap .bar-progress-unit {
   margin-left: 3px;
   text-transform: uppercase;
+}
+.info_Lvl{
+  color: white;
+  font-weight: 900;
+  text-align: center;
+}
+.info_Lvl span{
+  font-size: 1.25rem;
 }
 .header .action-list {
   height: 80px;
@@ -189,4 +199,75 @@ button, input[type=password], input[type=text], select, textarea {
 }
 button, input[type=password], input[type=text], label, select, textarea {
   font-family: Rajdhani,sans-serif;
+}
+
+/************************************************************************************************************/
+/*************************************************** body ***************************************************/
+/************************************************************************************************************/
+body {
+  font-size: 16px;
+  background-color: #f8f8fb;
+  overflow-x: hidden;
+}
+.sidebar {
+  height: 100%;
+  padding-top: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background-color: #fff;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.left{
+  left: 0;
+}
+.right{
+  right: 0;
+}
+.content-grid {
+  max-width: 1184px;
+  padding: 112px 0 100px;
+  transform: translate(167.5px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+}
+.navigation-widget {
+  width: 300px;
+  padding-bottom: 40px;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(94,92,154,.06);
+  position: relative;
+}
+.avatar{
+  margin: 20px 0;
+  position: relative;
+}
+.avatar img{
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+.onligne{
+  position: absolute;
+  background-color: rgb(0, 253, 13);
+  top: -2px;
+  left: -2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+.lvl_avatar{
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: 900;
 }
