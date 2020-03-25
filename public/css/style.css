@@ -251,7 +251,7 @@ body {
 }
 .onligne{
   position: absolute;
-  background-color: rgb(0, 253, 13);
+  background-image: linear-gradient(120deg, #d4fc79 0%, #00ff22 100%);
   top: -2px;
   left: -2px;
   width: 10px;
@@ -270,4 +270,44 @@ body {
   font-size: 12px;
   text-align: center;
   font-weight: 900;
+}
+
+/*************************************************** Sub Menu ***************************************************/
+.menu {
+  margin-top: 26px;
+}
+.menu .menu_Item {
+  padding: 0 16px;
+  margin-bottom: 10px;
+
+}
+.menu .menu_Item a{
+  color: rgba(172, 172, 172, 0.5);
+  text-align: center;
+  font-size: 2rem;
+  transition: 0.3s;
+}
+.menu .menu_Item a:hover{
+  color: #6f86d6;
+}
+.menu_Item #newsfeed::before{
+  content: "\f1ea";
+}
+.menu_Item #overview::before{
+  content: "\f200";
+}
+.menu_Item #Groups::before{
+  content: "\f0c0";
+}
+.menu_Item #members::before{
+  content: "\f007";
+}
+.menu_Item #badges::before{
+  content: "\f0a3";
+}
+.menu_Item #quests::before{
+  content: "\f005";
+}
+.menu_Item #events::before{
+  content: "\f271";
 }

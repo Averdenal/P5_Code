@@ -64,6 +64,29 @@
             <img src="<?= IMAGES ?>avatars/avatar02.jpg" alt="" srcset="">
             <span class="lvl_avatar">15</span>
         </div>
+        <ul class="menu small">
+            <li class="menu_Item">
+                <a href="" class="menu-item-link icons" id="newsfeed"></a>
+            </li>
+            <li class="menu_Item">
+                <a href="" class="menu-item-link icons" id="overview"></a>
+            </li>
+            <li class="menu_Item">
+                <a href="" class="menu-item-link icons" id="Groups"></a>
+            </li>
+            <li class="menu_Item">
+                <a href="" class="menu-item-link icons" id="members"></a>
+            </li>
+            <li class="menu_Item">
+                <a href="" class="menu-item-link icons" id="badges"></a>
+            </li>
+            <li class="menu_Item">
+                <a href="" class="menu-item-link icons" id="quests"></a>
+            </li>
+            <li class="menu_Item">
+                <a href="" class="menu-item-link icons" id="events"></a>
+            </li>
+        </ul>
     </aside>
     <div class="content-grid">ssss</div>
     <aside class="sidebar right">ssss</aside>
