@@ -277,9 +277,12 @@ body {
   margin-top: 26px;
 }
 .menu .menu_Item {
-  padding: 0 16px;
+  /*padding: 0 16px;*/
   margin-bottom: 10px;
-
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 10px;
 }
 .menu .menu_Item a{
   color: rgba(172, 172, 172, 0.5);
@@ -290,6 +293,7 @@ body {
 .menu .menu_Item a:hover{
   color: #6f86d6;
 }
+
 .menu_Item #newsfeed::before{
   content: "\f1ea";
 }

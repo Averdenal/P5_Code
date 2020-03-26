@@ -66,25 +66,25 @@
         </div>
         <ul class="menu small">
             <li class="menu_Item">
-                <a href="" class="menu-item-link icons" id="newsfeed"></a>
+                <a href="" class="menu_Item_Link icons" id="newsfeed"></a>
             </li>
             <li class="menu_Item">
-                <a href="" class="menu-item-link icons" id="overview"></a>
+                <a href="" class="menu_Item_Link icons" id="overview"></a>
             </li>
             <li class="menu_Item">
-                <a href="" class="menu-item-link icons" id="Groups"></a>
+                <a href="" class="menu_Item_Link icons" id="Groups"></a>
             </li>
             <li class="menu_Item">
-                <a href="" class="menu-item-link icons" id="members"></a>
+                <a href="" class="menu_Item_Link icons" id="members"></a>
             </li>
             <li class="menu_Item">
-                <a href="" class="menu-item-link icons" id="badges"></a>
+                <a href="" class="menu_Item_Link icons" id="badges"></a>
             </li>
             <li class="menu_Item">
-                <a href="" class="menu-item-link icons" id="quests"></a>
+                <a href="" class="menu_Item_Link icons" id="quests"></a>
             </li>
             <li class="menu_Item">
-                <a href="" class="menu-item-link icons" id="events"></a>
+                <a href="" class="menu_Item_Link icons" id="events"></a>
             </li>
         </ul>
     </aside>
