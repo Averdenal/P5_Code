@@ -64,32 +64,22 @@
             <img src="<?= IMAGES ?>avatars/avatar02.jpg" alt="" srcset="">
             <span class="lvl_avatar">15</span>
         </div>
-        <ul class="menu small">
-            <li class="menu_Item">
-                <a href="" class="menu_Item_Link icons" id="newsfeed"></a>
-            </li>
-            <li class="menu_Item">
-                <a href="" class="menu_Item_Link icons" id="overview"></a>
-            </li>
-            <li class="menu_Item">
-                <a href="" class="menu_Item_Link icons" id="Groups"></a>
-            </li>
-            <li class="menu_Item">
-                <a href="" class="menu_Item_Link icons" id="members"></a>
-            </li>
-            <li class="menu_Item">
-                <a href="" class="menu_Item_Link icons" id="badges"></a>
-            </li>
-            <li class="menu_Item">
-                <a href="" class="menu_Item_Link icons" id="quests"></a>
-            </li>
-            <li class="menu_Item">
-                <a href="" class="menu_Item_Link icons" id="events"></a>
-            </li>
-        </ul>
+        <div class="menu small">
+            <button class="menu_Item"><span class="icons" id="newsfeed"></span></button>
+            <button class="menu_Item"><span class="icons" id="bar"></span></button>
+            <button class="menu_Item"><span class="icons" id="Groups"></span></button>
+            <button class="menu_Item"><span class="icons" id="members"></span></button>
+            <button class="menu_Item"><span class="icons" id="badges"></span></button>
+            <button class="menu_Item"><span class="icons" id="quests"></span></button>
+            <button class="menu_Item"><span class="icons" id="events"></span></button>
+        </div>
     </aside>
-    <div class="content-grid">ssss</div>
-    <aside class="sidebar right">ssss</aside>
+    <div class="content-grid">
+
+    </div>
+    <aside class="sidebar right">
+        
+    </aside>
 
     <footer>
     </footer>

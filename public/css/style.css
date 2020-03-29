@@ -9,7 +9,9 @@
   outline: none;
   box-sizing: border-box;
 }
-
+button:focus{
+  outline: none;
+}
 *::before,*::after {
   display: block;
 }
@@ -232,6 +234,7 @@ body {
   padding: 112px 0 100px;
   transform: translate(167.5px, 0px);
   transition: transform 0.4s ease-in-out 0s;
+  background-color: red;
 }
 .navigation-widget {
   width: 300px;
@@ -275,30 +278,42 @@ body {
 /*************************************************** Sub Menu ***************************************************/
 .menu {
   margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.menu .menu_Item {
-  /*padding: 0 16px;*/
+.menu .menu_Item{
   margin-bottom: 10px;
   width: 50px;
   height: 50px;
-  background-color: red;
+  background-color: transparent;
   border-radius: 10px;
-}
-.menu .menu_Item a{
   color: rgba(172, 172, 172, 0.5);
   text-align: center;
   font-size: 2rem;
   transition: 0.3s;
+  
 }
-.menu .menu_Item a:hover{
+.menu .menu_Item span{
+  color: rgba(172, 172, 172, 0.5);
+  width: 100%;
+  height: 100%;
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+.menu .menu_Item span:hover{
   color: #6f86d6;
 }
 
+.menu .menu_Item:hover{
+  background-color: white;
+  box-shadow: -1px 5px 25px 0px rgba(0,0,0,0.52);
+}
 .menu_Item #newsfeed::before{
   content: "\f1ea";
 }
-.menu_Item #overview::before{
-  content: "\f200";
+.menu_Item #bar::before{
+  content: "\f1ad";
 }
 .menu_Item #Groups::before{
   content: "\f0c0";
