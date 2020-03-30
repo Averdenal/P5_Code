@@ -76,34 +76,7 @@
         </div>
     </aside>
     <div class="content-grid">
-        <div class="section_Banner">
-            <img class="section_Banner_Icon" src="public/imgs/banners/quests-icon.png" alt="quests-icon">
-            <h1>ijfirjifr</h1>
-            <p>kforfor</p>
-        </div>
-
-        <div class="grid grid-3">
-            <div class="etabs_Item">
-                <figure class="etabs_Item_Cover liquid" style='background: url("public/imgs/quest/cover/01.png") center center / cover no-repeat;'>
-                    <img src="public/imgs/quest/cover/01.png" alt="cover-01" style="display: none;">
-                </figure>
-            </div>
-            <div class="etabs_Item">
-                <figure class="etabs_Item_Cover liquid" style='background: url("public/imgs/quest/cover/01.png") center center / cover no-repeat;'>
-                    <img src="public/imgs/quest/cover/01.png" alt="cover-01" style="display: none;">
-                </figure>
-            </div>
-            <div class="etabs_Item">
-                <figure class="etabs_Item_Cover liquid" style='background: url("public/imgs/quest/cover/01.png") center center / cover no-repeat;'>
-                    <img src="public/imgs/quest/cover/01.png" alt="cover-01" style="display: none;">
-                </figure>
-            </div>
-            <div class="etabs_Item">
-                <figure class="etabs_Item_Cover liquid" style='background: url("public/imgs/quest/cover/01.png") center center / cover no-repeat;'>
-                    <img src="public/imgs/quest/cover/01.png" alt="cover-01" style="display: none;">
-                </figure>
-            </div>
-        </div>
+        <?php include('viewEtab.php') ?>
     </div>
     <aside class="sidebar right">
         

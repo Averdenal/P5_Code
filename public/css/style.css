@@ -340,7 +340,11 @@ body {
 }
 .section_Banner h1, .section_Banner p{
   color: white;
-  font-weight: 400;
+  
+}
+.section_Banner h1{
+  font-size: 3rem;
+  font-weight: 900;
 }
 
 .section_Banner .section_Banner_Icon {
@@ -353,6 +357,7 @@ img {
   border-style: none;
 }
 .grid{
+  margin-top: 32px;
   display: grid;
   grid-template-columns: 100%;
   grid-gap: 16px;
@@ -362,6 +367,32 @@ img {
 
 .grid-3{
   grid-template-columns: repeat(auto-fit,284px);
+}
+.text_Sticker {
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 200px;
+  background-color: #fff;
+  box-shadow: 3px 5px 20px 0 rgba(94,92,154,.12);
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 32px;
+}
+.cat_Sticker{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 32px;
+  padding: 0 14px;
+  border-radius: 200px;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+  box-shadow: 3px 5px 20px 0 rgba(94,92,154,.12);
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 32px;
 }
 .quest_Item {
   border-radius: 12px;

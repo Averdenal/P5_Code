@@ -10,3 +10,33 @@
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
 }
+.etabs_Item .etabs_Item_Info {
+    padding: 44px 28px 0;
+    position: relative;
+}
+
+.etabs_Item .etabs_Item_Badge {
+    border: 6px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -28px;
+    left: 22px;
+}
+.etabs_Status{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-weight: 400;
+    font-size: 15px;
+    
+}
+.etabs_Status .open{
+    color: green;
+}
+.etabs_Status .close{
+    color: red;
+}
+.etabs_Info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,110px);
+}
