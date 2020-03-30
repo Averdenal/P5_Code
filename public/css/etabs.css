@@ -1,0 +1,12 @@
+.etabs_Item {
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 40px 0 rgba(94,92,154,.06);
+    position: relative;
+}
+.etabs_Item .etabs_Item_Cover {
+    width: 100%;
+    height: 120px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}

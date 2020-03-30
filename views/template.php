@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= CSS ?>style.css">
+    <link rel="stylesheet" href="<?= CSS ?>etabs.css">
     <title><?= $titlePage ?></title>
 </head>
 <body>
@@ -75,7 +76,34 @@
         </div>
     </aside>
     <div class="content-grid">
+        <div class="section_Banner">
+            <img class="section_Banner_Icon" src="public/imgs/banners/quests-icon.png" alt="quests-icon">
+            <h1>ijfirjifr</h1>
+            <p>kforfor</p>
+        </div>
 
+        <div class="grid grid-3">
+            <div class="etabs_Item">
+                <figure class="etabs_Item_Cover liquid" style='background: url("public/imgs/quest/cover/01.png") center center / cover no-repeat;'>
+                    <img src="public/imgs/quest/cover/01.png" alt="cover-01" style="display: none;">
+                </figure>
+            </div>
+            <div class="etabs_Item">
+                <figure class="etabs_Item_Cover liquid" style='background: url("public/imgs/quest/cover/01.png") center center / cover no-repeat;'>
+                    <img src="public/imgs/quest/cover/01.png" alt="cover-01" style="display: none;">
+                </figure>
+            </div>
+            <div class="etabs_Item">
+                <figure class="etabs_Item_Cover liquid" style='background: url("public/imgs/quest/cover/01.png") center center / cover no-repeat;'>
+                    <img src="public/imgs/quest/cover/01.png" alt="cover-01" style="display: none;">
+                </figure>
+            </div>
+            <div class="etabs_Item">
+                <figure class="etabs_Item_Cover liquid" style='background: url("public/imgs/quest/cover/01.png") center center / cover no-repeat;'>
+                    <img src="public/imgs/quest/cover/01.png" alt="cover-01" style="display: none;">
+                </figure>
+            </div>
+        </div>
     </div>
     <aside class="sidebar right">
         

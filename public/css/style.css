@@ -229,13 +229,7 @@ body {
 .right{
   right: 0;
 }
-.content-grid {
-  max-width: 1184px;
-  padding: 112px 0 100px;
-  transform: translate(167.5px, 0px);
-  transition: transform 0.4s ease-in-out 0s;
-  background-color: red;
-}
+
 .navigation-widget {
   width: 300px;
   padding-bottom: 40px;
@@ -329,4 +323,49 @@ body {
 }
 .menu_Item #events::before{
   content: "\f271";
+}
+
+.content-grid {
+  max-width: 1184px;
+  padding: 112px 0 100px;
+  transform: translate(167.5px, 0px);
+  transition: transform 0.4s ease-in-out 0s;
+}
+.section_Banner {
+  min-height: 160px;
+  padding: 52px 60px 0 200px;
+  border-radius: 12px;
+  background: url(../imgs/banners/banner-bg.png) no-repeat 50%;
+  position: relative;
+}
+.section_Banner h1, .section_Banner p{
+  color: white;
+  font-weight: 400;
+}
+
+.section_Banner .section_Banner_Icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+.grid{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 16px;
+  -ms-flex-align: start;
+  align-items: start;
+}
+
+.grid-3{
+  grid-template-columns: repeat(auto-fit,284px);
+}
+.quest_Item {
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(94,92,154,.06);
+  position: relative;
 }
