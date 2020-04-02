@@ -1,4 +1,9 @@
 <?php
+namespace GOA;
+
+use GOA\HttpRequest;
+use GOA\Models\Route;
+
 class Router
 {
     public $listRoute =[];
@@ -16,7 +21,8 @@ class Router
     public function findRoute($url)
     {
         $httpResquest = new HttpRequest($url,$this->listRoute);
-        $controller = new $httpResquest->route->controller($httpResquest);
+        $controllers = "GOA\Controllers\\".$httpResquest->route->controller;
+        $controller = new $controllers($httpResquest);
         if($httpResquest->param != null){
             $controller->{$httpResquest->route->action}(...$httpResquest->param);//tab key int//
         }else{

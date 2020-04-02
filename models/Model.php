@@ -1,4 +1,7 @@
 <?php
+namespace GOA\Models;
+
+use PDO;
 
 abstract class Model{
     private static $bdd;

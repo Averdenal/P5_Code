@@ -1,5 +1,5 @@
 <?php
-
+namespace GOA\Controllers;
 class BaseController
 {
 

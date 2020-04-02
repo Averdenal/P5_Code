@@ -1,4 +1,8 @@
 <?php
+namespace GOA\Models;
+
+use PDO;
+use GOA\Models\Model;
 
 class EtablissementManager extends Model{
 
@@ -7,7 +11,7 @@ class EtablissementManager extends Model{
         $bdd = $this->getBdd();
         $req = $bdd->prepare('CALL `AllEtablissements`(); ');
         $req->execute();
-        return $req->fetchAll(PDO::FETCH_CLASS,'Etablissement');
+        return $req->fetchAll(PDO::FETCH_CLASS,'GOA\Models\Etablissement');
     }
     public function getEtablissementsById($id)
     {
@@ -15,6 +19,6 @@ class EtablissementManager extends Model{
         $req = $bdd->prepare('SET @idEtab = :id; CALL `Etablissements_By_Id`(@idEtab);');
         $req->bindParam(':id', $id , PDO::PARAM_INT);
         $req->execute();
-        return $req->fetchObject('Etablissement');
+        return $req->fetchObject('GOA\Models\Etablissement');
     }
 }

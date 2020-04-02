@@ -1,5 +1,5 @@
 <?php
-
+namespace GOA\Models;
 class Route{
     public $method;
     public $name;

@@ -52,8 +52,11 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
 /************************************************************************************************************/
 /* line 43, ../sass/style.scss */
 .header, .header .header_Action {
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
+  -webkit-justify-content: space-between;
   justify-content: space-between;
   width: 100%;
 }

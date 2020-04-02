@@ -1,4 +1,8 @@
 <?php
+namespace GOA\Controllers;
+
+use GOA\Controllers\BaseController;
+use GOA\Models\EtablissementManager;
 
 class ControllerEtablissement extends BaseController{
     private $_etabManager;

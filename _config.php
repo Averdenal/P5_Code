@@ -1,4 +1,5 @@
 <?php
+namespace GOA;
 global $env;
 
 define('TITLESITE','GETTING OUT AGAIN');

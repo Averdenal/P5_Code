@@ -1,4 +1,7 @@
 <?php 
+namespace GOA\Models\exceptions;
+
+use Exception;
 
 class NoRouteFoundException extends Exception
 {

@@ -1,5 +1,5 @@
 <?php
-
+namespace GOA\Models;
 class Etablissement{
     public $id;
     public $name;

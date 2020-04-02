@@ -1,19 +1,14 @@
 <?php
 
+use GOA\Router;
+use GOA\Models\Environement;
+
 session_start();
 global $env;
 require_once('models/Environement.php');
 $env = Environement::get();
+require 'vendor/autoload.php';
 
-spl_autoload_register(function($class) use($env){
-    foreach($env->listAutoloadFolder as $folder){ 
-        if(file_exists($folder.$class.'.php'))
-        {
-            require_once($folder.$class.'.php');
-        break;
-        }
-    }
-});
 require_once('_config.php');
 
 $router = new Router();

@@ -1,4 +1,8 @@
 <?php
+namespace GOA\Models;
+
+use PDO;
+use GOA\Models\Model;
 
 class VoteManager extends Model{
 

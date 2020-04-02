@@ -1,4 +1,7 @@
 <?php
+namespace GOA\Controllers;
+
+use GOA\Controllers\BaseController;
 
 class ControllerBagdes extends BaseController{
 

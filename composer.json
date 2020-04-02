@@ -1,0 +1,14 @@
+{
+    "name": "goa/platform",
+    "description": "GettingOutAgain - Platform",
+    "authors": [
+        {
+            "name": "averdenal",
+            "email": "amaury.y.verdenal@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {"GOA\\":""}
+    }
+}
