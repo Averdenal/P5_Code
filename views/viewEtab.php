@@ -5,18 +5,27 @@
 </div>
 
 <div class="section-filters-bar">
-    <p>Tu cherche quelque chose de particulé ?</p>
+    <p>Tu cherche quelque chose de particulier ?</p>
     <div>
-        <input type="checkbox" id="bar" name="bar" checked>
-        <label for="scales">Bars</label>
+        <label for="bars" class="checkbox">
+            <input type="checkbox" id="bars" name="bars" checked>
+            bar
+            <span></span>
+        </label>
     </div>
     <div>
-        <input type="checkbox" id="club" name="club" checked>
-        <label for="horns">Club</label>
+        <label for="club" class="checkbox">
+            <input type="checkbox" id="club" name="club" checked>
+            Club
+            <span></span>
+        </label>
     </div>
     <div>
-        <input type="checkbox" id="restaurant" name="restaurant" checked>
-        <label for="horns">Restaurant</label>
+        <label for="restaurant" class="checkbox">
+            <input type="checkbox" id="restaurant" name="restaurant" checked>
+            restaurant
+            <span></span>
+        </label>
     </div>
 </div>
 
@@ -42,7 +51,7 @@
                     
                 </div>
                 <div class="etabs_Info_2">
-                    <p class="grade_Tarif" data-gradeTarif="<?= $etablissement->getGradeTarif(); ?>"><span style="color:#F1C40F">€ € </span>€</p>
+                    <p class="grade_Tarif" data-gradeTarif="<?= $etablissement->getGradeTarif(); ?>"><span style="color:#F1C40F">€€</span>€</p>
                 </div>
                 
             </div>
