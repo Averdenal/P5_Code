@@ -1,7 +1,7 @@
 <?php
 global $env;
 
-define('TITLESITE','Book');
+define('TITLESITE','GETTING OUT AGAIN');
 define('ROOT',$env->basepath);
 define('ROUTER','controllers/Router.php');
 define('HTTP',$_SERVER['REQUEST_SCHEME'].'://'.$_SERVER['HTTP_HOST'].ROOT);

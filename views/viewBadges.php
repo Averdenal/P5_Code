@@ -1,29 +1,13 @@
 <div class="section_Banner">
-    <img class="section_Banner_Icon" src="public/imgs/banners/quests-icon.png" alt="quests-icon">
-    <h1>Les Etablissement</h1>
-    <p>On vous a fait une selection de nos petits préférés.</p>
-</div>
-
-<div class="section-filters-bar">
-    <p>Tu cherche quelque chose de particulé ?</p>
-    <div>
-        <input type="checkbox" id="bar" name="bar" checked>
-        <label for="scales">Bars</label>
-    </div>
-    <div>
-        <input type="checkbox" id="club" name="club" checked>
-        <label for="horns">Club</label>
-    </div>
-    <div>
-        <input type="checkbox" id="restaurant" name="restaurant" checked>
-        <label for="horns">Restaurant</label>
-    </div>
+    <img class="section_Banner_Icon" src="public/imgs/banners/badges-icon.png" alt="quests-icon">
+    <h1>Les Badges</h1>
+    <p>Débloque les !</p>
 </div>
 
 <div class="grid grid-3">
 <?php foreach($etablissements as $etablissement): ?>
-    <div class="etabs_Item" data-lat="<?= $etablissement->getLat(); ?>" data-lng="<?= $etablissement->getLng(); ?>" data-cat="<?= $etablissement->getCat(); ?>">
-        <figure class="etabs_Item_Cover" style='background: url("<?= $etablissement->getBanner(); ?>") center center / cover no-repeat;'>
+    <div class="etabs_Item" data-lat="<?= $etablissement->getLat(); ?>" data-lng="<?= $etablissement->getLng(); ?>">
+        <figure class="etabs_Item_Cover" style='background: url("public/imgs/etabs/po.jpg") center center / cover no-repeat;'>
             <a href="#" class="text_Sticker"><?= $etablissement->getName(); ?></a>
         </figure>
         <p class="cat_Sticker"><?= $etablissement->getCat(); ?></p>

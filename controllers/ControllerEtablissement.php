@@ -10,7 +10,6 @@ class ControllerEtablissement extends BaseController{
     {
         $titlePage = 'Les Etablissements';
         $this->addParam('etablissements',$this->_etabManager->getAllEtablissements());
-        var_dump($this->_etabManager->getAllEtablissements());
-        //$this->template('views/viewEtab.php',$titlePage);
+        $this->template('views/viewEtab.php',$titlePage);
     }
 }

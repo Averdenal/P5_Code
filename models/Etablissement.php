@@ -68,4 +68,8 @@ class Etablissement{
     {
         return $this->nbVote;
     }
+    public function getGradeTarif()
+    {
+        return $this->gradeTarif;
+    }
 }

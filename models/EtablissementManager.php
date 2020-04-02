@@ -12,7 +12,7 @@ class EtablissementManager extends Model{
     public function getEtablissementsById($id)
     {
         $bdd = $this->getBdd();
-        $req = $bdd->prepare('CALL `Etablissements_By_Id`(:id)');
+        $req = $bdd->prepare('SET @idEtab = :id; CALL `Etablissements_By_Id`(@idEtab);');
         $req->bindParam(':id', $id , PDO::PARAM_INT);
         $req->execute();
         return $req->fetchObject('Etablissement');
