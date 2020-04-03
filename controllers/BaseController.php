@@ -2,9 +2,7 @@
 namespace GOA\Controllers;
 class BaseController
 {
-
     private $_param;
-
     public function __construct()
     {
         $this->_param = array();
@@ -14,21 +12,10 @@ class BaseController
         $this->_param[$key] = $value;
     }
 
-    public function viewConstruct($view)
-    {   
-        ob_start();
-        if($this->_param != null){
-            extract($this->_param);
-        }
-        include($view);
-        return ob_get_clean();
-    }
-
-    public function template($view,$titlePage)
+    public function template($view)
     {
-        $titlePage = TITLESITE.' - '.$titlePage;
-        $content = $this->viewConstruct($view,$titlePage);
-        require_once('views/template.php');
+        global $twig;
+        echo $twig->render($view, $this->_param);     
         
     }
 

@@ -1,0 +1,115 @@
+/* line 2, ../sass/etab.scss */
+.etabs_Item {
+  flex: 1;
+  max-width: 380px;
+  min-width: 350px;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
+  position: relative;
+  margin-top: 15px;
+}
+/* line 11, ../sass/etab.scss */
+.etabs_Item .etabs_Item_Cover {
+  width: 100%;
+  height: 120px;
+  -moz-border-radius-topright: 12px;
+  -webkit-border-top-right-radius: 12px;
+  border-top-right-radius: 12px;
+}
+/* line 16, ../sass/etab.scss */
+.etabs_Item .etabs_Item_Info {
+  padding: 30px 15px 0;
+  position: relative;
+}
+/* line 20, ../sass/etab.scss */
+.etabs_Item .etabs_Item_Badge {
+  border: 6px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -28px;
+  left: 22px;
+}
+
+/* line 29, ../sass/etab.scss */
+.etabs_Status {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 400;
+  font-size: 15px;
+}
+/* line 38, ../sass/etab.scss */
+.etabs_Status .etab_Open {
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  border: 2px solid grey;
+  background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+/* line 46, ../sass/etab.scss */
+.etabs_Status .etab_Close {
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  border: 2px solid grey;
+  background-image: linear-gradient(to right, #fc1a5e 0%, #e29a00 100%);
+}
+
+/* line 55, ../sass/etab.scss */
+.etabs_Info {
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-justify-content: "space-between";
+  justify-content: "space-between";
+  padding-top: 10px;
+}
+/* line 61, ../sass/etab.scss */
+.etabs_Info .etabs_Info_2 {
+  text-align: end;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-justify-content: "space-between";
+  justify-content: "space-between";
+  align-items: center;
+  font-size: 13px;
+}
+/* line 70, ../sass/etab.scss */
+.etabs_Info .etabs_Info_1 {
+  font-size: 13px;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 74, ../sass/etab.scss */
+.etabs_Info .etabs_Info_1 .note {
+  padding: 5px 15px;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+}
+/* line 82, ../sass/etab.scss */
+.etabs_Info .etabs_Info_1 .nb_Vote {
+  padding: 5px 15px;
+}
+
+/* line 87, ../sass/etab.scss */
+.etabs_Info_Text {
+  text-align: center;
+  color: grey;
+  padding: 10px 0;
+}
+
+/* line 92, ../sass/etab.scss */
+.etabs_Title {
+  font-size: 2rem;
+  text-align: end;
+}

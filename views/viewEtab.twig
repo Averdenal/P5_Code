@@ -1,0 +1,107 @@
+{% extends "/templates/template.twig" %}
+{% block content %}
+<div class="section_Banner">
+    <img class="section_Banner_Icon" src="public/imgs/banners/quests-icon.png" alt="quests-icon">
+    <h1>Les Etablissement</h1>
+    <p>On vous a fait une selection de nos petits préférés.</p>
+</div>
+
+<div class="section-filters-bar">
+    <p>Tu cherche quelque chose de particulier ?</p>
+
+    <div class="lab_Checkbox_item">
+        <div>
+            <p>Bar</p>
+        </div>
+        <div class="lab_Checkbox">
+            <input type="checkbox" id="bars" class="_checkbox" checked>
+            <label for="bars">
+                <div id="tick_mark"></div>
+            </label>
+        </div>
+    </div>
+    <div class="lab_Checkbox_item">
+        <div>
+            <p>Restaurants</p>
+        </div>
+        <div class="lab_Checkbox">
+            <input type="checkbox" id="restaurant" class="_checkbox" checked>
+            <label for="restaurant">
+                <div id="tick_mark"></div>
+            </label>
+        </div>
+    </div>
+    <div class="lab_Checkbox_item">
+        <div>
+            <p>Club</p>
+        </div>
+        <div class="lab_Checkbox">
+            <input type="checkbox" id="club" class="_checkbox" checked>
+            <label for="club">
+                <div id="tick_mark"></div>
+            </label>
+        </div>
+    </div>
+    <div class="lab_Checkbox_item">
+        <div>
+            <p>Festivals</p>
+        </div>
+        <div class="lab_Checkbox">
+            <input type="checkbox" id="fest" class="_checkbox" checked>
+            <label for="fest">
+                <div id="tick_mark"></div>
+            </label>
+        </div>
+    </div>
+    
+</div>
+
+<div class="grid grid-3">
+{% for etablissement in etablissements %}
+<div class="etabs_Item" data-lat="{{ etablissement.latitude }}" data-lng="{{ etablissement.longitude}}" data-cat="{{ etablissement.cat }}">
+    <figure class="etabs_Item_Cover" style='background: url("{{ etablissement.banner }}") center center / cover no-repeat;'>
+        <a href="#" class="text_Sticker">{{ etablissement.name }}</a>
+    </figure>
+    <p class="cat_Sticker">{{ etablissement.cat }}</p>
+    <div class="etabs_Item_Info">
+        <div class="etabs_Item_Badge">
+            <img src="public/imgs/quest/completedq-b.png" alt="top Etab">
+        </div>
+        <div class="etabs_Status">
+            <p>Open</p>
+            <div class="etab_Open"></div>
+        </div>
+        <div class="etabs_Info">
+            <div class="etabs_Info_1">
+                <p class="note">{{ etablissement.moyenne }}</p>
+                <p class="nb_Vote">{{ etablissement.nbVote }} votes</p>
+                
+            </div>
+            <div class="etabs_Info_2">
+                <p class="grade_Tarif" data-gradeTarif="{{ etablissement.gradeTarif }}"><span style="color:#F1C40F">€€</span>€</p>
+            </div>
+            
+        </div>
+        <div class="etabs_Info">
+            <div class="etabs_Info_1">
+                <div class="fas fa-map-marker-alt localisation"></div>
+                <div>
+                    <p>{{ etablissement.adresse }}</p>
+                    <p>{{ etablissement.code }} {{ etablissement.city }}</p>
+                </div>
+            </div>
+            <div class="etabs_Info_2">
+                <div class="fas fa-phone-square-alt localisation"></div>
+                <p>{{ etablissement.phone }}</p>
+
+            </div>
+        </div>
+        <div class="etabs_Info etabs_Info_Text">
+            <p>{{ etablissement.description }}</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+    
+</div>
+{% endblock %}

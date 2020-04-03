@@ -3,11 +3,13 @@
     "description": "GettingOutAgain - Platform",
     "authors": [
         {
-            "name": "averdenal",
+            "name": "VERDENAL Amaury",
             "email": "amaury.y.verdenal@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "twig/twig": "^1.0"
+    },
     "autoload": {
         "psr-4": {"GOA\\":""}
     }

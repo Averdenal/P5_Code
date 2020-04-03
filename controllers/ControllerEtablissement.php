@@ -12,8 +12,8 @@ class ControllerEtablissement extends BaseController{
     }
     public function getAllEtablissements()
     {
-        $titlePage = 'Les Etablissements';
+        $this->addParam('titlePage','Les Etablissements');
         $this->addParam('etablissements',$this->_etabManager->getAllEtablissements());
-        $this->template('views/viewEtab.php',$titlePage);
+        $this->template('viewEtab.twig');
     }
 }

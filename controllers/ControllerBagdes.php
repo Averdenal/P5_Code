@@ -11,7 +11,7 @@ class ControllerBagdes extends BaseController{
     }
     public function getAllBadges()
     {
-        $titlePage = 'Les Bages';
-        $this->template('views/viewBadges.php',$titlePage);
+        $this->addParam('titlePage','Les Bages');
+        $this->template('viewBadges.twig');
     }
 }
