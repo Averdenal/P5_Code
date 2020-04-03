@@ -67,8 +67,8 @@
   display: -webkit-flex;
   display: flex;
   flex-wrap: wrap;
-  -webkit-justify-content: "space-between";
-  justify-content: "space-between";
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
   padding-top: 10px;
 }
 /* line 61, ../sass/etab.scss */

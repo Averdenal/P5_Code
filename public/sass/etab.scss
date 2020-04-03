@@ -55,7 +55,7 @@
 .etabs_Info{
     @include display-flex;
     flex-wrap: wrap;
-    @include justify-content('space-between');
+    @include justify-content(space-between);
     padding-top: 10px;
 
     .etabs_Info_2{
