@@ -18,11 +18,19 @@
             <p>Bienvenue sur la platforme</p>
             <h1 class="login_Page_Info_Title">Getting Out Again</h1>
             <p class="login_Page_Info_Sub_Text">The next generation social network & community! Connect with your friends and play with our quests and badges gamification system!</p>
+            <div class="btn_Contener">
+                
+                    <input type="radio" id="action_Login_Login" name="action_login" value="Connexion" checked class="action_login">
+                    <label for="action_Login_Login" id="btn_Action_Login_Login">Connexion</label>
+                
+                    <input type="radio" id="action_Login_Register" name="action_login" value="Enregistrement" class="action_login">
+                    <label for="action_Login_Register" id="btn_Action_Login_Register" >Enregistrement</label>
+            </div>
         </div>
         <div class="login_Page_Form">
             <div class="login_Page_From_Contener">
                 <img src="/public/imgs/landing/rocket.png" alt="rocket" class="login_Page_Info_rocket">
-                <div id="form_Login" class="none">
+                <div id="form_Login">
                     <h2>Log toi!</h2>
                     <form action="" method="post" id="login_Form">
                         <input type="text" value="" placeholder="Votre login">
@@ -47,14 +55,14 @@
                         des petites technique autre pour se connecter, ne sont pas encore actif
                     </div>
                 </div>
-                <div id="form_register">
+                <div id="form_Register" class="none">
                     <h2>Créer ton compte</h2>
                     <form action="" method="post" id="register_Form">
                         <input type="email" name="email" id="email" placeholder="Votre E-Mail">
                         <input type="text" name="login" id="login" placeholder="Votre Login">
                         <input type="password" name="password" id="password" placeholder="Votre Password">
                         <input type="password" name="passwordVerif" id="passwordVerif" placeholder="Confirmation">
-                        <input type="submit" value="Connexion" class="btn btn-success">
+                        <input type="submit" value="S'enregistrer" class="btn btn-success">
                     </form>
                     <p class="lined-text">Pas reçu le mail de confirmation ?</p>
                     <div class="contener-fluid">

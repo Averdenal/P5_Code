@@ -58,23 +58,54 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
     @include justify-content(center);
     @include align-items(center);
   }
-    .login_Page_Info{
-      color: white;
-      width: 900px;
-      .login_Page_Info_Title{
-        font-family: Titillium Web,sans-serif;
-        font-weight: 900;
-        font-size: 4rem;
-        text-align: center;
+  .login_Page_Info{
+    color: white;
+    width: 900px;
+    .btn_Contener{
+      @include display-flex;
+      @include flex-direction(row);
+      margin: 20px 0;
+      input{
+        display: none;
       }
-      .login_Page_Info_Sub_Text{
-        font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.6);
-        text-align: center;
-        width: 70%;
-        margin-top: 1.5rem;
+      label{
+        @include display-flex;
+        width: 250px;
+        height: 60px;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        @include justify-content(center);
+        @include align-items(center);
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+      #btn_Action_Login_Login{
+        border-radius: 15px 0 0 15px;
+      }
+      #btn_Action_Login_Register{
+        border-radius: 0 15px 15px 0;
+      }
+      input:checked + label{
+        transition: 0.5s ease background-color;
+        background-color: white;
+        color: black;
       }
     }
+    .login_Page_Info_Title{
+      font-family: Titillium Web,sans-serif;
+      font-weight: 900;
+      font-size: 4rem;
+      text-align: center;
+    }
+    .login_Page_Info_Sub_Text{
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      width: 70%;
+      margin-top: 1.5rem;
+    }
+  }
     .login_Page_Form{
       .login_Page_From_Contener{
         position: relative;
@@ -93,7 +124,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
         h2{
           text-align: center;
         }
-        #form_Login,#form_register{
+        #form_Login,#form_Register{
           width: 80%;
           form{
             margin: 20px 0;
