@@ -36,23 +36,27 @@
             
         </div>
         <div class="header_Action">
+        {% if user.online == true %}
             <div class="progress_Stat">
                 <div class="bar-progress-wrap">
-                    <p class="bar-progress-info">Next: <span class="bar-progress-text">38<span class="bar-progress-unit">exp</span></span></p>
+                    <p class="bar-progress-info">Next: <span class="bar-progress-text">{{ user.expBeforeLvl }}<span class="bar-progress-unit">exp</span></span></p>
                 </div>
                 <div id="logged-user-level" class="progress-stat-bar" style="width: 110px; height: 4px; position: relative;">
                     <canvas width="110" height="4" style="position: absolute;top: 0px;left: 0px;background-color: #f0f8ff73;"></canvas>
                     <canvas width="80" height="4" style="position: absolute;top: 0px;left: 0px;background-color: #7fff0099;"></canvas>
                 </div>
             </div>
-            <div class="info_Lvl"><p>Level</p><Span>3</Span></div>
+            <div class="info_Lvl"><p>Level</p><Span>{{user.lvl}}</Span></div>
+        {% endif %}
         </div>
         <div class="header_Action">
             <div class="action-list">
                 <div class="action-list-item icons" id="market"></div>
+                {% if online == true %}
                 <div class="action-list-item icons" id="friends"></div>
                 <div class="action-list-item icons" id="messages"></div>
                 <div class="action-list-item icons" id="notifs"></div>
+                {% endif %}
             </div>
             <div>
                 <div class="action-item icons" id="param"></div>
@@ -92,6 +96,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="/public/js/App.js"></script>
+    <script src="/public/js/Etab.js"></script>
     <script>var app = new App();</script>
     </body>
 </html>

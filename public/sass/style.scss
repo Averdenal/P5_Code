@@ -1,7 +1,9 @@
 @import "compass";
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
-
+.none{
+  display: none;
+}
 *,*::before,*::after {
   margin: 0;
   padding: 0;
@@ -53,6 +55,9 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
     top: 0;
     left: 0;
     z-index: 10000;
+    .header_Action{
+      justify-content: flex-end;
+    }
 }
 .header .header_Action .header_Text {
     margin: auto;
@@ -378,7 +383,7 @@ img {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  @include justify-content(space-around);
 }
 .etabs_Item_Cover{
   position: relative;

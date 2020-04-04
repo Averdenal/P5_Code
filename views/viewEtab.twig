@@ -8,52 +8,19 @@
 
 <div class="section-filters-bar">
     <p>Tu cherche quelque chose de particulier ?</p>
-
+{% for cat in cats %}
     <div class="lab_Checkbox_item">
         <div>
-            <p>Bar</p>
+            <p>{{ cat.name }}</p>
         </div>
         <div class="lab_Checkbox">
-            <input type="checkbox" id="bars" class="_checkbox" checked>
-            <label for="bars">
+            <input type="checkbox" id="{{ cat.name }}" class="_checkbox" checked>
+            <label for="{{ cat.name }}">
                 <div id="tick_mark"></div>
             </label>
         </div>
     </div>
-    <div class="lab_Checkbox_item">
-        <div>
-            <p>Restaurants</p>
-        </div>
-        <div class="lab_Checkbox">
-            <input type="checkbox" id="restaurant" class="_checkbox" checked>
-            <label for="restaurant">
-                <div id="tick_mark"></div>
-            </label>
-        </div>
-    </div>
-    <div class="lab_Checkbox_item">
-        <div>
-            <p>Club</p>
-        </div>
-        <div class="lab_Checkbox">
-            <input type="checkbox" id="club" class="_checkbox" checked>
-            <label for="club">
-                <div id="tick_mark"></div>
-            </label>
-        </div>
-    </div>
-    <div class="lab_Checkbox_item">
-        <div>
-            <p>Festivals</p>
-        </div>
-        <div class="lab_Checkbox">
-            <input type="checkbox" id="fest" class="_checkbox" checked>
-            <label for="fest">
-                <div id="tick_mark"></div>
-            </label>
-        </div>
-    </div>
-    
+{% endfor %}
 </div>
 
 <div class="grid grid-3">
