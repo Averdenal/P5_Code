@@ -12,6 +12,47 @@
     <title>{{ titlePage }}</title>
 </head>
 <body>
+    {% if user == null %}
+    <div id="login_Page" class="container-fluid row">
+        <div class="login_Page_Info">
+            <p>Bienvenue sur la platforme</p>
+            <h1 class="login_Page_Info_Title">Getting Out Again</h1>
+            <p class="login_Page_Info_Sub_Text">The next generation social network & community! Connect with your friends and play with our quests and badges gamification system!</p>
+        </div>
+        <div class="login_Page_Form">
+            <div class="login_Page_From_Contener">
+                <div id="form_Login">
+                    <h2>Log toi!</h2>
+                    <form action="" method="post">
+                        <input type="text" value="" placeholder="Votre login">
+                        <input type="password" value="" placeholder="Votre Password">
+                        <div class="contener-fluid row sub_Input">
+                            <div class="sub_Input_Item">
+                                <div class="lab_Checkbox">
+                                    <input type="checkbox" id="rememer" class="_checkbox" checked>
+                                    <label for="rememer">
+                                    </label>
+                                    <span>On ne t'oublie pas.</span>
+                                </div>
+                            </div>
+                            <div class="sub_Input_Item forget">
+                                <a href="#">Un trou de mémoire?</a>
+                            </div>
+                        </div>
+                        <input type="submit" value="Connexion" class="btn btn-success">
+                    </form>
+                    <p class="lined-text">Se connecter autrement</p>
+                    <div class="contener-fluid">
+                        des petites technique autre pour se connecter, ne sont pas encore actif
+                    </div>
+                </div>
+                <div id="form_register none"></div>
+            </div>
+           
+        </div>
+    </div>
+    {% endif %}
+    {% if user %}
     <header class="header">
         <div class="header_Action">
             <div class="logo"></div>
@@ -91,7 +132,7 @@
 
     <footer>
     </footer>
-
+    {% endif %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
