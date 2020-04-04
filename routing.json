@@ -37,6 +37,6 @@
         "route":"/Authentification/register",
         "controller":"ControllerAuthentification",
         "action":"register",
-        "param":"firstName,lastName,login,email,pwd"
+        "param":"login,email,password"
     }
 ]

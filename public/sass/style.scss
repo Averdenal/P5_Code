@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
 $color_blue: #615dfa;
 .none{
-  display: none;
+  display: none!important;
 }
 *,*::before,*::after {
   margin: 0;
@@ -77,6 +77,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
     }
     .login_Page_Form{
       .login_Page_From_Contener{
+        position: relative;
         height: 600px;
         width: 500px;
         background-color: white;
@@ -84,10 +85,15 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
         @include display-flex;
         @include justify-content(center);
         @include align-items(center);
+        .login_Page_Info_rocket{
+          position: absolute;
+          top: -20px;
+          left: -60px;
+        }
         h2{
           text-align: center;
         }
-        #form_Login{
+        #form_Login,#form_register{
           width: 80%;
           form{
             margin: 20px 0;
@@ -371,22 +377,22 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
   height: 100%;
   padding-right: 60px!important;
 }
-input[type=password], input[type=text] {
+input[type=password], input[type=text],input[type=email] {
   height: 54px;
   padding: 0 18px;
 }
-input[type=password], input[type=text], select, textarea {
+input[type=password], input[type=text],input[type=email] , select, textarea {
   background-color: rgba(18, 26, 136, 0.452);
   color: white;
   transition: border-color .2s ease-in-out;
 }
-button, input[type=password], input[type=text], select, textarea {
+button, input[type=password], input[type=text] ,input[type=email] , select, textarea {
   width: 100%;
   border-radius: 12px;
   font-size: 1rem;
   font-weight: 700;
 }
-button, input[type=password], input[type=text], label, select, textarea {
+button, input[type=password], input[type=text],input[type=email] , label, select, textarea {
   font-family: Rajdhani,sans-serif;
 }
 

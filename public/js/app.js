@@ -2,6 +2,8 @@ class App{
     constructor(){
         this.sub_Menu();
         new Etab();
+        new User();
+        this.a
     }
     sub_Menu() {
         $('.menu').on('click',"#bar",function() {

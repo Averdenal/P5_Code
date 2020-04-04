@@ -21,9 +21,10 @@
         </div>
         <div class="login_Page_Form">
             <div class="login_Page_From_Contener">
-                <div id="form_Login">
+                <img src="/public/imgs/landing/rocket.png" alt="rocket" class="login_Page_Info_rocket">
+                <div id="form_Login" class="none">
                     <h2>Log toi!</h2>
-                    <form action="" method="post">
+                    <form action="" method="post" id="login_Form">
                         <input type="text" value="" placeholder="Votre login">
                         <input type="password" value="" placeholder="Votre Password">
                         <div class="contener-fluid row sub_Input">
@@ -46,7 +47,20 @@
                         des petites technique autre pour se connecter, ne sont pas encore actif
                     </div>
                 </div>
-                <div id="form_register none"></div>
+                <div id="form_register">
+                    <h2>Créer ton compte</h2>
+                    <form action="" method="post" id="register_Form">
+                        <input type="email" name="email" id="email" placeholder="Votre E-Mail">
+                        <input type="text" name="login" id="login" placeholder="Votre Login">
+                        <input type="password" name="password" id="password" placeholder="Votre Password">
+                        <input type="password" name="passwordVerif" id="passwordVerif" placeholder="Confirmation">
+                        <input type="submit" value="Connexion" class="btn btn-success">
+                    </form>
+                    <p class="lined-text">Pas reçu le mail de confirmation ?</p>
+                    <div class="contener-fluid">
+                        <p>Si tu n'as pas reçu le mail de confirmation, tu peux nous contacter <a href="#">ici</a></p>
+                    </div>
+                </div>
             </div>
            
         </div>
@@ -136,8 +150,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/public/js/App.js"></script>
     <script src="/public/js/Etab.js"></script>
+    <script src="/public/js/User.js"></script>
     <script>var app = new App();</script>
     </body>
 </html>
