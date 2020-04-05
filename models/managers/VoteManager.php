@@ -1,5 +1,5 @@
 <?php
-namespace GOA\Models;
+namespace GOA\Models\Managers;
 
 use PDO;
 use GOA\Models\Model;

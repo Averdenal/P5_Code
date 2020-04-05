@@ -58,10 +58,34 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   width: 100%;
 }
 
+/* line 45, ../sass/style.scss */
+.warning_Input {
+  background-color: red !important;
+}
+
+/* line 49, ../sass/style.scss */
+.visibility {
+  visibility: visible !important;
+}
+
+/* line 53, ../sass/style.scss */
+#conf_Sub_Menu {
+  position: fixed;
+  top: 70px;
+  right: 15px;
+  width: 150px;
+  visibility: hidden;
+  background-color: white;
+  z-index: 10000;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: -1px 5px 25px 0px rgba(0, 0, 0, 0.52);
+}
+
 /************************************************************************************************************/
 /******************************************* register / login ***********************************************/
 /************************************************************************************************************/
-/* line 48, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 #login_Page {
   margin: 0 !important;
   width: 100%;
@@ -70,7 +94,13 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   background-size: cover;
   z-index: 10001;
 }
-/* line 55, ../sass/style.scss */
+@media (max-width: 650px) {
+  /* line 69, ../sass/style.scss */
+  #login_Page {
+    height: 100%;
+  }
+}
+/* line 79, ../sass/style.scss */
 #login_Page .login_Page_Info, #login_Page .login_Page_Form {
   display: -webkit-flex;
   display: flex;
@@ -81,12 +111,12 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 61, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 #login_Page .login_Page_Info {
   color: white;
   width: 900px;
 }
-/* line 64, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 #login_Page .login_Page_Info .btn_Contener {
   display: -webkit-flex;
   display: flex;
@@ -94,11 +124,11 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   flex-direction: row;
   margin: 20px 0;
 }
-/* line 68, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 #login_Page .login_Page_Info .btn_Contener input {
   display: none;
 }
-/* line 71, ../sass/style.scss */
+/* line 95, ../sass/style.scss */
 #login_Page .login_Page_Info .btn_Contener label {
   display: -webkit-flex;
   display: flex;
@@ -114,28 +144,35 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   font-weight: 600;
   font-size: 1.5rem;
 }
-/* line 83, ../sass/style.scss */
+@media (max-width: 650px) {
+  /* line 95, ../sass/style.scss */
+  #login_Page .login_Page_Info .btn_Contener label {
+    width: 150px;
+    font-size: 1.2rem;
+  }
+}
+/* line 112, ../sass/style.scss */
 #login_Page .login_Page_Info .btn_Contener #btn_Action_Login_Login {
   border-radius: 15px 0 0 15px;
 }
-/* line 86, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 #login_Page .login_Page_Info .btn_Contener #btn_Action_Login_Register {
   border-radius: 0 15px 15px 0;
 }
-/* line 89, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 #login_Page .login_Page_Info .btn_Contener input:checked + label {
   transition: 0.5s ease background-color;
   background-color: white;
   color: black;
 }
-/* line 95, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
 #login_Page .login_Page_Info .login_Page_Info_Title {
   font-family: Titillium Web,sans-serif;
   font-weight: 900;
   font-size: 4rem;
   text-align: center;
 }
-/* line 101, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 #login_Page .login_Page_Info .login_Page_Info_Sub_Text {
   font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.6);
@@ -143,7 +180,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   width: 70%;
   margin-top: 1.5rem;
 }
-/* line 110, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 #login_Page .login_Page_Form .login_Page_From_Contener {
   position: relative;
   height: 600px;
@@ -159,22 +196,28 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 119, ../sass/style.scss */
+@media (max-width: 650px) {
+  /* line 139, ../sass/style.scss */
+  #login_Page .login_Page_Form .login_Page_From_Contener {
+    width: 100%;
+  }
+}
+/* line 151, ../sass/style.scss */
 #login_Page .login_Page_Form .login_Page_From_Contener .login_Page_Info_rocket {
   position: absolute;
   top: -20px;
   left: -60px;
 }
-/* line 124, ../sass/style.scss */
+/* line 156, ../sass/style.scss */
 #login_Page .login_Page_Form .login_Page_From_Contener h2 {
   text-align: center;
 }
-/* line 127, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register {
+/* line 159, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget {
   width: 80%;
 }
-/* line 129, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form {
+/* line 161, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form {
   margin: 20px 0;
   display: -webkit-flex;
   display: flex;
@@ -183,29 +226,29 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 134, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form input, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form input {
+/* line 166, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form input, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form input, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form input {
   margin-top: 20px;
   border: 1px solid #615dfa;
 }
-/* line 138, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form input[type="submit"], #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form input[type="submit"] {
+/* line 170, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form input[type="submit"], #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form input[type="submit"], #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form input[type="submit"] {
   width: 100%;
   border: none;
 }
-/* line 143, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item {
+/* line 175, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item {
   width: 50%;
   margin-top: 15px;
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 146, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item input[type="checkbox"], #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item input[type="checkbox"] {
+/* line 178, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item input[type="checkbox"], #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item input[type="checkbox"], #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item input[type="checkbox"] {
   display: none;
 }
-/* line 150, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox {
+/* line 182, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox {
   position: relative;
   display: inline;
   display: -webkit-flex;
@@ -213,16 +256,16 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   -webkit-flex-direction: row;
   flex-direction: row;
 }
-/* line 155, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox span, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox span {
+/* line 187, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox span, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox span, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox span {
   margin-left: 10px;
 }
-/* line 158, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox {
+/* line 190, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox {
   display: none;
 }
-/* line 163, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox label, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox label {
+/* line 195, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox label, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox label, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox label {
   margin: 12px 0;
   width: 20px;
   height: 20px;
@@ -235,8 +278,8 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   overflow: hidden;
   z-index: 1;
 }
-/* line 178, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox label:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox label:before {
+/* line 210, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox label:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox label:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox label:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -251,44 +294,44 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   box-shadow: inset 0 7px 10px #ffbeb8;
   transition: 0.2s ease width, 0.2s ease height;
 }
-/* line 195, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox label:hover:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox label:hover:before {
+/* line 227, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox label:hover:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox label:hover:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox label:hover:before {
   width: 15px;
   height: 15px;
   box-shadow: inset 0 7px 10px #ff9d96;
 }
-/* line 202, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox label:active, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox label:active {
+/* line 234, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox label:active, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox label:active, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox label:active {
   transform: translateY(-50%) scale(0.9);
 }
-/* line 206, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label {
+/* line 238, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label {
   background-color: #07d410;
   box-shadow: 0 7px 10px #92ff97;
 }
-/* line 212, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label:before {
+/* line 244, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked + label:before {
   width: 0;
   height: 0;
 }
-/* line 218, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked {
+/* line 250, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .sub_Input .sub_Input_Item .lab_Checkbox ._checkbox:checked {
   transform: translate(0);
   opacity: 1;
 }
-/* line 226, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .forget, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .forget {
+/* line 258, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login form .forget, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register form .forget, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget form .forget {
   text-align: end;
 }
-/* line 230, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text {
+/* line 262, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget .lined-text {
   font-size: .875rem;
   font-weight: 700;
   text-align: center;
   position: relative;
 }
-/* line 236, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text:after, #login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text:after, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text:before {
+/* line 268, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text:after, #login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text:after, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget .lined-text:after, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget .lined-text:before {
   content: "";
   width: 70px;
   height: 1px;
@@ -297,19 +340,19 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   top: 7px;
   vertical-align: middle;
 }
-/* line 245, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text:before {
+/* line 277, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text:before, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget .lined-text:before {
   left: 0;
 }
-/* line 248, ../sass/style.scss */
-#login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text:after, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text:after {
+/* line 280, ../sass/style.scss */
+#login_Page .login_Page_Form .login_Page_From_Contener #form_Login .lined-text:after, #login_Page .login_Page_Form .login_Page_From_Contener #form_Register .lined-text:after, #login_Page .login_Page_Form .login_Page_From_Contener #form_Forget .lined-text:after {
   right: 0;
 }
 
 /************************************************************************************************************/
 /************************************************** header **************************************************/
 /************************************************************************************************************/
-/* line 259, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 .header, .header .header_Action {
   display: -webkit-flex;
   display: flex;
@@ -320,7 +363,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   width: 100%;
 }
 
-/* line 265, ../sass/style.scss */
+/* line 297, ../sass/style.scss */
 .header {
   height: 80px;
   background-color: #615dfa;
@@ -329,12 +372,12 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   left: 0;
   z-index: 10000;
 }
-/* line 272, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 .header .header_Action {
   justify-content: flex-end;
 }
 
-/* line 276, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 .header .header_Action .header_Text {
   margin: auto;
   color: #fff;
@@ -344,22 +387,22 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   text-transform: uppercase;
 }
 
-/* line 284, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 .navigation {
   height: 80px;
 }
 
-/* line 287, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .navigation .menu_Main {
   display: flex;
 }
 
-/* line 290, ../sass/style.scss */
+/* line 322, ../sass/style.scss */
 .navigation .menu_Main .menu_Main_Item {
   position: relative;
 }
 
-/* line 293, ../sass/style.scss */
+/* line 325, ../sass/style.scss */
 .navigation .menu_Main .menu_Main_Item .menu_Main_Item_Link {
   padding: 0 24px;
   display: block;
@@ -371,24 +414,24 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   transition: color .2s ease-in-out;
 }
 
-/* line 303, ../sass/style.scss */
+/* line 335, ../sass/style.scss */
 .navigation .menu_Main .menu_Main_Item .menu_Main_Item_Link:hover {
   color: white;
 }
 
-/* line 306, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 #link_Sub_Menu::before {
   font-size: 1.2rem;
   content: "\f0c9";
 }
 
-/* line 311, ../sass/style.scss */
+/* line 343, ../sass/style.scss */
 .header .header_Action .progress_Stat {
   width: 110px;
   margin: auto;
 }
 
-/* line 315, ../sass/style.scss */
+/* line 347, ../sass/style.scss */
 .progress_Stat .bar-progress-wrap .bar-progress-info {
   display: flex;
   justify-content: space-between;
@@ -398,91 +441,81 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   text-transform: uppercase;
 }
 
-/* line 323, ../sass/style.scss */
+/* line 355, ../sass/style.scss */
 .progress_Stat .bar-progress-wrap .bar-progress-unit {
   margin-left: 3px;
   text-transform: uppercase;
 }
 
-/* line 327, ../sass/style.scss */
+/* line 359, ../sass/style.scss */
 .info_Lvl {
   color: white;
   font-weight: 900;
   text-align: center;
 }
 
-/* line 332, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
 .info_Lvl span {
   font-size: 1.25rem;
 }
 
-/* line 335, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .header .action-list {
   height: 80px;
-}
-
-/* line 338, ../sass/style.scss */
-.action-list {
   display: flex;
   padding: 0 18px;
   position: relative;
 }
-
-/* line 343, ../sass/style.scss */
-.action-list:before {
-  right: 0;
+/* line 373, ../sass/style.scss */
+.header .action-list .action-list-item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 14px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
 }
-
-/* line 346, ../sass/style.scss */
+/* line 381, ../sass/style.scss */
+.header .action-list .action-list-item:hover {
+  color: white;
+}
+/* line 384, ../sass/style.scss */
+.header .action-list #market::before {
+  content: "\f290";
+}
+/* line 387, ../sass/style.scss */
+.header .action-list #friends::before {
+  content: "\f0c0";
+}
+/* line 390, ../sass/style.scss */
+.header .action-list #messages::before {
+  content: "\f086";
+}
+/* line 393, ../sass/style.scss */
+.header .action-list #notifs::before {
+  content: "\f0f3";
+}
+/* line 397, ../sass/style.scss */
 .header .action-list:after, .header .action-list:before {
   top: 24px;
-}
-
-/* line 349, ../sass/style.scss */
-.action-list:after, .action-list:before {
   content: "";
   width: 1px;
   height: 32px;
   background-color: #dedeea;
   position: absolute;
 }
-
-/* line 356, ../sass/style.scss */
-.action-list .action-list-item {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 14px;
-  cursor: pointer;
+/* line 405, ../sass/style.scss */
+.header .action-list:before {
+  right: 0;
 }
 
-/* line 363, ../sass/style.scss */
-#market::before {
-  content: "\f290";
-}
-
-/* line 366, ../sass/style.scss */
-#friends::before {
-  content: "\f0c0";
-}
-
-/* line 369, ../sass/style.scss */
-#messages::before {
-  content: "\f086";
-}
-
-/* line 372, ../sass/style.scss */
-#notifs::before {
-  content: "\f0f3";
-}
-
-/* line 375, ../sass/style.scss */
+/* line 411, ../sass/style.scss */
 .header .action-item {
   width: 80px;
   height: 80px;
 }
 
-/* line 379, ../sass/style.scss */
+/* line 415, ../sass/style.scss */
 .action-item {
   display: flex;
   justify-content: center;
@@ -490,19 +523,19 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   cursor: pointer;
 }
 
-/* line 385, ../sass/style.scss */
+/* line 421, ../sass/style.scss */
 #param::before {
   content: "\f085";
 }
 
-/* line 388, ../sass/style.scss */
+/* line 424, ../sass/style.scss */
 .interactive_Input {
   width: 500px;
   height: 52px;
   position: relative;
 }
 
-/* line 393, ../sass/style.scss */
+/* line 429, ../sass/style.scss */
 .interactive_Input .interactive_Input_Icon_Wrap {
   display: flex;
   justify-content: center;
@@ -515,31 +548,31 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row {
   pointer-events: none;
 }
 
-/* line 404, ../sass/style.scss */
+/* line 440, ../sass/style.scss */
 .search_Icon::before {
   content: "";
 }
 
-/* line 407, ../sass/style.scss */
+/* line 443, ../sass/style.scss */
 .interactive_Input input {
   height: 100%;
   padding-right: 60px !important;
 }
 
-/* line 411, ../sass/style.scss */
+/* line 447, ../sass/style.scss */
 input[type=password], input[type=text], input[type=email] {
   height: 54px;
   padding: 0 18px;
 }
 
-/* line 415, ../sass/style.scss */
+/* line 451, ../sass/style.scss */
 input[type=password], input[type=text], input[type=email], select, textarea {
   background-color: rgba(18, 26, 136, 0.452);
   color: white;
   transition: border-color .2s ease-in-out;
 }
 
-/* line 420, ../sass/style.scss */
+/* line 456, ../sass/style.scss */
 button, input[type=password], input[type=text], input[type=email], select, textarea {
   width: 100%;
   border-radius: 12px;
@@ -547,7 +580,7 @@ button, input[type=password], input[type=text], input[type=email], select, texta
   font-weight: 700;
 }
 
-/* line 426, ../sass/style.scss */
+/* line 462, ../sass/style.scss */
 button, input[type=password], input[type=text], input[type=email], label, select, textarea {
   font-family: Rajdhani,sans-serif;
 }
@@ -555,14 +588,14 @@ button, input[type=password], input[type=text], input[type=email], label, select
 /************************************************************************************************************/
 /*************************************************** body ***************************************************/
 /************************************************************************************************************/
-/* line 433, ../sass/style.scss */
+/* line 469, ../sass/style.scss */
 body {
   font-size: 16px;
   background-color: #f8f8fb;
   overflow-x: hidden;
 }
 
-/* line 438, ../sass/style.scss */
+/* line 474, ../sass/style.scss */
 .sidebar {
   height: 100%;
   padding-top: 80px;
@@ -576,17 +609,17 @@ body {
   flex-direction: column;
 }
 
-/* line 450, ../sass/style.scss */
+/* line 486, ../sass/style.scss */
 .left {
   left: 0;
 }
 
-/* line 453, ../sass/style.scss */
+/* line 489, ../sass/style.scss */
 .right {
   right: 0;
 }
 
-/* line 457, ../sass/style.scss */
+/* line 493, ../sass/style.scss */
 .navigation-widget {
   width: 300px;
   padding-bottom: 40px;
@@ -595,19 +628,19 @@ body {
   position: relative;
 }
 
-/* line 464, ../sass/style.scss */
+/* line 500, ../sass/style.scss */
 .avatar {
   margin: 20px 0;
   position: relative;
 }
-/* line 467, ../sass/style.scss */
+/* line 503, ../sass/style.scss */
 .avatar img {
   width: 50px;
   height: 50px;
   border-radius: 30px;
 }
 
-/* line 473, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .onligne {
   position: absolute;
   background-image: linear-gradient(120deg, #d4fc79 0%, #00ff22 100%);
@@ -619,7 +652,7 @@ body {
   border: 2px solid white;
 }
 
-/* line 483, ../sass/style.scss */
+/* line 519, ../sass/style.scss */
 .lvl_avatar {
   position: absolute;
   bottom: -5px;
@@ -636,14 +669,14 @@ body {
 }
 
 /*************************************************** Sub Menu ***************************************************/
-/* line 499, ../sass/style.scss */
+/* line 535, ../sass/style.scss */
 .menu {
   margin-top: 26px;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-/* line 504, ../sass/style.scss */
+/* line 540, ../sass/style.scss */
 .menu .menu_Item {
   display: flex;
   align-items: center;
@@ -657,7 +690,7 @@ body {
   font-size: 2rem;
   transition: 0.3s;
 }
-/* line 516, ../sass/style.scss */
+/* line 552, ../sass/style.scss */
 .menu .menu_Item span {
   color: rgba(172, 172, 172, 0.5);
   width: 100%;
@@ -665,53 +698,53 @@ body {
   font-weight: 200;
   font-size: 1.5rem;
 }
-/* line 523, ../sass/style.scss */
+/* line 559, ../sass/style.scss */
 .menu .menu_Item span:hover {
   color: #6f86d6;
 }
-/* line 526, ../sass/style.scss */
+/* line 562, ../sass/style.scss */
 .menu .menu_Item #newsfeed::before {
   content: "\f1ea";
 }
-/* line 529, ../sass/style.scss */
+/* line 565, ../sass/style.scss */
 .menu .menu_Item #bar::before {
   content: "\f1ad";
 }
-/* line 532, ../sass/style.scss */
+/* line 568, ../sass/style.scss */
 .menu .menu_Item #Groups::before {
   content: "\f0c0";
 }
-/* line 535, ../sass/style.scss */
+/* line 571, ../sass/style.scss */
 .menu .menu_Item #newsfeed::before {
   content: "\f1ea";
 }
-/* line 538, ../sass/style.scss */
+/* line 574, ../sass/style.scss */
 .menu .menu_Item #members::before {
   content: "\f007";
 }
-/* line 541, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 .menu .menu_Item #members::before {
   content: "\f007";
 }
-/* line 544, ../sass/style.scss */
+/* line 580, ../sass/style.scss */
 .menu .menu_Item #badges::before {
   content: "\f0a3";
 }
-/* line 547, ../sass/style.scss */
+/* line 583, ../sass/style.scss */
 .menu .menu_Item #quests::before {
   content: "\f005";
 }
-/* line 550, ../sass/style.scss */
+/* line 586, ../sass/style.scss */
 .menu .menu_Item #events::before {
   content: "\f271";
 }
-/* line 555, ../sass/style.scss */
+/* line 591, ../sass/style.scss */
 .menu .menu_Item:hover {
   background-color: white;
   box-shadow: -1px 5px 25px 0px rgba(0, 0, 0, 0.52);
 }
 
-/* line 560, ../sass/style.scss */
+/* line 596, ../sass/style.scss */
 .content-grid {
   max-width: 1184px;
   padding: 112px 0 100px;
@@ -719,7 +752,7 @@ body {
   transition: transform 0.4s ease-in-out 0s;
 }
 
-/* line 566, ../sass/style.scss */
+/* line 602, ../sass/style.scss */
 .section_Banner {
   min-height: 160px;
   padding: 52px 60px 0 200px;
@@ -728,31 +761,31 @@ body {
   position: relative;
 }
 
-/* line 574, ../sass/style.scss */
+/* line 610, ../sass/style.scss */
 .section_Banner h1, .section_Banner p {
   color: white;
 }
 
-/* line 579, ../sass/style.scss */
+/* line 615, ../sass/style.scss */
 .section_Banner h1 {
   font-size: 3rem;
   font-weight: 900;
 }
 
-/* line 586, ../sass/style.scss */
+/* line 622, ../sass/style.scss */
 .section_Banner .section_Banner_Icon {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-/* line 592, ../sass/style.scss */
+/* line 628, ../sass/style.scss */
 img {
   vertical-align: middle;
   border-style: none;
 }
 
-/* line 596, ../sass/style.scss */
+/* line 632, ../sass/style.scss */
 .grid {
   margin-top: 20px;
   display: flex;
@@ -761,12 +794,12 @@ img {
   justify-content: space-around;
 }
 
-/* line 602, ../sass/style.scss */
+/* line 638, ../sass/style.scss */
 .etabs_Item_Cover {
   position: relative;
 }
 
-/* line 605, ../sass/style.scss */
+/* line 641, ../sass/style.scss */
 .cat_Sticker {
   position: absolute;
   top: 10px;
@@ -781,7 +814,7 @@ img {
   line-height: 32px;
 }
 
-/* line 618, ../sass/style.scss */
+/* line 654, ../sass/style.scss */
 .text_Sticker {
   color: white;
   position: absolute;
@@ -798,7 +831,7 @@ img {
   line-height: 32px;
 }
 
-/* line 633, ../sass/style.scss */
+/* line 669, ../sass/style.scss */
 .quest_Item {
   border-radius: 12px;
   background-color: #fff;
@@ -806,7 +839,7 @@ img {
   position: relative;
 }
 
-/* line 639, ../sass/style.scss */
+/* line 675, ../sass/style.scss */
 .localisation {
   font-size: 1.1rem;
   margin: 0 10px;
@@ -815,7 +848,7 @@ img {
   color: #615dfa;
 }
 
-/* line 646, ../sass/style.scss */
+/* line 682, ../sass/style.scss */
 .section-filters-bar {
   margin-top: 20px;
   display: flex;
@@ -830,25 +863,25 @@ img {
   background-color: #fff;
 }
 
-/* line 657, ../sass/style.scss */
+/* line 693, ../sass/style.scss */
 .lab_Checkbox_item {
   display: flex;
   flex-direction: row-reverse;
 }
-/* line 660, ../sass/style.scss */
+/* line 696, ../sass/style.scss */
 .lab_Checkbox_item p {
   margin-left: 10px;
 }
-/* line 664, ../sass/style.scss */
+/* line 700, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox {
   position: relative;
   display: inline;
 }
-/* line 667, ../sass/style.scss */
+/* line 703, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox ._checkbox {
   display: none;
 }
-/* line 672, ../sass/style.scss */
+/* line 708, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox label {
   position: absolute;
   top: 50%;
@@ -865,7 +898,7 @@ img {
   overflow: hidden;
   z-index: 1;
 }
-/* line 690, ../sass/style.scss */
+/* line 726, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox label:before {
   content: "";
   position: absolute;
@@ -881,17 +914,17 @@ img {
   box-shadow: inset 0 7px 10px #ffbeb8;
   transition: 0.2s ease width, 0.2s ease height;
 }
-/* line 707, ../sass/style.scss */
+/* line 743, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox label:hover:before {
   width: 20px;
   height: 20px;
   box-shadow: inset 0 7px 10px #ff9d96;
 }
-/* line 714, ../sass/style.scss */
+/* line 750, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox label:active {
   transform: translateY(-50%) scale(0.9);
 }
-/* line 719, ../sass/style.scss */
+/* line 755, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox #tick_mark {
   position: absolute;
   top: -5px;
@@ -903,7 +936,7 @@ img {
   margin-left: 5px;
   transform: rotateZ(-40deg);
 }
-/* line 732, ../sass/style.scss */
+/* line 768, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox #tick_mark:before, .lab_Checkbox_item .lab_Checkbox #tick_mark:after {
   content: "";
   position: absolute;
@@ -912,7 +945,7 @@ img {
   opacity: 0;
   transition: 0.2s ease transform, 0.2s ease opacity;
 }
-/* line 742, ../sass/style.scss */
+/* line 778, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox #tick_mark:before {
   left: 0;
   bottom: 0;
@@ -921,7 +954,7 @@ img {
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.23);
   transform: translateY(-68px);
 }
-/* line 752, ../sass/style.scss */
+/* line 788, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox #tick_mark:after {
   left: 0;
   bottom: 0;
@@ -930,17 +963,17 @@ img {
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.23);
   transform: translateX(78px);
 }
-/* line 762, ../sass/style.scss */
+/* line 798, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox ._checkbox:checked + label {
   background-color: #07d410;
   box-shadow: 0 7px 10px #92ff97;
 }
-/* line 768, ../sass/style.scss */
+/* line 804, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox ._checkbox:checked + label:before {
   width: 0;
   height: 0;
 }
-/* line 774, ../sass/style.scss */
+/* line 810, ../sass/style.scss */
 .lab_Checkbox_item .lab_Checkbox ._checkbox:checked + label #tick_mark:before, .lab_Checkbox_item .lab_Checkbox ._checkbox:checked + label #tick_mark:after {
   transform: translate(0);
   opacity: 1;

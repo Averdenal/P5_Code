@@ -28,15 +28,23 @@
         "name":"auth",
         "route":"/Authentification/login",
         "controller":"ControllerAuthentification",
-        "action":"loginverif",
-        "param":"login,pwd"
+        "action":"loginUser",
+        "param":"login,password"
     },
     {
         "method":"POST",
         "name":"register",
         "route":"/Authentification/register",
         "controller":"ControllerAuthentification",
-        "action":"register",
-        "param":"login,email,password"
+        "action":"newUser",
+        "param":"login,email,password,passwordVerif"
+    },
+    {
+        "method":"GET",
+        "name":"logout",
+        "route":"/Authentification/logout",
+        "controller":"ControllerAuthentification",
+        "action":"logout",
+        "param":""
     }
 ]

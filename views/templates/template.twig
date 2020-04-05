@@ -27,14 +27,26 @@
                     <label for="action_Login_Register" id="btn_Action_Login_Register" >Enregistrement</label>
             </div>
         </div>
-        <div class="login_Page_Form">
+        <div class="login_Page_Form" >
             <div class="login_Page_From_Contener">
                 <img src="/public/imgs/landing/rocket.png" alt="rocket" class="login_Page_Info_rocket">
+                <div id="form_Forget" class="none">
+                    <h2>Aide avec le mot de passe</h2>
+                    <p>Saisissez l'adresse e-mail associé à votre compte <strong>Getting Out Again</strong>.</p>
+                    <form action="" method="post" id="forget_Form">
+                        <input type="text" name="email" placeholder="Votre Email">
+                        <input type="submit" value="Continuer" class="btn btn-success">
+                    </form>
+                    <p class="lined-text">Retour à la connexion</p>
+                    <div class="contener-fluid">
+                        <a href="" id="back_connexion">Se connecter</a>
+                    </div>
+                </div>
                 <div id="form_Login">
                     <h2>Log toi!</h2>
                     <form action="" method="post" id="login_Form">
-                        <input type="text" value="" placeholder="Votre login">
-                        <input type="password" value="" placeholder="Votre Password">
+                        <input type="text" name="login" placeholder="Votre login">
+                        <input type="password" name="password" placeholder="Votre Password">
                         <div class="contener-fluid row sub_Input">
                             <div class="sub_Input_Item">
                                 <div class="lab_Checkbox">
@@ -45,7 +57,7 @@
                                 </div>
                             </div>
                             <div class="sub_Input_Item forget">
-                                <a href="#">Un trou de mémoire?</a>
+                                <a href="#" id="go_Forget">Un trou de mémoire?</a>
                             </div>
                         </div>
                         <input type="submit" value="Connexion" class="btn btn-success">
@@ -58,10 +70,10 @@
                 <div id="form_Register" class="none">
                     <h2>Créer ton compte</h2>
                     <form action="" method="post" id="register_Form">
-                        <input type="email" name="email" id="email" placeholder="Votre E-Mail">
-                        <input type="text" name="login" id="login" placeholder="Votre Login">
-                        <input type="password" name="password" id="password" placeholder="Votre Password">
-                        <input type="password" name="passwordVerif" id="passwordVerif" placeholder="Confirmation">
+                        <input type="email" name="email" id="email" placeholder="Votre E-Mail" required>
+                        <input type="text" name="login" id="login" placeholder="Votre Login" required>
+                        <input type="password" name="password" id="password" placeholder="Votre Password" required>
+                        <input type="password" name="passwordVerif" id="passwordVerif" placeholder="Confirmation" required>
                         <input type="submit" value="S'enregistrer" class="btn btn-success">
                     </form>
                     <p class="lined-text">Pas reçu le mail de confirmation ?</p>
@@ -99,7 +111,7 @@
             
         </div>
         <div class="header_Action">
-        {% if user.online == true %}
+        {% if user %}
             <div class="progress_Stat">
                 <div class="bar-progress-wrap">
                     <p class="bar-progress-info">Next: <span class="bar-progress-text">{{ user.expBeforeLvl }}<span class="bar-progress-unit">exp</span></span></p>
@@ -115,7 +127,7 @@
         <div class="header_Action">
             <div class="action-list">
                 <div class="action-list-item icons" id="market"></div>
-                {% if online == true %}
+                {% if user %}
                 <div class="action-list-item icons" id="friends"></div>
                 <div class="action-list-item icons" id="messages"></div>
                 <div class="action-list-item icons" id="notifs"></div>
@@ -126,7 +138,13 @@
             </div>
         </div>
     </header>
-
+    <div id="conf_Sub_Menu">
+        <ul>
+            <li><a href="" id="btn_Logout">deconnexion</a></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
     <aside class="sidebar left">
         <div class="avatar">
             <span class="onligne"></span>

@@ -3,10 +3,6 @@
 use GOA\Router;
 use GOA\Models\Environement;
 
-
-
-
-
 session_start();
 global $env;
 global $twig;
@@ -18,8 +14,6 @@ $loader = new \Twig\Loader\FilesystemLoader('./views');
 $twig = new \Twig\Environment($loader, [
     'cache' => false,
 ]);
-
-
 require_once('_config.php');
 
 $router = new Router();
