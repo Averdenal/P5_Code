@@ -300,32 +300,43 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
 }
 .header{
     height: 80px;
-    background-color: #615dfa;
+    background-color: $color_blue;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 10000;
-    .header_Action_phone_top,.header_Action_phone_bottom{
-      display: none;
-      @media (max-width:650px) {
-        display: block;
-        position: fixed;
-        left: 0;
-        width: 100%;
-      }
+    @media (max-width:650px) {
+      height: 50px;
     }
     .header_Action_phone_top{
+      display: none;
+      @include justify-content(space-between);
+      @include align-items(center);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       @media (max-width:650px) {
-        top: 0;
+        @include display-flex;
+      }
+      #link_Sub_Menu::before {
+        font-size: 1.5rem;
+      }
+      .header_Text{
+        color:white;
+        font-weight: 900;
+        font-size: 1.5rem;
+      }
+      .interactive_Input{
+          width: 60%;
+
+        input[type=text] {
+          height: 50px;
+          padding: 0 18px;
+        }
       }
     }
-    .header_Action_phone_bottom{
-      @media (max-width:650px) {
-        bottom: 0;
-        height: 70px;
-        background-color: black;
-      }
-    }
+
     .header_Action{
       justify-content: flex-end;
       @media (max-width:650px) {
@@ -634,6 +645,9 @@ body {
   padding: 112px 0 100px;
   transform: translate(167.5px, 0px);
   transition: transform 0.4s ease-in-out 0s;
+  @media (max-width: 650px) {
+    transform: translate(0);
+  }
 }
 .section_Banner {
   min-height: 160px;
@@ -851,3 +865,51 @@ img {
   }
 }
 
+/***********************************************************************************/
+
+.header_Action_Phone_Bottom{
+    @include justify-content(center);
+    width: 100%;
+    height: 60px;
+    background-color: #615dfa;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10000;
+    display: none;
+    @media (max-width: 650px) {
+      @include display-flex;
+    }
+  .action_List{
+    height: 100%;
+    width: 100%;
+    @include display-flex;
+    @include justify-content(space-around);
+    .action_List_Item{
+      @include display-flex;
+      @include align-items(center);
+      height: 100%;
+      padding: 0 14px;
+      cursor: pointer;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .action_List_Item:hover{
+      color: white;
+    }
+    #market::before{
+      content: "\f290";
+    }
+    #friends::before{
+      content: "\f0c0";
+    }
+    #messages::before{
+      content: "\f086";
+    }
+    #notifs::before{
+      content: "\f0f3";
+    }
+    #param::before{
+      content: "\f085";
+    }
+  }
+}
