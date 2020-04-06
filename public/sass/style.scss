@@ -136,6 +136,7 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
     }
   }
   .login_Page_Form{
+    margin: 20px 0;
     .login_Page_From_Contener{
       position: relative;
       height: 600px;
@@ -158,6 +159,9 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
       }
       #form_Login,#form_Register,#form_Forget{
         width: 80%;
+        @media (max-width:650px) {
+          width: 90%;
+        }
         form{
           margin: 20px 0;
           @include display-flex;
@@ -301,69 +305,98 @@ h1, h2, h3, h4, h5, h6, p, ol, ul, figure, .table, .form-row{
     top: 0;
     left: 0;
     z-index: 10000;
+    .header_Action_phone_top,.header_Action_phone_bottom{
+      display: none;
+      @media (max-width:650px) {
+        display: block;
+        position: fixed;
+        left: 0;
+        width: 100%;
+      }
+    }
+    .header_Action_phone_top{
+      @media (max-width:650px) {
+        top: 0;
+      }
+    }
+    .header_Action_phone_bottom{
+      @media (max-width:650px) {
+        bottom: 0;
+        height: 70px;
+        background-color: black;
+      }
+    }
     .header_Action{
       justify-content: flex-end;
+      @media (max-width:650px) {
+        display: none;
+      }
+      .header_Text {
+        margin: auto;
+        color: #fff;
+        font-family: Titillium Web,sans-serif;
+        font-size: 1.3rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+      .progress_Stat {
+        width: 110px;
+        margin: auto;
+        .bar-progress-wrap {
+          .bar-progress-info {
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+            font-size: .75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+          .bar-progress-unit {
+            margin-left: 3px;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
-}
-.header .header_Action .header_Text {
-    margin: auto;
-    color: #fff;
-    font-family: Titillium Web,sans-serif;
-    font-size: 1.3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-}
+  }
+
 .navigation{
     height: 80px;
+    .menu_Main{
+      display: flex;
+      .menu_Main_Item{
+        position: relative;
+        .menu_Main_Item_Link{
+          padding: 0 24px;
+          display: block;
+          color: rgba(255, 255, 255, 0.3);
+          font-size: .75rem;
+          font-weight: 700;
+          line-height: 80px;
+          cursor: pointer;
+          transition: color .2s ease-in-out;
+      }
+      .menu_Main_Item_Link:hover{
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
 }
-.navigation .menu_Main{
-    display: flex;
-}
-.navigation .menu_Main .menu_Main_Item{
-    position: relative;
-}
-.navigation .menu_Main .menu_Main_Item .menu_Main_Item_Link{
-    padding: 0 24px;
-    display: block;
-    color: rgba(255, 255, 255, 0.3);
-    font-size: .75rem;
-    font-weight: 700;
-    line-height: 80px;
-    cursor: pointer;
-    transition: color .2s ease-in-out;
-}
-.navigation .menu_Main .menu_Main_Item .menu_Main_Item_Link:hover{
-  color: rgba(255, 255, 255, 1);
-}
+
 #link_Sub_Menu::before{
   font-size: 1.2rem;
   content: "\f0c9";
 }
 
-.header .header_Action .progress_Stat {
-  width: 110px;
-  margin: auto;
-}
-.progress_Stat .bar-progress-wrap .bar-progress-info {
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-  font-size: .75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.progress_Stat .bar-progress-wrap .bar-progress-unit {
-  margin-left: 3px;
-  text-transform: uppercase;
-}
 .info_Lvl{
   color: white;
   font-weight: 900;
   text-align: center;
+  span{
+    font-size: 1.25rem;
+  }
 }
-.info_Lvl span{
-  font-size: 1.25rem;
-}
+
 .header{
   .action-list {
     height: 80px;
@@ -482,6 +515,9 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 650px) {
+    display:none;
+  }
 }
 .left{
   left: 0;

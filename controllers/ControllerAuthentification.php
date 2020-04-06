@@ -24,4 +24,13 @@ class ControllerAuthentification extends BaseController
     {
         session_destroy();
     }
+    public function forgetPassword($email)
+    {
+        $p = bin2hex(random_bytes(32));
+        var_dump($p);
+    }
+    public function resetPassword($token)
+    {
+        # code...
+    }
 }

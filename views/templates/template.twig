@@ -73,7 +73,7 @@
                         <input type="email" name="email" id="email" placeholder="Votre E-Mail" required>
                         <input type="text" name="login" id="login" placeholder="Votre Login" required>
                         <input type="password" name="password" id="password" placeholder="Votre Password" required>
-                        <input type="password" name="passwordVerif" id="passwordVerif" placeholder="Confirmation" required>
+                        <input type="password" name="passwordVerif" id="passwordVerif" placeholder="Confirmation" >
                         <input type="submit" value="S'enregistrer" class="btn btn-success">
                     </form>
                     <p class="lined-text">Pas reçu le mail de confirmation ?</p>
@@ -88,6 +88,10 @@
     {% endif %}
     {% if user %}
     <header class="header">
+        <div class="header_Action_phone_top">
+            <div class="logo"></div>
+            <div class="header_Text">Getting Out Again</div>
+        </div>
         <div class="header_Action">
             <div class="logo"></div>
             <div class="header_Text">Getting Out Again</div>
@@ -127,11 +131,9 @@
         <div class="header_Action">
             <div class="action-list">
                 <div class="action-list-item icons" id="market"></div>
-                {% if user %}
                 <div class="action-list-item icons" id="friends"></div>
                 <div class="action-list-item icons" id="messages"></div>
                 <div class="action-list-item icons" id="notifs"></div>
-                {% endif %}
             </div>
             <div>
                 <div class="action-item icons" id="param"></div>
@@ -152,13 +154,13 @@
             <span class="lvl_avatar">15</span>
         </div>
         <div class="menu small">
-            <!--<button class="menu_Item"><span class="icons" id="newsfeed"></span></button>-->
+            <button class="menu_Item"><span class="icons" id="newsfeed"></span></button>
             <button class="menu_Item"><span class="icons" id="bar"></span></button>
-            <!--<button class="menu_Item"><span class="icons" id="Groups"></span></button>
-            <button class="menu_Item"><span class="icons" id="members"></span></button>-->
+            <button class="menu_Item"><span class="icons" id="Groups"></span></button>
+            <button class="menu_Item"><span class="icons" id="members"></span></button>
             <button class="menu_Item"><span class="icons" id="badges"></span></button>
-            <!--<button class="menu_Item"><span class="icons" id="quests"></span></button>
-            <button class="menu_Item"><span class="icons" id="events"></span></button>-->
+            <button class="menu_Item"><span class="icons" id="quests"></span></button>
+            <button class="menu_Item"><span class="icons" id="events"></span></button>
         </div>
     </aside>
     <div class="content-grid">
@@ -171,6 +173,14 @@
     </aside>
 
     <footer>
+        <div class="header_Action_phone_bottom">
+            <div class="action-list">
+                <div class="action-list-item icons" id="market"></div>
+                <div class="action-list-item icons" id="friends"></div>
+                <div class="action-list-item icons" id="messages"></div>
+                <div class="action-list-item icons" id="notifs"></div>
+            </div>
+        </div>
     </footer>
     {% endif %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
