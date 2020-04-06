@@ -149,11 +149,9 @@
     <div id="conf_Sub_Menu">
         <ul>
             <li><a href="" id="btn_Logout">deconnexion</a></li>
-            <li></li>
-            <li></li>
         </ul>
     </div>
-    <aside class="sidebar left">
+    <!--<aside class="sidebar left">
         <div class="avatar">
             <span class="onligne"></span>
             <img src="/public/imgs/avatars/avatar02.jpg" alt="" srcset="">
@@ -168,12 +166,73 @@
             <button class="menu_Item"><span class="icons" id="quests"></span></button>
             <button class="menu_Item"><span class="icons" id="events"></span></button>
         </div>
-    </aside>
-    <div class="content-grid">
-    {% block content %}
-        
-    {% endblock %}
-    </div>
+    </aside>-->
+    <nav class="navigation_Widget left none" id="navigation_Widget_Mobile">
+        <div>
+            <a class="back" id="btn_Back_Sub_Menu"><i class="fas fa-arrow-left"></i></a>
+            <div class="info_User">
+                <div class="avatar">
+                    <span class="onligne"></span>
+                    <img src="/public/imgs/avatars/avatar02.jpg" alt="" srcset="">
+                    <span class="lvl_avatar">15</span>
+                </div>
+                <div class="info_User_Text">
+                    <p>Amaury VERDENAL</p>
+                    <p class="exp">Exp : 45/150</p>
+                </div>
+            </div>
+            <div class="">
+                <button id="btn_Logout" class="btn btn-warning">déconnexion</button>
+            </div>
+            <div>
+                <a href="">
+                    <span class="icons" id="newsfeed"></span>
+                    News
+                </a>
+                <a href="">
+                    <span class="icons" id="bar"></span>
+                    Les établissements
+                </a>
+                <a href="">
+                    <span class="icons" id="Groups"></span>
+                    Les groupes
+                </a>
+                <a href="">
+                    <span class="icons" id="members"></span>
+                    Les members
+                </a>
+                <a href="">
+                    <span class="icons" id="badges"></span>
+                    Les badges
+                </a>
+                <a href="">
+                    <span class="icons" id="quests"></span>
+                    Les quests
+                </a>
+                <a href="">
+                    <span class="icons" id="events"></span>
+                    Les events
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!--<aside class="sidebar_Big left">
+        <div class="avatar">
+            <span class="onligne"></span>
+            <img src="/public/imgs/avatars/avatar02.jpg" alt="" srcset="">
+            <span class="lvl_avatar">15</span>
+        </div>
+        <div class="menu small">
+            <button class="menu_Item"><span class="icons" id="newsfeed"></span>Newsfeed</button>
+            <button class="menu_Item"><span class="icons" id="bar"></span>Les Bars</button>
+            <button class="menu_Item"><span class="icons" id="Groups"></span>Les groupes</button>
+            <button class="menu_Item"><span class="icons" id="members"></span>Les membres</button>
+            <button class="menu_Item"><span class="icons" id="badges"></span>Les Badges</button>
+            <button class="menu_Item"><span class="icons" id="quests"></span>Les quêtes</button>
+            <button class="menu_Item"><span class="icons" id="events"></span>Les events</button>
+        </div>
+    </aside>-->
+    {% block content %}{% endblock %}
     <aside class="sidebar right">
         
     </aside>
@@ -186,6 +245,7 @@
             <div class="action_List_Item icons" id="param"></div>
         </div>
     </aside>
+    <div class="none" id="mobile_Black_Zone"></div>
     <footer>
     </footer>
     {% endif %}

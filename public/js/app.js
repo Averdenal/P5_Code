@@ -12,6 +12,14 @@ class App{
         $('.menu').on('click',"#badges",function() {
             window.location.href = 'http://127.0.0.1/Badges';
         });
+        $('#link_Sub_Menu').on('click',function () { 
+            $("#mobile_Black_Zone").removeClass('none');
+            $('#navigation_Widget_Mobile').removeClass('none');
+        })
+        $('#btn_Back_Sub_Menu').on('click',function () { 
+            $("#mobile_Black_Zone").addClass('none');
+            $('#navigation_Widget_Mobile').addClass('none');
+        })
         
     }
     top_Menu(){
