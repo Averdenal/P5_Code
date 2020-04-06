@@ -39,7 +39,6 @@ class User{
     }
     login(){
         $('#login_Form').on('submit',function (e) { 
-            debugger
             e.preventDefault();
             $.ajax({
                 type: "POST",
@@ -52,7 +51,7 @@ class User{
         });
     }
     logout(){
-        $('#btn_Logout').on('click',function(e){
+        $('#btn_Logout1').on('click',function(e){
             e.preventDefault();
             $.ajax({
                 type: "GET",
