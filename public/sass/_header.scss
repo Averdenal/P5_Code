@@ -120,6 +120,20 @@
   }
   
 }
+.bottom_Actions_Mobile{
+  display: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  background-color: $violet-dark;
+  .navbar-nav{
+    @include display-flex;
+    @include justify-content(space-around);
+    @include flex-direction(row);
+  }
+}
   /*--------------------
       MEDIA QUERIES 
   --------------------*/
@@ -128,17 +142,87 @@
   }
   
   @media screen and (max-width: 1365px) {
-    
+    .header{
+      
+      .navbar{
+        @for $i from 6 through 7 {
+          :nth-child(#{$i}){
+            display: none;
+          }
+        }
+        .header_Actions{
+          .interactive-input{
+            input{
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
   }
   
   @media screen and (max-width: 960px) {
-    
+    .header{
+      height: 60px;
+      .navbar{
+        @for $i from 5 through 7 {
+          :nth-child(#{$i}){
+            display: none;
+          }
+        }
+        .header_Actions{
+          .interactive-input{
+            input{
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+    .bottom_Actions_Mobile{
+      display: block;
+    }
   }
   
   @media screen and (max-width: 680px) {
-   
+    .header{
+
+      .navbar{
+        :nth-child(3){
+          display: none;
+        }
+        @for $i from 5 through 7 {
+          :nth-child(#{$i}){
+            display: none;
+          }
+        }
+        .header_Actions{
+          .interactive-input{
+            input{
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+    .bottom_Actions_Mobile{
+      display: block;
+    }
   }
   
   @media screen and (max-width: 480px) {
-  
+    .header{
+
+      .navbar{
+        @for $i from 3 through 7 {
+          :nth-child(#{$i}){
+            display: none;
+          }
+        }
+        
+      }
+    }
+    .bottom_Actions_Mobile{
+      display: block;
+    }
   }
