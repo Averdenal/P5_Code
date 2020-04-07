@@ -7,6 +7,11 @@ use GOA\models\Model;
 
 class UserManager extends Model{
 
+    public function __construct()
+    {
+
+    }
+
     function searchUserByLogin($login)
     {
         $bdd = $this->getBdd();
@@ -28,8 +33,8 @@ class UserManager extends Model{
         
         $pwd = $this->convPwd($pwd);
         $bdd = $this->getBdd();
-        $req = $bdd->prepare("INSERT INTO `users` (id, firstname, lastname, login, password, email,statut,exp,token) 
-        VALUES (NULL, null, null, :login, :password, :email,1,0,null)");
+        $req = $bdd->prepare("INSERT INTO `users` (id, firstname, lastname, login, password, email,statut,pictureprofil,picturebanner,exp,token) 
+        VALUES (NULL, null, null, :login, :password, :email,1,6,5,0,null)");
         $req->bindParam(':login',$login,PDO::PARAM_STR);
         $req->bindParam(':password',$pwd,PDO::PARAM_STR);
         $req->bindParam(':email',$email,PDO::PARAM_STR);
@@ -65,7 +70,7 @@ class UserManager extends Model{
         if(isset($_SESSION['auth'])){
             $auth = $_SESSION['auth'];
             //$rang = $_SESSION['rang'];
-            return ['id' => $auth];
+            return $this->getUsersById($auth);
         }else{
             return null;
         }
@@ -90,9 +95,12 @@ class UserManager extends Model{
     function getUsersById($id)
     {
         $bdd = $this->getBdd();
-        $req = $bdd->prepare('SELECT users.id, users.lastname, users.firstname, users.login, users.email,users.rang
+        $req = $bdd->prepare('SELECT users.id,users.firstname,users.lastname,users.login,users.datenaissance,users.email,users.exp,users.statut, (SELECT url FROM pictures WHERE pictures.idpictures = users.pictureprofil) as pictureprofil,
+        (SELECT url FROM pictures WHERE pictures.idpictures = users.picturebanner) as picturebanner
         FROM users
-        WHERE users.id = :id');
+        JOIN pictures
+        WHERE users.id = :id
+        GROUP BY users.id');
         $req->bindParam(':id', $id, PDO::PARAM_INT);
         $req->execute();
         return $req->fetchObject('GOA\models\User');

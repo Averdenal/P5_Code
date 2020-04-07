@@ -747,7 +747,126 @@
     display: block;
   }
 }
-/* line 9, ../sass/main.scss */
+/* line 2, ../sass/_sub_Menu_Mobile.scss */
+.translate_Sub_Menu {
+  transform: translateX(0) !important;
+  visibility: visible !important;
+  transition: 0.5s ease-in-out transform;
+}
+
+/* line 7, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile {
+  transition: 0.5s ease-in-out transform,0.5s ease-in-out visibility;
+  visibility: hidden;
+  transform: translateX(-100%);
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  background-color: #fff;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  align-items: start;
+  width: 90%;
+  max-width: 400px;
+  height: 100%;
+}
+/* line 21, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info {
+  position: relative;
+}
+/* line 23, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+/* line 28, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info .profil_Info_User {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 33, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info .profil_Info_User .user_Img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 3px solid white;
+}
+/* line 42, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info .profil_Info_User .user_Img img {
+  width: 100px;
+  height: 100px;
+}
+/* line 48, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info #btn_Profil_Logout {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  transform: translateY(-20px);
+  right: 5%;
+  padding: 0 !important;
+}
+/* line 58, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info #btn_Profil_Logout svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
+}
+/* line 63, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info #btn_Profil_Logout svg:hover {
+  fill: #ff5384;
+}
+/* line 67, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info .btn_Back_Sub_Menu {
+  outline: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+}
+/* line 74, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info .btn_Back_Sub_Menu svg {
+  fill: #f9515c;
+  width: 30px;
+  height: 30px;
+}
+/* line 79, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info .btn_Back_Sub_Menu svg:hover {
+  transform: rotate(270deg);
+  fill: #1df377;
+  transition: 0.4s ease transform;
+}
+
+/* line 10, ../sass/main.scss */
 .none {
   display: none;
+}
+
+/* line 13, ../sass/main.scss */
+.left {
+  left: 0;
+}
+
+/* line 16, ../sass/main.scss */
+.right {
+  right: 0;
 }

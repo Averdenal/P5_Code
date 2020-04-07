@@ -5,7 +5,14 @@
 
 @import 'login';
 @import 'header';
+@import 'sub_Menu_Mobile';
 
 .none{
     display: none;
+}
+.left{
+    left: 0;
+}
+.right{
+    right: 0;
 }

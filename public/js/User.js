@@ -51,7 +51,7 @@ class User{
         });
     }
     logout(){
-        $('#btn_Logout1').on('click',function(e){
+        $('#btn_Profil_Logout').on('click',function(e){
             e.preventDefault();
             $.ajax({
                 type: "GET",

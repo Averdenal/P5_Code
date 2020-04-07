@@ -135,7 +135,7 @@
           <div class="progress_Stat">
             <div class="bar_Progress_Wrap">
               <p class="bar_Progress_Info">Next:</p> 
-              <p class="bar_Progress_Info">30 EXP</p>
+              <p class="bar_Progress_Info">{{user.exp}} EXP</p>
             </div>
             <div id="logged-user-level" class="progress_Stat_Bar">
               <canvas width="100" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
@@ -217,7 +217,6 @@
             </li>
           </ul>
         </div>
-        
       </nav>
     </header>
 
@@ -260,6 +259,27 @@
 
         </li>
       </ul>
+    </div>
+    <div class="sub_Menu_Mobile left">
+      <div class="profil_Info">
+        <img src="{{user.picturebanner}}" alt="">
+        <div class="profil_Info_User">
+          <div class="user_Img">
+            <img src="{{user.pictureprofil}}" alt="">
+          </div>
+        </div>
+        <button id="btn_Profil_Logout" class="btn btn-danger">
+          <svg class="icon-login">
+            <use xlink:href="#svg-login"></use>
+          </svg>
+        </button>
+        <button class="btn_Back_Sub_Menu">
+          <svg class="icon-return">
+            <use xlink:href="#svg-return"></use>
+          </svg>
+        </button>
+
+      </div>
     </div>
 
     {% endif %}

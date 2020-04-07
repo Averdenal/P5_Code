@@ -12,22 +12,14 @@ class App{
         $('.menu').on('click',"#badges",function() {
             location.replace('/Badges');
         });
-        $('#link_Sub_Menu').on('click',function () { 
-            $("#mobile_Black_Zone").removeClass('none');
-            $('#navigation_Widget_Mobile').removeClass('none');
-        })
-        $('#btn_Back_Sub_Menu').on('click',function () { 
-            $("#mobile_Black_Zone").addClass('none');
-            $('#navigation_Widget_Mobile').addClass('none');
+        
+
+        $('.sub_Menu_Action_Grid').on('click',function(){
+            $('.sub_Menu_Mobile').addClass('translate_Sub_Menu');
         });
-        $('.sub_Menu').on('click',function () { 
-            $('#navigation_Widget_Mobile').removeClass('none');
-            $("#mobile_Black_Zone").removeClass('none');
-         });
-         $("#mobile_Black_Zone").on('click',function () { 
-            $("#mobile_Black_Zone").addClass('none');
-            $('#navigation_Widget_Mobile').addClass('none');
-          })
+        $('.btn_Back_Sub_Menu').on('click',function(){
+            $('.sub_Menu_Mobile').removeClass('translate_Sub_Menu');
+        });
         
     }
     top_Menu(){
