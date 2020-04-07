@@ -1,8 +1,8 @@
 <?php 
-namespace GOA\Models\Managers;
+namespace GOA\models\Managers;
 
 use PDO;
-use GOA\Models\Model;
+use GOA\models\Model;
 
 class CategoryManager extends Model{
 
@@ -11,6 +11,6 @@ class CategoryManager extends Model{
         $bdd = $this->getBdd();
         $req = $bdd->prepare('SELECT * FROM cats');
         $req->execute();
-        return $req->fetchAll(PDO::FETCH_CLASS,'GOA\Models\Category');
+        return $req->fetchAll(PDO::FETCH_CLASS,'GOA\models\Category');
     }
 }

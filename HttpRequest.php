@@ -1,8 +1,8 @@
 <?php
 namespace GOA;
 
-use GOA\Models\exceptions\NoParamFoundException;
-use GOA\Models\exceptions\NoRouteFoundException;
+use GOA\models\exceptions\NoParamFoundException;
+use GOA\models\exceptions\NoRouteFoundException;
 
 
 class HttpRequest

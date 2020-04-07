@@ -1,8 +1,8 @@
 <?php
 
-namespace GOA\Models;
+namespace GOA\models;
 
-use GOA\Models\Model;
+use GOA\models\Model;
 
 class Category extends Model{
     private $id;

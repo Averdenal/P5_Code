@@ -1,10 +1,10 @@
 <?php
-namespace GOA\Controllers;
+namespace GOA\controllers;
 
-use GOA\Controllers\BaseController;
-use GOA\Models\Managers\CategoryManager;
-use GOA\Models\Managers\EtablissementManager;
-use GOA\Models\Managers\UserManager;
+use GOA\controllers\BaseController;
+use GOA\models\managers\CategoryManager;
+use GOA\models\managers\EtablissementManager;
+use GOA\models\managers\UserManager;
 
 class ControllerEtablissement extends BaseController{
     private $_etabManager;
@@ -24,5 +24,9 @@ class ControllerEtablissement extends BaseController{
         $this->addParam('cats',$this->_catManager->getAllCat());
         $this->addParam('user',$this->_userManager->getConnecte());
         $this->template('viewEtab.twig');
+    }
+    public function getEtablissementBySlug($slug)
+    {
+        # code...
     }
 }

@@ -1,0 +1,144 @@
+@import 'compass';
+.dropdown-toggle::after {
+  display: none;
+}
+.header {
+  @include display-flex;
+  @include justify-content(space-between);
+  @include align-items(center);
+  width: 100%;
+  height: 80px;
+  background-color: $color-secondary;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  .navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .navbar-nav{
+    .nav-item{
+      margin: 0 .5rem;
+      &.show > .nav-link > .icons_Hover{
+        fill: white;
+      }
+    }
+  }
+  .header_Actions{
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+    &.stats_User{
+      width: 200px;
+      .progress_Stat {
+        margin:10px;
+        width: 100px;
+        .bar_Progress_Wrap{
+          @include display-flex;
+          @include justify-content(space-between);
+          font-size: 0.8rem;
+          color: white;
+          font-weight: 900;
+
+        }
+        .progress_Stat_Bar{
+          width: 100px;
+          height: 4px;
+          position: relative;
+          :first-child{
+            background-color: $violet-dark;
+          }
+          :last-child{
+            background-color: $cyan-dark;
+          }
+        }
+      }
+      .info_Lvl{
+        margin:0 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        font-weight: 900;
+        :first-child{
+          margin:0;
+        }
+        :last-child{
+          font-size: 2rem;
+          margin:0;
+        }
+      }
+    }
+    .action_List{
+      @include display-flex;
+      padding: 0 15px;
+      position: relative;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+    }
+  }
+  .sub_Menu_Action_Grid {
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+  }
+  .interactive-input{
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);
+    height: 52px;
+    position: relative;
+    &.dark{
+      input {
+        outline: none;
+        width: 500px;
+        height: 50px;
+        border-radius: 15px 0 0 15px;
+        padding: 10px;
+        border: none;
+        background-color: $violet-dark;
+        color: #fff;
+    }
+    .interactive-input-icon-wrap{
+      @include display-flex;
+      @include justify-content(center);
+      @include align-items(center);
+      height: 50px;
+      width: 50px;
+      border-radius: 0 15px 15px 0;
+      border: none;
+      background-color:$violet-dark;
+    }
+  }
+  }
+  
+}
+  /*--------------------
+      MEDIA QUERIES 
+  --------------------*/
+  @media screen and (max-width: 1500px) {
+    
+  }
+  
+  @media screen and (max-width: 1365px) {
+    
+  }
+  
+  @media screen and (max-width: 960px) {
+    
+  }
+  
+  @media screen and (max-width: 680px) {
+   
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+  }

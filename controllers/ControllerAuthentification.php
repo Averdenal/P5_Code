@@ -1,8 +1,8 @@
 <?php 
-namespace GOA\Controllers;
+namespace GOA\controllers;
 
-use GOA\Controllers\BaseController;
-use GOA\Models\Managers\UserManager;
+use GOA\controllers\BaseController;
+use GOA\models\managers\UserManager;
 
 class ControllerAuthentification extends BaseController
 {
@@ -27,7 +27,6 @@ class ControllerAuthentification extends BaseController
     public function forgetPassword($email)
     {
         $p = bin2hex(random_bytes(32));
-        var_dump($p);
     }
     public function resetPassword($token)
     {

@@ -1,8 +1,8 @@
 <?php
-namespace GOA\Controllers;
+namespace GOA\controllers;
 
-use GOA\Controllers\BaseController;
-use GOA\Models\Managers\UserManager;
+use GOA\controllers\BaseController;
+use GOA\models\managers\UserManager;
 
 class ControllerBagdes extends BaseController{
 

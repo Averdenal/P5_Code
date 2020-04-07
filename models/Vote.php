@@ -1,5 +1,5 @@
 <?php
-namespace GOA\Models;
+namespace GOA\models;
 class vote{
     public $id;
     public $vote;

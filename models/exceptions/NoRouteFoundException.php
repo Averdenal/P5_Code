@@ -1,5 +1,5 @@
 <?php 
-namespace GOA\Models\exceptions;
+namespace GOA\models\exceptions;
 
 use Exception;
 

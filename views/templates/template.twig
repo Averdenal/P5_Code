@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="/public/stylesheets/all.min.css">
-    <link rel="stylesheet" href="/public/stylesheets/style.css">
-    <link rel="stylesheet" href="/public/stylesheets/etab.css">
+    <link rel="stylesheet" href="/public/stylesheets/main.css">
     <title>{{ titlePage }}</title>
 </head>
 <body>
@@ -88,171 +87,146 @@
     {% endif %}
     {% if user %}
     <header class="header">
-        <div class="header_Action_phone_top">
-            <div class="logo"></div>
-            <div class="header_Text">GOA</div>
-            <div href="#" class="menu_Main_Item_Link icons" id="link_Sub_Menu"></div>
-            <div></div>
-            <div class="interactive_Input">
-                <input type="text">
-                <div class="interactive_Input_Icon_Wrap icons search_Icon"></div>
-            </div>
-        </div>
-        <div class="header_Action">
-            <div class="logo"></div>
-            <div class="header_Text">Getting Out Again</div>
-        </div>
-        <div class="header_Action">
-            <div></div>
-            <nav class="navigation">
-                <ul class="menu_Main">
-                    <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link icons" id="link_Sub_Menu"></a></li>
-                    <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link">HOME</a></li>
-                    <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link">HOME</a></li>
-                    <li class="menu_Main_Item"><a href="#" class="menu_Main_Item_Link">...</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header_Action">
-            <div class="interactive_Input">
-                <input type="text">
-                <div class="interactive_Input_Icon_Wrap icons search_Icon"></div>
-            </div>
-            
-        </div>
-        <div class="header_Action">
-        {% if user %}
-            <div class="progress_Stat">
-                <div class="bar-progress-wrap">
-                    <p class="bar-progress-info">Next: <span class="bar-progress-text">{{ user.expBeforeLvl }}<span class="bar-progress-unit">exp</span></span></p>
-                </div>
-                <div id="logged-user-level" class="progress-stat-bar" style="width: 110px; height: 4px; position: relative;">
-                    <canvas width="110" height="4" style="position: absolute;top: 0px;left: 0px;background-color: #f0f8ff73;"></canvas>
-                    <canvas width="80" height="4" style="position: absolute;top: 0px;left: 0px;background-color: #7fff0099;"></canvas>
-                </div>
-            </div>
-            <div class="info_Lvl"><p>Level</p><Span>{{user.lvl}}</Span></div>
-        {% endif %}
-        </div>
-        <div class="header_Action">
-            <div class="action-list">
-                <div class="action-list-item icons" id="market"></div>
-                <div class="action-list-item icons" id="friends"></div>
-                <div class="action-list-item icons" id="messages"></div>
-                <div class="action-list-item icons" id="notifs"></div>
-            </div>
-            <div>
-                <div class="action-item icons" id="param"></div>
-            </div>
-        </div>
-    </header>
-    <div id="conf_Sub_Menu">
-        <ul>
-            <li><a href="" id="btn_Logout">deconnexion</a></li>
-        </ul>
-    </div>
-    <!--<aside class="sidebar left">
-        <div class="avatar">
-            <span class="onligne"></span>
-            <img src="/public/imgs/avatars/avatar02.jpg" alt="" srcset="">
-            <span class="lvl_avatar">15</span>
-        </div>
-        <div class="menu small">
-            <button class="menu_Item"><span class="icons" id="newsfeed"></span></button>
-            <button class="menu_Item"><span class="icons" id="bar"></span></button>
-            <button class="menu_Item"><span class="icons" id="Groups"></span></button>
-            <button class="menu_Item"><span class="icons" id="members"></span></button>
-            <button class="menu_Item"><span class="icons" id="badges"></span></button>
-            <button class="menu_Item"><span class="icons" id="quests"></span></button>
-            <button class="menu_Item"><span class="icons" id="events"></span></button>
-        </div>
-    </aside>-->
-    <nav class="navigation_Widget left none" id="navigation_Widget_Mobile">
-        <div>
-            <a class="back" id="btn_Back_Sub_Menu"><i class="fas fa-arrow-left"></i></a>
-            <div class="info_User">
-                <div class="avatar">
-                    <span class="onligne"></span>
-                    <img src="/public/imgs/avatars/avatar02.jpg" alt="" srcset="">
-                    <span class="lvl_avatar">15</span>
-                </div>
-                <div class="info_User_Text">
-                    <p>Amaury VERDENAL</p>
-                    <p class="exp">Exp : 45/150</p>
-                </div>
-            </div>
-            <div class="">
-                <button id="btn_Logout1" class="btn btn-warning">déconnexion</button>
-            </div>
-            <div>
-                <a href="">
-                    <span class="icons" id="newsfeed"></span>
-                    News
-                </a>
-                <a href="">
-                    <span class="icons" id="bar"></span>
-                    Les établissements
-                </a>
-                <a href="">
-                    <span class="icons" id="Groups"></span>
-                    Les groupes
-                </a>
-                <a href="">
-                    <span class="icons" id="members"></span>
-                    Les members
-                </a>
-                <a href="">
-                    <span class="icons" id="badges"></span>
-                    Les badges
-                </a>
-                <a href="">
-                    <span class="icons" id="quests"></span>
-                    Les quests
-                </a>
-                <a href="">
-                    <span class="icons" id="events"></span>
-                    Les events
-                </a>
-            </div>
-        </div>
-    </nav>
-    <!--<aside class="sidebar_Big left">
-        <div class="avatar">
-            <span class="onligne"></span>
-            <img src="/public/imgs/avatars/avatar02.jpg" alt="" srcset="">
-            <span class="lvl_avatar">15</span>
-        </div>
-        <div class="menu small">
-            <button class="menu_Item"><span class="icons" id="newsfeed"></span>Newsfeed</button>
-            <button class="menu_Item"><span class="icons" id="bar"></span>Les Bars</button>
-            <button class="menu_Item"><span class="icons" id="Groups"></span>Les groupes</button>
-            <button class="menu_Item"><span class="icons" id="members"></span>Les membres</button>
-            <button class="menu_Item"><span class="icons" id="badges"></span>Les Badges</button>
-            <button class="menu_Item"><span class="icons" id="quests"></span>Les quêtes</button>
-            <button class="menu_Item"><span class="icons" id="events"></span>Les events</button>
-        </div>
-    </aside>-->
-    {% block content %}{% endblock %}
-    <aside class="sidebar right">
+      <nav class="navbar navbar-expand-sm navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Getting Out Again</a>
+        <div class="header_Actions">
+          <div class="sub_Menu_Action_Grid">
+            <svg class="icons_Hover icon-grid">
+              <use xlink:href="#svg-grid"></use>
+            </svg>
+          </div>
+        </div>  
+        <div class="header_Actions">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Profil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
         
-    </aside>
-    <aside class="header_Action_Phone_Bottom">
-        <div class="action_List">
-            <div class="action_List_Item icons" id="market"></div>
-            <div class="action_List_Item icons" id="friends"></div>
-            <div class="action_List_Item icons" id="messages"></div>
-            <div class="action_List_Item icons" id="notifs"></div>
-            <div class="action_List_Item icons" id="param"></div>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <svg class="icon-dots">
+                  <use xlink:href="#svg-dots"></use>
+                </svg>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">A propos</a>
+                <a class="dropdown-item" href="#">Contact</a>
+                <a class="dropdown-item" href="#">charte de confidentialité</a>
+              </div>
+            </li>
+          </ul>
         </div>
-    </aside>
-    <div class="none" id="mobile_Black_Zone"></div>
-    <footer>
-    </footer>
+        <div class="header_Actions">
+          <div class="interactive-input dark">
+            <input type="text" id="search-main" name="search_main" placeholder="Recherche ici, ce que tu veux !">
+            <div class="interactive-input-icon-wrap">
+              <svg class="icon-magnifying-glass">
+                <use xlink:href="#svg-magnifying-glass"></use>
+              </svg>
+            </div>
+          </div>
+        </div>  
+        <div class="header_Actions stats_User">
+          <div class="progress_Stat">
+            <div class="bar_Progress_Wrap">
+              <p class="bar_Progress_Info">Next:</p> 
+              <p class="bar_Progress_Info">30 EXP</p>
+            </div>
+            <div id="logged-user-level" class="progress_Stat_Bar">
+              <canvas width="100" height="4" style="position: absolute; top: 0px; left: 0px;"></canvas>
+              <canvas width="40" height="4" style="position: absolute; top: 0px; left: 0px; color:white"></canvas>
+            </div>
+          </div>
+          <div class="info_Lvl">
+            <p>Lvl</p>
+            <p class="info_Lvl_Lvl">3</p>
+          </div>
+        </div>
+        <div class="header_Actions">
+          <div class="action_List">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  <svg class="icons_Hover icon-shopping-bag">
+                    <use xlink:href="#svg-shopping-bag"></use>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">A propos</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                  <a class="dropdown-item" href="#">charte de confidentialité</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  <svg class="icons_Hover icon-friend">
+                    <use xlink:href="#svg-friend"></use>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">A propos</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                  <a class="dropdown-item" href="#">charte de confidentialité</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  <svg class="icons_Hover icon-messages">
+                    <use xlink:href="#svg-messages"></use>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">A propos</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                  <a class="dropdown-item" href="#">charte de confidentialité</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                  <svg class="icons_Hover icon-notification">
+                    <use xlink:href="#svg-notification"></use>
+                  </svg>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">A propos</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                  <a class="dropdown-item" href="#">charte de confidentialité</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header_Actions">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <svg class="icons_Hover icon-settings">
+                  <use xlink:href="#svg-settings"></use>
+                </svg>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">A propos</a>
+                <a class="dropdown-item" href="#">Contact</a>
+                <a class="dropdown-item" href="/Authentification/logout">Déconnexion</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+    </header>
+
     {% endif %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/public/js/utils/svg-loader.js"></script>
     <script src="/public/js/App.js"></script>
     <script src="/public/js/Etab.js"></script>
     <script src="/public/js/User.js"></script>

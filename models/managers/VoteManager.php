@@ -1,8 +1,8 @@
 <?php
-namespace GOA\Models\Managers;
+namespace GOA\models\Managers;
 
 use PDO;
-use GOA\Models\Model;
+use GOA\models\Model;
 
 class VoteManager extends Model{
 
@@ -12,6 +12,6 @@ class VoteManager extends Model{
         $req = $bdd->prepare('SELECT * FROM voteetab WHERE etablissment = :id');
         $req->bindParam(':id', $etablissment , PDO::PARAM_INT);
         $req->execute();
-        return $req->fetchAll(PDO::FETCH_CLASS,'Vote');
+        return $req->fetchAll(PDO::FETCH_CLASS,'GOA\models\Vote');
     }
 }

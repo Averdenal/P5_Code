@@ -1,5 +1,5 @@
 <?php
-namespace GOA\Models;
+namespace GOA\models;
 class Environement
 {
     public static function get()

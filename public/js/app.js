@@ -7,10 +7,10 @@ class App{
     }
     sub_Menu() {
         $('.menu').on('click',"#bar",function() {
-            window.location.href = 'http://127.0.0.1/Etablissements';
+            location.replace('/Etablissements');
         });
         $('.menu').on('click',"#badges",function() {
-            window.location.href = 'http://127.0.0.1/Badges';
+            location.replace('/Badges');
         });
         $('#link_Sub_Menu').on('click',function () { 
             $("#mobile_Black_Zone").removeClass('none');
@@ -19,7 +19,15 @@ class App{
         $('#btn_Back_Sub_Menu').on('click',function () { 
             $("#mobile_Black_Zone").addClass('none');
             $('#navigation_Widget_Mobile').addClass('none');
-        })
+        });
+        $('.sub_Menu').on('click',function () { 
+            $('#navigation_Widget_Mobile').removeClass('none');
+            $("#mobile_Black_Zone").removeClass('none');
+         });
+         $("#mobile_Black_Zone").on('click',function () { 
+            $("#mobile_Black_Zone").addClass('none');
+            $('#navigation_Widget_Mobile').addClass('none');
+          })
         
     }
     top_Menu(){

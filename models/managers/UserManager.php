@@ -1,8 +1,8 @@
 <?php
-namespace GOA\Models\Managers;
+namespace GOA\models\Managers;
 
 use PDO;
-use GOA\Models\Model;
+use GOA\models\Model;
 
 
 class UserManager extends Model{
@@ -13,7 +13,7 @@ class UserManager extends Model{
         $req = $bdd->prepare("SELECT * FROM users WHERE login = :login");
         $req->bindParam(':login',$login,PDO::PARAM_STR);
         $req->execute();
-        return $req->fetchObject('GOA\Models\User');
+        return $req->fetchObject('GOA\models\User');
     }
     function searchUserByEMail($email)
     {
@@ -21,7 +21,7 @@ class UserManager extends Model{
         $req = $bdd->prepare("SELECT * FROM users WHERE email = :email");
         $req->bindParam(':email',$email,PDO::PARAM_STR);
         $req->execute();
-        return $req->fetchObject('GOA\Models\User');
+        return $req->fetchObject('GOA\models\User');
     }
 
     function bddAddUser($login,$email,$pwd){
@@ -85,7 +85,7 @@ class UserManager extends Model{
         JOIN rangs
         ON users.rang = rangs.id');
         $req->execute();
-        return $req->fetchAll(PDO::FETCH_CLASS,'GOA\Models\User');
+        return $req->fetchAll(PDO::FETCH_CLASS,'GOA\models\User');
     }
     function getUsersById($id)
     {
@@ -95,7 +95,7 @@ class UserManager extends Model{
         WHERE users.id = :id');
         $req->bindParam(':id', $id, PDO::PARAM_INT);
         $req->execute();
-        return $req->fetchObject('GOA\Models\User');
+        return $req->fetchObject('GOA\models\User');
     }
 
     public function deleteUser($id)

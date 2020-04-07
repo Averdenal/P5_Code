@@ -1,5 +1,5 @@
 <?php
-namespace GOA\Controllers;
+namespace GOA\controllers;
 class BaseController
 {
     private $_param;
