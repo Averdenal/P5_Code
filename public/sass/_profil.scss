@@ -1,0 +1,246 @@
+@import 'compass';
+
+#profil_User{
+    margin-bottom: 50px;
+    .top_User_Info{
+        height: 500px;
+        border-radius: 40px;
+        overflow: hidden;
+        .top_User_Info_Banner{
+            .banner_User{
+                width: 100%;
+                object-fit: cover;
+                height: 300px;
+            }
+        }
+        .top_User_All_Info{
+            position: relative;
+            height: 200px;
+            background-color: $white;
+            .picture_User{
+                position: absolute;
+                left: 50%;
+                top: -150px;
+                transform: translate(-50%);
+                width: 200px;
+                height: 200px;
+                border-radius: 100px;
+                border: 5px solid $white;
+            }
+            .zone_Btn_User_Action{
+                position: absolute;
+                right: 20px;
+                top: -30px;
+                @include display-flex;
+                button{
+                    @include display-flex;
+                    @include flex-direction(row);
+                    @include justify-content(center);
+                    @include align-items(center);
+                    margin-right:20px;
+                    width: 175px;
+                    height: 40px;
+                    color: $white;
+                    font-weight: 600;
+                    &.btn{
+                        border-radius: 15px;
+                    }
+                    &:hover{
+                        box-shadow: $shadow-darker;
+                    }
+                    p{
+                        margin: 0;
+                    }
+                }
+                #add_Friends{
+                    background-color: $violet;
+                    &:hover{
+                        background-color: $violet-dark;
+                    }
+                }
+                #send_Message{
+                    background-color: $cyan;
+                    &:hover{
+                        background-color: $cyan-dark;
+                    }
+                }
+
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1500px) {
+    
+}
+
+@media screen and (max-width: 1365px) {
+    #profil_User{
+        margin-bottom: 50px;
+        .top_User_Info{
+            .top_User_All_Info{
+                .zone_Btn_User_Action{
+                    position: absolute;
+                    right: 20px;
+                    top: -30px;
+                    @include display-flex;
+                    button{
+                        width: 150px;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #profil_User{
+        .top_User_Info{
+            height: 350px;
+            border-radius: 40px;
+            .top_User_Info_Banner{
+                .banner_User{
+                    height: 200px;
+                }
+            }
+            .top_User_All_Info{
+                height: 150px;
+                .picture_User{
+                    top: -90px;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 100px;
+                    border: 2px solid $white;
+                }
+                .zone_Btn_User_Action{
+                    right: 10px;
+                    top: -20px;
+                    button{
+                        margin-right:10px;
+                        width: 120px;
+                        height: 30px;
+                        &.btn{
+                            border-radius: 5px;
+                        }
+                        &:hover{
+                        }
+
+                    }
+                    #add_Friends{
+                        &:hover{
+                        }
+                    }
+                    #send_Message{
+                        &:hover{
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    #profil_User{
+        .top_User_Info{
+            height: 250px;
+            border-radius: 40px;
+            .top_User_Info_Banner{
+                .banner_User{
+                    height: 100px;
+                }
+            }
+            .top_User_All_Info{
+                height: 150px;
+                .picture_User{
+                    top: -75px;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50px;
+                    border: 2px solid $white;
+                }
+                .zone_Btn_User_Action{
+                    right: 10px;
+                    top: -25px;
+                    button{
+                        margin-right:10px;
+                        width: 40px;
+                        height: 40px;
+                        &.btn{
+                            border-radius: 5px;
+                        }
+                        &:hover{
+                        }
+                        p{
+                            display: none;
+                        }
+                    }
+                    #add_Friends{
+                        &:hover{
+                        }
+                    }
+                    #send_Message{
+                        &:hover{
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #profil_User{
+        .top_User_Info{
+            height: 250px;
+            border-radius: 20px;
+            .top_User_Info_Banner{
+                .banner_User{
+                    height: 100px;
+                }
+            }
+            .top_User_All_Info{
+                height: 150px;
+                .picture_User{
+                    top: -60px;
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50px;
+                    border: 2px solid $white;
+                }
+                .zone_Btn_User_Action{
+                    right: 10px;
+                    top: -20px;
+                    button{
+                        margin-right:10px;
+                        width: 30px;
+                        height: 30px;
+                        &.btn{
+                            border-radius: 5px;
+                        }
+                        &:hover{
+                        }
+                        p{
+                            display: none;
+                        }
+                    }
+                    #add_Friends{
+                        &:hover{
+                        }
+                    }
+                    #send_Message{
+                        &:hover{
+                        }
+                    }
+    
+                }
+            }
+            
+        }
+    }
+}

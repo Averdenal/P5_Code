@@ -671,6 +671,7 @@ a, h1, h2, h3, h4, h5, h6, p {
 
 /* line 142, ../sass/_header.scss */
 .bottom_Actions_Mobile {
+  z-index: 10000;
   display: none;
   position: fixed;
   width: 100%;
@@ -679,7 +680,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   height: 40px;
   background-color: #4e4ac8;
 }
-/* line 150, ../sass/_header.scss */
+/* line 151, ../sass/_header.scss */
 .bottom_Actions_Mobile .navbar-nav {
   display: -webkit-flex;
   display: flex;
@@ -693,96 +694,96 @@ a, h1, h2, h3, h4, h5, h6, p {
     MEDIA QUERIES 
 --------------------*/
 @media screen and (max-width: 1365px) {
-  /* line 168, ../sass/_header.scss */
+  /* line 169, ../sass/_header.scss */
   .header .navbar :nth-child(6) {
     display: none;
   }
-  /* line 168, ../sass/_header.scss */
+  /* line 169, ../sass/_header.scss */
   .header .navbar :nth-child(7) {
     display: none;
   }
-  /* line 174, ../sass/_header.scss */
+  /* line 175, ../sass/_header.scss */
   .header .navbar .header_Actions .interactive-input input {
     width: 250px;
   }
 }
 @media screen and (max-width: 960px) {
-  /* line 184, ../sass/_header.scss */
+  /* line 185, ../sass/_header.scss */
   .header {
     height: 60px;
   }
-  /* line 188, ../sass/_header.scss */
+  /* line 189, ../sass/_header.scss */
   .header .navbar :nth-child(5) {
     display: none;
   }
-  /* line 188, ../sass/_header.scss */
+  /* line 189, ../sass/_header.scss */
   .header .navbar :nth-child(6) {
     display: none;
   }
-  /* line 188, ../sass/_header.scss */
+  /* line 189, ../sass/_header.scss */
   .header .navbar :nth-child(7) {
     display: none;
   }
-  /* line 194, ../sass/_header.scss */
+  /* line 195, ../sass/_header.scss */
   .header .navbar .header_Actions .interactive-input input {
     width: 250px;
   }
 
-  /* line 201, ../sass/_header.scss */
+  /* line 202, ../sass/_header.scss */
   .bottom_Actions_Mobile {
     display: block;
   }
 }
 @media screen and (max-width: 680px) {
-  /* line 210, ../sass/_header.scss */
+  /* line 211, ../sass/_header.scss */
   .header .navbar :nth-child(3) {
     display: none;
   }
-  /* line 214, ../sass/_header.scss */
+  /* line 215, ../sass/_header.scss */
   .header .navbar :nth-child(5) {
     display: none;
   }
-  /* line 214, ../sass/_header.scss */
+  /* line 215, ../sass/_header.scss */
   .header .navbar :nth-child(6) {
     display: none;
   }
-  /* line 214, ../sass/_header.scss */
+  /* line 215, ../sass/_header.scss */
   .header .navbar :nth-child(7) {
     display: none;
   }
-  /* line 220, ../sass/_header.scss */
+  /* line 221, ../sass/_header.scss */
   .header .navbar .header_Actions .interactive-input input {
     width: 250px;
   }
 
-  /* line 227, ../sass/_header.scss */
+  /* line 228, ../sass/_header.scss */
   .bottom_Actions_Mobile {
     display: block;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 237, ../sass/_header.scss */
+  /* line 238, ../sass/_header.scss */
   .header .navbar :nth-child(3) {
     display: none;
   }
-  /* line 237, ../sass/_header.scss */
+  /* line 238, ../sass/_header.scss */
   .header .navbar :nth-child(4) {
     display: none;
   }
-  /* line 237, ../sass/_header.scss */
+  /* line 238, ../sass/_header.scss */
   .header .navbar :nth-child(5) {
     display: none;
   }
-  /* line 237, ../sass/_header.scss */
+  /* line 238, ../sass/_header.scss */
   .header .navbar :nth-child(6) {
     display: none;
   }
-  /* line 237, ../sass/_header.scss */
+  /* line 238, ../sass/_header.scss */
   .header .navbar :nth-child(7) {
     display: none;
   }
 
-  /* line 244, ../sass/_header.scss */
+  /* line 245, ../sass/_header.scss */
   .bottom_Actions_Mobile {
     display: block;
   }
@@ -995,17 +996,283 @@ a, h1, h2, h3, h4, h5, h6, p {
   fill: #615dfa !important;
 }
 
-/* line 18, ../sass/main.scss */
+/* line 2, ../sass/_body.scss */
+.contener {
+  max-width: 1184px;
+  margin: auto;
+}
+
+/* line 6, ../sass/_body.scss */
+.body {
+  margin-top: 150px;
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 15, ../sass/_body.scss */
+  .body {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 21, ../sass/_body.scss */
+  .body {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 680px) {
+  /* line 27, ../sass/_body.scss */
+  .body {
+    margin-top: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 33, ../sass/_body.scss */
+  .body {
+    margin-top: 80px;
+  }
+}
+/* line 3, ../sass/_profil.scss */
+#profil_User {
+  margin-bottom: 50px;
+}
+/* line 5, ../sass/_profil.scss */
+#profil_User .top_User_Info {
+  height: 500px;
+  border-radius: 40px;
+  overflow: hidden;
+}
+/* line 10, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_Info_Banner .banner_User {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+/* line 16, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info {
+  position: relative;
+  height: 200px;
+  background-color: #fff;
+}
+/* line 20, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .picture_User {
+  position: absolute;
+  left: 50%;
+  top: -150px;
+  transform: translate(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  border: 5px solid #fff;
+}
+/* line 30, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
+  position: absolute;
+  right: 20px;
+  top: -30px;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 35, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-right: 20px;
+  width: 175px;
+  height: 40px;
+  color: #fff;
+  font-weight: 600;
+}
+/* line 45, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
+  border-radius: 15px;
+}
+/* line 48, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button:hover {
+  box-shadow: 3px 5px 20px 0px rgba(34, 33, 73, 0.582);
+}
+/* line 51, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button p {
+  margin: 0;
+}
+/* line 55, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action #add_Friends {
+  background-color: #615dfa;
+}
+/* line 57, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action #add_Friends:hover {
+  background-color: #4e4ac8;
+}
+/* line 61, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action #send_Message {
+  background-color: #23d2e2;
+}
+/* line 63, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action #send_Message:hover {
+  background-color: #00c7d9;
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 79, ../sass/_profil.scss */
+  #profil_User {
+    margin-bottom: 50px;
+  }
+  /* line 83, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
+    position: absolute;
+    right: 20px;
+    top: -30px;
+    display: -webkit-flex;
+    display: flex;
+  }
+  /* line 88, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 960px) {
+  /* line 100, ../sass/_profil.scss */
+  #profil_User .top_User_Info {
+    height: 350px;
+    border-radius: 40px;
+  }
+  /* line 104, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_Info_Banner .banner_User {
+    height: 200px;
+  }
+  /* line 108, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info {
+    height: 150px;
+  }
+  /* line 110, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User {
+    top: -90px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 2px solid #fff;
+  }
+  /* line 117, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
+    right: 10px;
+    top: -20px;
+  }
+  /* line 120, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
+    margin-right: 10px;
+    width: 120px;
+    height: 30px;
+  }
+  /* line 124, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 680px) {
+  /* line 148, ../sass/_profil.scss */
+  #profil_User .top_User_Info {
+    height: 250px;
+    border-radius: 40px;
+  }
+  /* line 152, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_Info_Banner .banner_User {
+    height: 100px;
+  }
+  /* line 156, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info {
+    height: 150px;
+  }
+  /* line 158, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User {
+    top: -75px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+  }
+  /* line 165, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
+    right: 10px;
+    top: -25px;
+  }
+  /* line 168, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+  /* line 172, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
+    border-radius: 5px;
+  }
+  /* line 177, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button p {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 199, ../sass/_profil.scss */
+  #profil_User .top_User_Info {
+    height: 250px;
+    border-radius: 20px;
+  }
+  /* line 203, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_Info_Banner .banner_User {
+    height: 100px;
+  }
+  /* line 207, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info {
+    height: 150px;
+  }
+  /* line 209, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User {
+    top: -60px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+  }
+  /* line 216, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
+    right: 10px;
+    top: -20px;
+  }
+  /* line 219, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  /* line 223, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
+    border-radius: 5px;
+  }
+  /* line 228, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button p {
+    display: none;
+  }
+}
+/* line 20, ../sass/main.scss */
+body {
+  background-color: #eaeaf5;
+}
+
+/* line 23, ../sass/main.scss */
 .none {
   display: none;
 }
 
-/* line 21, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .left {
   left: 0;
 }
 
-/* line 24, ../sass/main.scss */
+/* line 29, ../sass/main.scss */
 .right {
   right: 0;
 }

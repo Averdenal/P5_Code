@@ -1,0 +1,26 @@
+{% extends "/templates/template.twig" %}
+{% block content %}
+<div class="contener" id="profil_User">
+    <div class="col-12">
+        <div class="top_User_Info">
+            <div class="top_User_Info_Banner">
+                <img src="{{user.picturebanner}}" alt="" class="banner_User">
+            </div>
+            <div class="top_User_All_Info">
+                <img src="{{user.pictureprofil}}" alt="" class="picture_User">
+                <div class="zone_Btn_User_Action">
+                    <button class="btn" id="add_Friends">
+                        <span></span>
+                        <p>Ajouter</p> 
+                    </button>
+                    <button class="btn" id="send_Message">
+                        <span></span>
+                        <p>Messages</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

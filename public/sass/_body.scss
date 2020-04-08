@@ -1,0 +1,36 @@
+@import 'compass';
+.contener{
+    max-width: 1184px;
+    margin: auto;
+}
+.body{
+    margin-top: 150px;
+}
+
+@media screen and (max-width: 1500px) {
+    
+}
+
+@media screen and (max-width: 1365px) {
+    .body{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .body{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .body{
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .body{
+        margin-top: 80px;
+    }
+}

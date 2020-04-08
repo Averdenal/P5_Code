@@ -14,7 +14,12 @@ a, h1, h2, h3, h4, h5, h6, p {
 @import 'login';
 @import 'header';
 @import 'sub_Menu_Mobile';
+@import 'body';
 
+@import 'profil';
+body{
+    background-color: $gray-lighter;
+}
 .none{
     display: none;
 }

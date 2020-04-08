@@ -46,5 +46,17 @@
         "controller":"ControllerAuthentification",
         "action":"logout",
         "param":""
+    },
+
+
+
+
+    {
+        "method":"GET",
+        "name":"profil",
+        "route":"/User/(.*)",
+        "controller":"ControllerUser",
+        "action":"getProfil",
+        "param":"login"
     }
 ]
