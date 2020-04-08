@@ -11,6 +11,7 @@
     <title>{{ titlePage }}</title>
 </head>
 <body>
+  
     {% if user == null %}
     <div id="login_Page" class="container-fluid row">
         <div class="login_Page_Info">
@@ -89,7 +90,13 @@
     <header class="header">
       <nav class="navbar navbar-expand-sm navbar-dark">
         <!-- Brand -->
-        <a class="navbar-brand" href="#">Getting Out Again</a>
+        <div class="header_Title_Logo">
+          <img src="/public/imgs/logo/logo.png" alt="" srcset="">
+          <a class="navbar-brand" href="#">
+            <p>Getting Out Again</p>
+          </a>
+        </div>
+        
         <div class="header_Actions">
           <div class="sub_Menu_Action_Grid">
             <svg class="icons_Hover icon-grid">
@@ -144,7 +151,8 @@
           </div>
           <div class="info_Lvl">
             <p>Lvl</p>
-            <p class="info_Lvl_Lvl">3</p>
+            <p class="info_Lvl_Lvl">42
+            </p>
           </div>
         </div>
         <div class="header_Actions ">
@@ -278,7 +286,87 @@
             <use xlink:href="#svg-return"></use>
           </svg>
         </button>
-
+        <div class="info_User">
+          <h4>{{user.firstname}} {{user.lastname}}</h4>
+          <p>{{user.login}}</p>
+        </div>
+        <div class="badges_User">
+          {% for badge in badges %}
+          <img src="{{badge.picture}}" alt="{{badge.name}}">
+          {% endfor %}
+        </div>
+        <div class="stat_Profil_User">
+          <div class="stat_Profil_User_Info">
+            <p>99</p>
+            <p>Posts</p>
+          </div>
+          <div class="stat_Profil_User_Info">
+            <p>99</p>
+            <p>friends</p>
+          </div>
+          <div class="stat_Profil_User_Info">
+            <p>99</p>
+            <p>visites</p>
+          </div>
+        </div>
+        <div class="sub_Menu_Content">
+          <button class="btn">
+            <span>
+              <svg class="icon-newsfeed">
+                <use xlink:href="#svg-newsfeed"></use>
+              </svg>
+            </span>
+            <p>Newsfeed</p>
+          </button>
+          <button class="btn">
+            <span>
+              <svg class="icon-overview">
+                <use xlink:href="#svg-overview"></use>
+              </svg>
+            </span>
+            <p>Les stats</p>
+          </button>
+          <button class="btn">
+            <span>
+              <svg class="icon-group">
+                <use xlink:href="#svg-group"></use>
+              </svg>
+            </span>
+            <p>Les groupes</p>
+          </button>
+          <button class="btn">
+            <span>
+              <svg class="icon-members">
+                <use xlink:href="#svg-members"></use>
+              </svg>
+            </span>
+            <p>Les membres</p>
+          </button>
+          <button class="btn">
+            <span>
+              <svg class="icon-badges">
+                <use xlink:href="#svg-badges"></use>
+              </svg>
+            </span>
+            <p>Les badges</p>
+          </button>
+          <button class="btn">
+            <span>
+              <svg class="icon-quests">
+                <use xlink:href="#svg-quests"></use>
+              </svg>
+            </span>
+            <p>Les quests</p>
+          </button>
+          <button class="btn">
+            <span>
+              <svg class="icon-events">
+                <use xlink:href="#svg-events"></use>
+              </svg>
+            </span>
+            <p>Les events</p>
+          </button>
+        </div>
       </div>
     </div>
 

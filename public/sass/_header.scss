@@ -13,10 +13,28 @@
   top: 0;
   left: 0;
   z-index: 10000;
+  }
   .navbar{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    .header_Title_Logo{
+      @include display-flex;
+      @include justify-content(space-between);
+      @include align-items(center);
+      img{
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+      }
+      a{
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 900;
+        p{
+          margin: 0;
+        }
+      }
   }
   .navbar-nav{
     .nav-item{
@@ -68,7 +86,8 @@
           margin:0;
         }
         :last-child{
-          font-size: 2rem;
+          line-height: 1;
+          font-size: 1.5rem;
           margin:0;
         }
       }

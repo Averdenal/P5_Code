@@ -1,4 +1,12 @@
+
+
 @import 'font';
+a, h1, h2, h3, h4, h5, h6, p {
+    font-family: Rajdhani,sans-serif;
+    line-height: 1em;
+    font-weight: 600;
+}
+
 @import 'color';
 @import 'color-theme';
 @import 'icon';

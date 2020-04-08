@@ -742,8 +742,8 @@ const svgWrap = document.createElement('div'),
       C19,7.083,16.493,3.76,13,2.523z M11,0H9v10h2V0z"/>
     </symbol>
   </svg>
-  <!-- /SVG LOGIN -->
-`;
+  <!-- /SVG LOGIN -->`;
 
 svgWrap.innerHTML = svgData;
 document.body.appendChild(svgWrap);
+

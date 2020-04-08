@@ -2,9 +2,7 @@
 
 namespace GOA\models;
 
-use GOA\models\Model;
-
-class Category extends Model{
+class Category{
     private $id;
     public $name;
 
