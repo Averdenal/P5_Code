@@ -47,10 +47,6 @@
         "action":"logout",
         "param":""
     },
-
-
-
-
     {
         "method":"GET",
         "name":"profil",
@@ -58,5 +54,29 @@
         "controller":"ControllerUser",
         "action":"getProfil",
         "param":"login"
+    },
+    {
+        "method":"GET",
+        "name":"profilEdit",
+        "route":"/EditUser/(.*)",
+        "controller":"ControllerUser",
+        "action":"getEditProfil",
+        "param":"login"
+    },
+    {
+        "method":"POST",
+        "name":"editBanner",
+        "route":"/updateBanner",
+        "controller":"ControllerUser",
+        "action":"changeBanner",
+        "param":""
+    },
+    {
+        "method":"POST",
+        "name":"editPicture",
+        "route":"/updatePicture",
+        "controller":"ControllerUser",
+        "action":"changePicture",
+        "param":"Picture"
     }
 ]

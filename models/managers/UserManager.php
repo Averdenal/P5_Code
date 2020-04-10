@@ -12,11 +12,16 @@ class UserManager extends Model{
 
     }
 
-    function searchUserByLogin($login)
+    function getUsersBylogin($login)
     {
         $bdd = $this->getBdd();
-        $req = $bdd->prepare("SELECT * FROM users WHERE login = :login");
-        $req->bindParam(':login',$login,PDO::PARAM_STR);
+        $req = $bdd->prepare('SELECT users.about,users.password, users.id,users.firstname,users.lastname,users.login,users.datenaissance,users.email,users.exp,users.statut, (SELECT url FROM pictures WHERE pictures.idpictures = users.pictureprofil) as pictureprofil,
+        (SELECT url FROM pictures WHERE pictures.idpictures = users.picturebanner) as picturebanner
+        FROM users
+        JOIN pictures
+        WHERE users.login = :loginUser
+        GROUP BY users.id');
+        $req->bindParam(':loginUser', $login, PDO::PARAM_STR);
         $req->execute();
         return $req->fetchObject('GOA\models\User');
     }
@@ -43,7 +48,7 @@ class UserManager extends Model{
     
     function checkLoginPassword($login,$password)
     {
-        $user = $this->searchUserByLogin($login);
+        $user = $this->getUsersBylogin($login);
         if(!$user){
             return [false];
         }else {
@@ -95,7 +100,7 @@ class UserManager extends Model{
     function getUsersById($id)
     {
         $bdd = $this->getBdd();
-        $req = $bdd->prepare('SELECT users.id,users.firstname,users.lastname,users.login,users.datenaissance,users.email,users.exp,users.statut, (SELECT url FROM pictures WHERE pictures.idpictures = users.pictureprofil) as pictureprofil,
+        $req = $bdd->prepare('SELECT users.about,users.password, users.id,users.firstname,users.lastname,users.login,users.datenaissance,users.email,users.exp,users.statut, (SELECT url FROM pictures WHERE pictures.idpictures = users.pictureprofil) as pictureprofil,
         (SELECT url FROM pictures WHERE pictures.idpictures = users.picturebanner) as picturebanner
         FROM users
         JOIN pictures

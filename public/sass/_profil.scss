@@ -3,7 +3,7 @@
 #profil_User{
     margin-bottom: 50px;
     .top_User_Info{
-        height: 500px;
+        height: 420px;
         border-radius: 40px;
         overflow: hidden;
         .top_User_Info_Banner{
@@ -15,17 +15,35 @@
         }
         .top_User_All_Info{
             position: relative;
-            height: 200px;
+            height: 120px;
             background-color: $white;
             .picture_User{
                 position: absolute;
                 left: 50%;
                 top: -150px;
                 transform: translate(-50%);
-                width: 200px;
-                height: 200px;
-                border-radius: 100px;
-                border: 5px solid $white;
+                $width_height_Img:200px;
+                img{
+                    width: $width_height_Img;
+                    height: $width_height_Img;
+                    border-radius: 100px;
+                    border: 5px solid $white;
+                }
+                .lvl{
+                    position: absolute;
+                    bottom: calc(#{$width_height_Img}/16);
+                    right: calc(#{$width_height_Img}/16);
+                    width: calc(#{$width_height_Img}/5);
+                    height: calc(#{$width_height_Img}/5);
+                    border-radius: calc(#{$width_height_Img}/10);
+                    background-color: $violet;
+                    border: 3px solid $white;
+                    color: white;
+                    @include display-flex;
+                    @include justify-content(center);
+                    @include align-items(center);
+                    font-weight: 600;
+                }
             }
             .zone_Btn_User_Action{
                 position: absolute;
@@ -33,6 +51,8 @@
                 top: -30px;
                 @include display-flex;
                 button{
+                    padding: 0;
+                    position: relative;
                     @include display-flex;
                     @include flex-direction(row);
                     @include justify-content(center);
@@ -47,6 +67,15 @@
                     }
                     &:hover{
                         box-shadow: $shadow-darker;
+                    }
+                    span{
+                        display: none;
+                        top: 50%;
+                        left: 50%;
+                        //transform: translate(-50%, -50%);
+                        svg{
+                            fill:$white;
+                        }
                     }
                     p{
                         margin: 0;
@@ -66,8 +95,152 @@
                 }
 
             }
+            .top_User_Text_Info{
+                padding-top: 50px;
+                margin:0 50px;
+                @include display-flex;
+                @include flex-direction(row);
+                @include justify-content(space-around);
+                .top_User_Text_Info_stat{
+                    @include display-flex;
+                    @include flex-direction(row);
+                    @include justify-content(space-between);
+                    @include align-items(center);
+                    .stat_Profil_User_Info{
+                        margin-right:25px;
+                        text-align: center;
+                        font-size: 1rem;
+                        :first-child{
+                            font-size: 1.5rem;
+                            font-weight: 900;
+                        }
+                        :last-child{
+                            color: $gray;
+                            font-weight: 900;
+                        }
+                        img{
+                            width: 30px;
+                            object-fit: cover;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+                .top_User_Text_Info_Name{
+                    @include display-flex;
+                    @include flex-direction(column);
+                    @include justify-content(center);
+                    @include align-items(center);
+                    h3{
+                        font-weight: 900;
+                    }
+                }
+                .badges_User{
+                    text-align: end;
+                    img{
+                        width: 40px;
+                        object-fit: cover;
+                        margin-right: 5px;
+                    }
+                }
+            }
         }
     }
+    .sub_Menu_User_Block{
+        @include display-flex;
+        @include flex-direction(row);
+        @include justify-content(space-around);
+        padding: 0 20px;
+        background-color: white;
+        margin-top: 20px;
+        border-radius: 20px;
+        button{
+
+            background-color: white;
+            border: none;
+            height: 70px;
+            width: 100%;
+            outline: none;
+            @include display-flex;
+            @include flex-direction(column);
+            @include align-items(center);
+            @include justify-content(center);
+            .icon_Sub_Menu_User_Block{
+                visibility: visible;
+            }
+            .text_Sub_Menu_User_Block{
+                visibility: hidden;
+                display: none;
+            }
+            &:hover{
+                border-bottom:5px solid $violet;
+                background-color: $white-dark;
+                .icon_Sub_Menu_User_Block{
+                    transition: .5s ease-in-out visibility;
+                    visibility: hidden;
+                    display: none;
+                }
+                .text_Sub_Menu_User_Block{
+                    transition: .5s ease-in-out visibility;
+                    visibility: visible;
+                    display: initial;
+                }
+            }
+        }
+    }
+    .body_block{
+        @include display-flex;
+        @include flex-direction(row);
+        .aside_Block{
+            padding: 30px 20px;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 20px;
+            h5{
+                font-weight: 900;
+                margin-bottom: 20px;
+                font-size: 1rem;
+            }
+            .list_Badge{
+                img{
+                    width: 30px;
+                }
+            }
+        }
+        .centre_Block{
+            padding: 10px 20px;
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 20px;
+            .user_Info{
+                @include display-flex;
+                @include flex-direction(row);
+                @include align-items(center);
+                .image_User{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    border: 2px solid $gray;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+                .info_User{
+                    margin-top: 18px;
+                    margin-left: 10px;
+                    :first-child{
+                        font-weight: 900;
+                        font-size: 1.2rem;
+                    }
+                    p{
+                        line-height: .3em;
+                    }
+                }
+            }
+        }
+    }
+    
     
 }
 
@@ -77,21 +250,87 @@
 
 @media screen and (max-width: 1365px) {
     #profil_User{
-        margin-bottom: 50px;
         .top_User_Info{
+            height: 350px;
+            border-radius: 40px;
+            .top_User_Info_Banner{
+                .banner_User{
+                    height: 200px;
+                }
+            }
             .top_User_All_Info{
+                height: 150px;
+                .picture_User{
+                    top: -90px;
+                    $width_height_Img:120px;
+                    img{
+                        width: $width_height_Img;
+                        height: $width_height_Img;
+                        border-radius: 100px;
+                        border: 2px solid $white;
+                    }
+                    .lvl{
+                        bottom: calc(#{$width_height_Img}/16);
+                        right: calc(#{$width_height_Img}/16);
+                        width: calc(#{$width_height_Img}/4);
+                        height: calc(#{$width_height_Img}/4);
+                        border-radius: calc(#{$width_height_Img}/8);
+                        border: 2px solid $white;
+                    }
+                }
                 .zone_Btn_User_Action{
-                    position: absolute;
-                    right: 20px;
-                    top: -30px;
-                    @include display-flex;
+                    right: 10px;
+                    top: -20px;
                     button{
-                        width: 150px;
+                        margin-right:10px;
+                        width: 120px;
+                        height: 30px;
+                        &.btn{
+                            border-radius: 5px;
+                        }
+                    }
+                }
+                .top_User_Text_Info{
+                    margin:0 10px;
+                    .top_User_Text_Info_stat{
+                        .stat_Profil_User_Info{
+                            margin-left:20px;
+                            font-size: .7rem;
+                            :first-child{
+                                font-size: 1.2rem;
+                                font-weight: 900;
+                            }
+                            :last-child{
+                                color: $gray;
+                                font-weight: 900;
+                            }
+                            img{
+                                width: 30px;
+                                object-fit: cover;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                    .top_User_Text_Info_Name{
+                        @include display-flex;
+                        @include flex-direction(column);
+                        @include justify-content(center);
+                        @include align-items(center);
+                        h3{
+                            font-size: 1.2rem;
+                        }
+                    }
+                    .badges_User{
+                        text-align: center;
+                        margin: 0;
+                        img{
+                            width: 25px;
+                            margin-right: 5px;
+                        }
                     }
                 }
             }
         }
-        
     }
 }
 
@@ -109,10 +348,21 @@
                 height: 150px;
                 .picture_User{
                     top: -90px;
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 100px;
-                    border: 2px solid $white;
+                    $width_height_Img:120px;
+                    img{
+                        width: $width_height_Img;
+                        height: $width_height_Img;
+                        border-radius: 100px;
+                        border: 2px solid $white;
+                    }
+                    .lvl{
+                        bottom: calc(#{$width_height_Img}/16);
+                        right: calc(#{$width_height_Img}/16);
+                        width: calc(#{$width_height_Img}/4);
+                        height: calc(#{$width_height_Img}/4);
+                        border-radius: calc(#{$width_height_Img}/8);
+                        border: 2px solid $white;
+                    }
                 }
                 .zone_Btn_User_Action{
                     right: 10px;
@@ -138,6 +388,23 @@
                     }
     
                 }
+                .top_User_Text_Info{
+                    padding-top: 40px;
+                    .top_User_Text_Info_stat{
+                        .stat_Profil_User_Info{
+                            margin-left:10px;
+                            font-size: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .sub_Menu_User_Block{
+            display: none;
+        }
+        .body_block{
+            aside{
+                display: none;
             }
         }
     }
@@ -146,7 +413,7 @@
 @media screen and (max-width: 680px) {
     #profil_User{
         .top_User_Info{
-            height: 250px;
+            height: 200px;
             border-radius: 40px;
             .top_User_Info_Banner{
                 .banner_User{
@@ -154,13 +421,25 @@
                 }
             }
             .top_User_All_Info{
-                height: 150px;
+                height: 100px;
                 .picture_User{
                     top: -75px;
-                    width: 100px;
-                    height: 100px;
-                    border-radius: 50px;
-                    border: 2px solid $white;
+                    $width_height_Img:100px;
+                    img{
+                        width: $width_height_Img;
+                        height: $width_height_Img;
+                        border-radius: 50px;
+                        border: 2px solid $white;
+                    }
+                    .lvl{
+                        bottom: calc(#{$width_height_Img}/16);
+                        right: calc(#{$width_height_Img}/16);
+                        width: calc(#{$width_height_Img}/4);
+                        height: calc(#{$width_height_Img}/4);
+                        border-radius: calc(#{$width_height_Img}/8);
+                        border: 2px solid $white;
+                        font-size: .8rem;
+                    }
                 }
                 .zone_Btn_User_Action{
                     right: 10px;
@@ -173,6 +452,9 @@
                             border-radius: 5px;
                         }
                         &:hover{
+                        }
+                        span{
+                            @include display-flex;
                         }
                         p{
                             display: none;
@@ -188,6 +470,33 @@
                     }
     
                 }
+                .top_User_Text_Info{
+                    padding-top: 30px;
+                    .top_User_Text_Info_stat{
+                      display: none;
+                    }
+                    .top_User_Text_Info_Name{
+                        @include display-flex;
+                        @include flex-direction(column);
+                        @include justify-content(center);
+                        @include align-items(center);
+                    }
+                    .badges_User{
+                        text-align: center;
+                        img{
+                            width: 25px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .sub_Menu_User_Block{
+            display: none;
+        }
+        .body_block{
+            aside{
+                display: none;
             }
         }
     }
@@ -208,10 +517,22 @@
                 height: 150px;
                 .picture_User{
                     top: -60px;
-                    width: 80px;
-                    height: 80px;
-                    border-radius: 50px;
-                    border: 2px solid $white;
+                    $width_height_Img:80px;
+                    img{
+                        width: $width_height_Img;
+                        height: $width_height_Img;
+                        border-radius: 50px;
+                        border: 2px solid $white;
+                    }
+                    .lvl{
+                        bottom: calc(#{$width_height_Img}/16);
+                        right: calc(#{$width_height_Img}/16);
+                        width: calc(#{$width_height_Img}/3);
+                        height: calc(#{$width_height_Img}/3);
+                        border-radius: calc(#{$width_height_Img}/6);
+                        border: 2px solid $white;
+                        font-size: 0.8em;
+                    }
                 }
                 .zone_Btn_User_Action{
                     right: 10px;
@@ -224,6 +545,9 @@
                             border-radius: 5px;
                         }
                         &:hover{
+                        }
+                        span{
+                            @include display-flex;
                         }
                         p{
                             display: none;
@@ -239,8 +563,37 @@
                     }
     
                 }
+                .top_User_Text_Info{
+                    margin:0 10px;
+                    padding-top: 25px;
+                    @include flex-direction(column);
+                    .top_User_Text_Info_stat{
+                      display: none;
+                    }
+                    .top_User_Text_Info_Name{
+                        @include display-flex;
+                        @include flex-direction(column);
+                        @include justify-content(center);
+                        @include align-items(center);
+                    }
+                    .badges_User{
+                        text-align: center;
+                        img{
+                            width: 25px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
             }
             
+        }
+        .sub_Menu_User_Block{
+            display: none;
+        }
+        .body_block{
+            aside{
+                display: none;
+            }
         }
     }
 }

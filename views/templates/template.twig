@@ -92,7 +92,7 @@
         <!-- Brand -->
         <div class="header_Title_Logo">
           <img src="/public/imgs/logo/logo.png" alt="" srcset="">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <p>Getting Out Again</p>
           </a>
         </div>
@@ -107,10 +107,10 @@
         <div class="header_Actions ">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Profil</a>
+              <a class="nav-link" href="/User/{{user.login}}">Profil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="/">Home</a>
             </li>
         
             <!-- Dropdown -->
@@ -217,8 +217,9 @@
                   <use xlink:href="#svg-settings"></use>
                 </svg>
               </a>
-              <div class="dropdown-menu dropdown-menu-right">
-                <a class="dropdown-item" href="#">A propos</a>
+              <div class="dropdown-menu dropdown-menu-right top_Sub_Menu">
+                <p class="title_Top_Sub_Menu">Profil menu</p>
+                <a class="dropdown-item" href="/EditUser/{{user.login}}">Vos informations</a>
                 <a class="dropdown-item" href="#">Contact</a>
                 <a class="dropdown-item" href="/Authentification/logout">Déconnexion</a>
               </div>
@@ -287,7 +288,7 @@
           </svg>
         </button>
         <div class="info_User">
-          <h4>{{user.firstname}} {{user.lastname}}</h4>
+          <h4><a href="/User/{{user.login}}">{{user.firstname | capitalize }} {{user.lastname | upper}}</a></h4>
           <p>{{user.login}}</p>
         </div>
         <div class="badges_User">

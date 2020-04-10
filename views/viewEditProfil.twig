@@ -1,0 +1,115 @@
+{% extends "/templates/template.twig" %}
+{% block content %}
+
+<div class="container noPadding" id="edit_User">
+    <div class="row">
+        <div class="top col-12">
+            <div class="top_Banner">
+                <img src="/public/imgs/banners/accounthub-icon.png" alt="" srcset="" class="img_Sub_Banner">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <div class="content_Block"></div>
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Profil informations</h3>
+                    <p>Tu veux changer tes informations ?</p>
+                </div>
+                <div class="col-4 ">
+                    <div class="content_Block">
+                        <div class="user_Banner_Picture">
+                            <img src="{{user.picturebanner}}" alt="" srcset="" class="banner_User">
+                            <img src="{{user.pictureprofil}}" alt="" srcset="" class="picture_user">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="content_Block">
+                        <button id="add_Picture_User" class="btn_Change_Picture">
+                            <svg class="icon-members">
+                                <use xlink:href="#svg-members"></use>
+                            </svg>
+                            <p>Change Avatar</p>
+                            <p>110x110px size minimum</p>
+                            <input type="file" name="picture_User" id="picture_User" style="display: none;">
+                        </button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="content_Block">
+                        <button id="add_Banner_User" class="btn_Change_Picture">
+                            <svg class="icon-photos">
+                                <use xlink:href="#svg-photos"></use>
+                            </svg>
+                            <p>Change banner</p>
+                            <p>1184x300px size minimum</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="content_Block">
+                        <h4>Change picture</h4>
+                        <form action="" method="post" enctype="multipart/form-data" id="changePicture">
+                            <input type="file" name="picture" id="picture">
+                            <input type="submit" value="envoyé" name="envoie">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="content_Block">
+                        <h4>Change Banner</h4>
+                        <form action="/updateBanner" method="post" enctype="multipart/form-data" id="changeBanner">
+                            Select image to upload:
+                            <input type="file" name="banner" id="banner">
+                            <input type="submit" value="Upload Image" name="submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="content_Block">
+                        <div class="row col-12">
+                            <div class="col-12">
+                                <h4>Informations</h4>
+                            </div>
+                            <form action="" method="post" class="row col-12">
+                                <div class="col-6">
+                                    <p>{{ user.login }}</p>
+                                    <textarea  name="" id="description" placeholder="Votre description">{{ user.about }}</textarea>
+                                    <select name="sexe" id="sexe">
+                                        <option value="H">Homme</option>
+                                        <option value="F">Femme</option>
+                                        <option value="A">Autre</option>
+                                    </select>
+                                    <input type="text" name="job" id="job" placeholder="Votre job" value="{{user.job}}">
+                                    
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" name="firstname" id="firstname" placeholder="Votre prénom" value="{{user.firstname}}">
+                                    <input type="text" name="lastname" id="lastname" placeholder="votre nom" value="{{user.lastname}}">
+                                    <input type="email" name="email" id="email" placeholder="Votre E-Mail" value="{{user.email}}">
+                                    <input type="date" name="anniv" id="anniv" placeholder="Votre date de naissance" value="{{user.datenaissance }}">
+                                    <select name="relation" id="relation">
+                                        <option value="couple">Couple</option>
+                                        <option value="celiba">Célibataire</option>
+                                        <option value="Attente">Attente d'un miracle</option>
+                                        <option value="couplePhone">Couple avec mon smartphone</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <input type="submit" value="Enregistrer" class="btn btn-success">
+                                </div>
+                            </form>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,20 +1,31 @@
-
+.noMargin{
+    margin: 0;
+}
+.noPadding{
+    padding: 0;
+}
 
 @import 'font';
-a, h1, h2, h3, h4, h5, h6, p {
-    font-family: Rajdhani,sans-serif;
-    line-height: 1em;
-    font-weight: 600;
-}
 
 @import 'color';
 @import 'color-theme';
 @import 'icon';
+a, h1, h2, h3, h4, h5, h6, p {
+    font-family: Rajdhani,sans-serif;
+    line-height: 1em;
+}
+.paragraph {
+    font-size: .875rem;
+    line-height: 1.7142857143em;
+    font-weight: 500;
+}
+
 
 @import 'login';
 @import 'header';
 @import 'sub_Menu_Mobile';
 @import 'body';
+@import 'editUser';
 
 @import 'profil';
 body{

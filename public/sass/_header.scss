@@ -18,6 +18,16 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    .nav-item{
+      .top_Sub_Menu{
+        padding:10px 10px;
+        .title_Top_Sub_Menu{
+          font-weight: 900;
+          color: $gray-dark;
+          margin-left: 10px;
+        }
+      }
+    }
     .header_Title_Logo{
       @include display-flex;
       @include justify-content(space-between);
@@ -193,7 +203,7 @@
         .header_Actions{
           .interactive-input{
             input{
-              width: 250px;
+              width: 200px;
             }
           }
         }

@@ -4,23 +4,175 @@
     <div class="col-12">
         <div class="top_User_Info">
             <div class="top_User_Info_Banner">
-                <img src="{{user.picturebanner}}" alt="" class="banner_User">
+                <img src="{{userPage.picturebanner}}" alt="" class="banner_User">
             </div>
             <div class="top_User_All_Info">
-                <img src="{{user.pictureprofil}}" alt="" class="picture_User">
+                <div class="picture_User">
+                    <img src="{{userPage.pictureprofil}}" alt="">
+                    <span class="lvl">99</span>
+                </div>
+                
                 <div class="zone_Btn_User_Action">
                     <button class="btn" id="add_Friends">
-                        <span></span>
+                        <span>
+                            <svg class="icon-add-friend">
+                                <use xlink:href="#svg-add-friend"></use>
+                            </svg>
+                        </span>
                         <p>Ajouter</p> 
                     </button>
                     <button class="btn" id="send_Message">
-                        <span></span>
+                        <span>
+                            <svg class="icon-messages">
+                                <use xlink:href="#svg-messages"></use>
+                            </svg>
+                        </span>
                         <p>Messages</p>
                     </button>
+                </div>
+                <div class="top_User_Text_Info">
+                    <div class="top_User_Text_Info_stat col-lg-4 col-md-4 col-XL-4">
+                        <div class="stat_Profil_User_Info">
+                            <p>99</p>
+                            <p>Posts</p>
+                        </div>
+                        <div class="stat_Profil_User_Info">
+                            <p>99</p>
+                            <p>Friends</p>
+                        </div>
+                        <div class="stat_Profil_User_Info">
+                            <p>99</p>
+                            <p>Visites</p>
+                        </div>
+                        <div class="stat_Profil_User_Info">
+                            <img src="/public/imgs/flag/france.png" alt="" srcset="">
+                            <p>Pays</p>
+                        </div>
+                    </div>
+                    <div class="top_User_Text_Info_Name col-lg-4 col-md-4 col-XL-4 col-sm-6 col-12">
+                        <h3>{{userPage.firstname | capitalize }} {{userPage.lastname | upper }}</h3>
+                        <p>{{userPage.login}}</p>
+                    </div>
+                    <div class="badges_User col-XL-4 col-md-4 col-lg-4 col-sm-6 col-12">
+                        {% for badgePage in badgesPage %}
+                        <img src="{{badgePage.picture}}" alt="{{badgePage.name}}">
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
         
+    </div>
+    <div class="sub_Menu_User_Block">
+        <button>
+            <span class="icon_Sub_Menu_User_Block">
+                <svg class="icon-profile">
+                  <use xlink:href="#svg-profile"></use>
+                </svg>
+            </span>
+            <span class="text_Sub_Menu_User_Block">About</span>
+        </button>
+        <button> 
+            <span class="icon_Sub_Menu_User_Block">
+                <svg class="icon-timeline">
+                    <use xlink:href="#svg-timeline"></use>
+                </svg>
+            </span>
+            <span class="text_Sub_Menu_User_Block">Timeline</span>
+        </button>
+        <button> 
+            <span class="icon_Sub_Menu_User_Block">
+                <svg class="icon-friend">
+                    <use xlink:href="#svg-friend"></use>
+                </svg>
+            </span>
+            <span class="text_Sub_Menu_User_Block">Friends</span>
+        </button>
+        <button> 
+            <span class="icon_Sub_Menu_User_Block">
+                <svg class="icon-group">
+                    <use xlink:href="#svg-group"></use>
+                </svg>
+            </span>
+            <span class="text_Sub_Menu_User_Block">Groupes</span>
+        </button>
+        <button> 
+            <span class="icon_Sub_Menu_User_Block">
+                <svg class="icon-photos">
+                    <use xlink:href="#svg-photos"></use>
+                </svg>
+            </span>
+            <span class="text_Sub_Menu_User_Block">Photos</span>
+        </button>
+        <button> 
+            <span class="icon_Sub_Menu_User_Block">
+                <svg class="icon-badges">
+                    <use xlink:href="#svg-badges"></use>
+                </svg>
+            </span>
+            <span class="text_Sub_Menu_User_Block">Bagdes</span>
+        </button>
+        <button> 
+            <span class="icon_Sub_Menu_User_Block">
+                <svg class="icon-quests">
+                    <use xlink:href="#svg-quests"></use>
+                </svg>
+            </span>
+            <span class="text_Sub_Menu_User_Block">Quests</span>
+        </button>
+        <button> 
+            <span class="icon_Sub_Menu_User_Block">
+                <svg class="icon-store">
+                    <use xlink:href="#svg-store"></use>
+                </svg>
+            </span>
+            <span class="text_Sub_Menu_User_Block">Store</span>
+        </button>
+    </div>
+    <div class="body_block">
+        <aside class="col-3">
+            <div id="about" class="aside_Block">
+                <h5>About Me</h5>
+                <p class="paragraph">{{ userPage.about }}</p>
+            </div>
+            <div id="badges" class="aside_Block">
+                <h5>Badges</h5>
+                <div class="list_Badge">
+                    {% for badgePage in badgesPage %}
+                        <img src="{{badgePage.picture}}" alt="{{badgePage.name}}">
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="events" class="aside_Block">
+                <h5>Events</h5>
+            </div>
+
+        </aside>
+        <div class="col-12 col-xl-6 col-lg-6">
+            <div class="centre_Block">
+                <div class="Posts">
+                    <div class="user_Info">
+                        <div class="image_User">
+                            <img src="{{userPage.pictureprofil}}" alt="" srcset="">
+                        </div>
+                        <div class="info_User">
+                            <p>{{userPage.firstname | capitalize }} {{userPage.lastname | upper}}</p>
+                            <p>{{ userPage.login }}</p>
+                        </div>
+                    </div>
+                       
+                </div>
+                
+            </div>
+        </div>
+        <aside class="col-3">
+            <div id="groups" class="aside_Block">
+                <h5>Groupes</h5>
+            </div>
+            <div id="pictures" class="aside_Block">
+                <h5>Photos</h5>
+            </div>
+        </aside>
     </div>
 </div>
 {% endblock %}

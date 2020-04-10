@@ -13,6 +13,7 @@ class User{
     public $picturebanner;
     public $rang;
     public $exp;
+    public $about;
 
     public function getPassword()
     {

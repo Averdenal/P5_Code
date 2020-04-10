@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700&display=swap");
+/* line 1, ../sass/main.scss */
+.noMargin {
+  margin: 0;
+}
+
 /* line 4, ../sass/main.scss */
-a, h1, h2, h3, h4, h5, h6, p {
-  font-family: Rajdhani,sans-serif;
-  line-height: 1em;
-  font-weight: 600;
+.noPadding {
+  padding: 0;
 }
 
 /* line 1, ../sass/_icon.scss */
@@ -204,6 +207,19 @@ a, h1, h2, h3, h4, h5, h6, p {
 /* line 176, ../sass/_icon.scss */
 .icons_Hover:hover {
   fill: #fff;
+}
+
+/* line 13, ../sass/main.scss */
+a, h1, h2, h3, h4, h5, h6, p {
+  font-family: Rajdhani,sans-serif;
+  line-height: 1em;
+}
+
+/* line 17, ../sass/main.scss */
+.paragraph {
+  font-size: .875rem;
+  line-height: 1.7142857143em;
+  font-weight: 500;
 }
 
 /************************************************************************************************************/
@@ -515,7 +531,17 @@ a, h1, h2, h3, h4, h5, h6, p {
   display: flex;
   justify-content: space-between;
 }
-/* line 21, ../sass/_header.scss */
+/* line 22, ../sass/_header.scss */
+.navbar .nav-item .top_Sub_Menu {
+  padding: 10px 10px;
+}
+/* line 24, ../sass/_header.scss */
+.navbar .nav-item .top_Sub_Menu .title_Top_Sub_Menu {
+  font-weight: 900;
+  color: #8f91ac;
+  margin-left: 10px;
+}
+/* line 31, ../sass/_header.scss */
 .navbar .header_Title_Logo {
   display: -webkit-flex;
   display: flex;
@@ -524,31 +550,31 @@ a, h1, h2, h3, h4, h5, h6, p {
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 25, ../sass/_header.scss */
+/* line 35, ../sass/_header.scss */
 .navbar .header_Title_Logo img {
   width: 60px;
   height: 60px;
   margin-right: 10px;
 }
-/* line 30, ../sass/_header.scss */
+/* line 40, ../sass/_header.scss */
 .navbar .header_Title_Logo a {
   margin: 0;
   font-size: 1.3rem;
   font-weight: 900;
 }
-/* line 34, ../sass/_header.scss */
+/* line 44, ../sass/_header.scss */
 .navbar .header_Title_Logo a p {
   margin: 0;
 }
-/* line 40, ../sass/_header.scss */
+/* line 50, ../sass/_header.scss */
 .navbar .navbar-nav .nav-item {
   margin: 0 .5rem;
 }
-/* line 42, ../sass/_header.scss */
+/* line 52, ../sass/_header.scss */
 .navbar .navbar-nav .nav-item.show > .nav-link > .icons_Hover {
   fill: white;
 }
-/* line 47, ../sass/_header.scss */
+/* line 57, ../sass/_header.scss */
 .navbar .header_Actions {
   display: -webkit-flex;
   display: flex;
@@ -557,16 +583,16 @@ a, h1, h2, h3, h4, h5, h6, p {
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 51, ../sass/_header.scss */
+/* line 61, ../sass/_header.scss */
 .navbar .header_Actions.stats_User {
   width: 200px;
 }
-/* line 53, ../sass/_header.scss */
+/* line 63, ../sass/_header.scss */
 .navbar .header_Actions.stats_User .progress_Stat {
   margin: 10px;
   width: 100px;
 }
-/* line 56, ../sass/_header.scss */
+/* line 66, ../sass/_header.scss */
 .navbar .header_Actions.stats_User .progress_Stat .bar_Progress_Wrap {
   display: -webkit-flex;
   display: flex;
@@ -576,21 +602,21 @@ a, h1, h2, h3, h4, h5, h6, p {
   color: white;
   font-weight: 900;
 }
-/* line 64, ../sass/_header.scss */
+/* line 74, ../sass/_header.scss */
 .navbar .header_Actions.stats_User .progress_Stat .progress_Stat_Bar {
   width: 100px;
   height: 4px;
   position: relative;
 }
-/* line 68, ../sass/_header.scss */
+/* line 78, ../sass/_header.scss */
 .navbar .header_Actions.stats_User .progress_Stat .progress_Stat_Bar :first-child {
   background-color: #4e4ac8;
 }
-/* line 71, ../sass/_header.scss */
+/* line 81, ../sass/_header.scss */
 .navbar .header_Actions.stats_User .progress_Stat .progress_Stat_Bar :last-child {
   background-color: #00c7d9;
 }
-/* line 76, ../sass/_header.scss */
+/* line 86, ../sass/_header.scss */
 .navbar .header_Actions.stats_User .info_Lvl {
   margin: 0 10px;
   width: 100%;
@@ -601,17 +627,17 @@ a, h1, h2, h3, h4, h5, h6, p {
   color: white;
   font-weight: 900;
 }
-/* line 85, ../sass/_header.scss */
+/* line 95, ../sass/_header.scss */
 .navbar .header_Actions.stats_User .info_Lvl :first-child {
   margin: 0;
 }
-/* line 88, ../sass/_header.scss */
+/* line 98, ../sass/_header.scss */
 .navbar .header_Actions.stats_User .info_Lvl :last-child {
   line-height: 1;
   font-size: 1.5rem;
   margin: 0;
 }
-/* line 95, ../sass/_header.scss */
+/* line 105, ../sass/_header.scss */
 .navbar .header_Actions .action_List {
   display: -webkit-flex;
   display: flex;
@@ -620,7 +646,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   border-left: 1px solid white;
   border-right: 1px solid white;
 }
-/* line 103, ../sass/_header.scss */
+/* line 113, ../sass/_header.scss */
 .navbar .sub_Menu_Action_Grid {
   display: -webkit-flex;
   display: flex;
@@ -632,7 +658,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   height: 80px;
   cursor: pointer;
 }
-/* line 111, ../sass/_header.scss */
+/* line 121, ../sass/_header.scss */
 .navbar .interactive-input {
   display: -webkit-flex;
   display: flex;
@@ -643,7 +669,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   height: 52px;
   position: relative;
 }
-/* line 118, ../sass/_header.scss */
+/* line 128, ../sass/_header.scss */
 .navbar .interactive-input.dark input {
   outline: none;
   width: 500px;
@@ -654,7 +680,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   background-color: #4e4ac8;
   color: #fff;
 }
-/* line 128, ../sass/_header.scss */
+/* line 138, ../sass/_header.scss */
 .navbar .interactive-input.dark .interactive-input-icon-wrap {
   display: -webkit-flex;
   display: flex;
@@ -669,7 +695,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   background-color: #4e4ac8;
 }
 
-/* line 142, ../sass/_header.scss */
+/* line 152, ../sass/_header.scss */
 .bottom_Actions_Mobile {
   z-index: 10000;
   display: none;
@@ -680,7 +706,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   height: 40px;
   background-color: #4e4ac8;
 }
-/* line 151, ../sass/_header.scss */
+/* line 161, ../sass/_header.scss */
 .bottom_Actions_Mobile .navbar-nav {
   display: -webkit-flex;
   display: flex;
@@ -694,96 +720,96 @@ a, h1, h2, h3, h4, h5, h6, p {
     MEDIA QUERIES 
 --------------------*/
 @media screen and (max-width: 1365px) {
-  /* line 169, ../sass/_header.scss */
+  /* line 179, ../sass/_header.scss */
   .header .navbar :nth-child(6) {
     display: none;
   }
-  /* line 169, ../sass/_header.scss */
+  /* line 179, ../sass/_header.scss */
   .header .navbar :nth-child(7) {
     display: none;
   }
-  /* line 175, ../sass/_header.scss */
+  /* line 185, ../sass/_header.scss */
   .header .navbar .header_Actions .interactive-input input {
     width: 250px;
   }
 }
 @media screen and (max-width: 960px) {
-  /* line 185, ../sass/_header.scss */
+  /* line 195, ../sass/_header.scss */
   .header {
     height: 60px;
   }
-  /* line 189, ../sass/_header.scss */
+  /* line 199, ../sass/_header.scss */
   .header .navbar :nth-child(5) {
     display: none;
   }
-  /* line 189, ../sass/_header.scss */
+  /* line 199, ../sass/_header.scss */
   .header .navbar :nth-child(6) {
     display: none;
   }
-  /* line 189, ../sass/_header.scss */
+  /* line 199, ../sass/_header.scss */
   .header .navbar :nth-child(7) {
     display: none;
   }
-  /* line 195, ../sass/_header.scss */
+  /* line 205, ../sass/_header.scss */
   .header .navbar .header_Actions .interactive-input input {
-    width: 250px;
+    width: 200px;
   }
 
-  /* line 202, ../sass/_header.scss */
+  /* line 212, ../sass/_header.scss */
   .bottom_Actions_Mobile {
     display: block;
   }
 }
 @media screen and (max-width: 680px) {
-  /* line 211, ../sass/_header.scss */
+  /* line 221, ../sass/_header.scss */
   .header .navbar :nth-child(3) {
     display: none;
   }
-  /* line 215, ../sass/_header.scss */
+  /* line 225, ../sass/_header.scss */
   .header .navbar :nth-child(5) {
     display: none;
   }
-  /* line 215, ../sass/_header.scss */
+  /* line 225, ../sass/_header.scss */
   .header .navbar :nth-child(6) {
     display: none;
   }
-  /* line 215, ../sass/_header.scss */
+  /* line 225, ../sass/_header.scss */
   .header .navbar :nth-child(7) {
     display: none;
   }
-  /* line 221, ../sass/_header.scss */
+  /* line 231, ../sass/_header.scss */
   .header .navbar .header_Actions .interactive-input input {
     width: 250px;
   }
 
-  /* line 228, ../sass/_header.scss */
+  /* line 238, ../sass/_header.scss */
   .bottom_Actions_Mobile {
     display: block;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 238, ../sass/_header.scss */
+  /* line 248, ../sass/_header.scss */
   .header .navbar :nth-child(3) {
     display: none;
   }
-  /* line 238, ../sass/_header.scss */
+  /* line 248, ../sass/_header.scss */
   .header .navbar :nth-child(4) {
     display: none;
   }
-  /* line 238, ../sass/_header.scss */
+  /* line 248, ../sass/_header.scss */
   .header .navbar :nth-child(5) {
     display: none;
   }
-  /* line 238, ../sass/_header.scss */
+  /* line 248, ../sass/_header.scss */
   .header .navbar :nth-child(6) {
     display: none;
   }
-  /* line 238, ../sass/_header.scss */
+  /* line 248, ../sass/_header.scss */
   .header .navbar :nth-child(7) {
     display: none;
   }
 
-  /* line 245, ../sass/_header.scss */
+  /* line 255, ../sass/_header.scss */
   .bottom_Actions_Mobile {
     display: block;
   }
@@ -910,7 +936,12 @@ a, h1, h2, h3, h4, h5, h6, p {
 .sub_Menu_Mobile .profil_Info .info_User h4 {
   font-size: 1.4rem;
 }
-/* line 95, ../sass/_sub_Menu_Mobile.scss */
+/* line 93, ../sass/_sub_Menu_Mobile.scss */
+.sub_Menu_Mobile .profil_Info .info_User h4 a {
+  color: black;
+  text-decoration: none;
+}
+/* line 99, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .badges_User {
   display: -webkit-flex;
   display: flex;
@@ -919,13 +950,13 @@ a, h1, h2, h3, h4, h5, h6, p {
   -webkit-justify-content: center;
   justify-content: center;
 }
-/* line 99, ../sass/_sub_Menu_Mobile.scss */
+/* line 103, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .badges_User img {
   width: 30px;
   height: 34px;
   margin: 2px;
 }
-/* line 105, ../sass/_sub_Menu_Mobile.scss */
+/* line 109, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .stat_Profil_User {
   display: -webkit-flex;
   display: flex;
@@ -937,7 +968,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
   margin-top: 20px;
 }
-/* line 111, ../sass/_sub_Menu_Mobile.scss */
+/* line 115, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .stat_Profil_User .stat_Profil_User_Info {
   border-right: 1px solid #fff;
   border-left: 1px solid #fff;
@@ -950,7 +981,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   text-align: center;
   padding: 0 20px;
 }
-/* line 121, ../sass/_sub_Menu_Mobile.scss */
+/* line 125, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .sub_Menu_Content {
   margin-top: 20px;
   display: -webkit-flex;
@@ -962,7 +993,7 @@ a, h1, h2, h3, h4, h5, h6, p {
   -webkit-align-items: center;
   align-items: center;
 }
-/* line 127, ../sass/_sub_Menu_Mobile.scss */
+/* line 131, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .sub_Menu_Content button {
   margin-top: 20px;
   width: 90%;
@@ -977,21 +1008,21 @@ a, h1, h2, h3, h4, h5, h6, p {
   align-items: center;
   background-color: #f5f5fa;
 }
-/* line 136, ../sass/_sub_Menu_Mobile.scss */
+/* line 140, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .sub_Menu_Content button span {
   margin-right: 10px;
 }
-/* line 139, ../sass/_sub_Menu_Mobile.scss */
+/* line 143, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .sub_Menu_Content button p {
   margin: 0 10px;
 }
-/* line 142, ../sass/_sub_Menu_Mobile.scss */
+/* line 146, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .sub_Menu_Content button:hover {
   background-color: #fff;
   color: #615dfa;
   box-shadow: 3px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-/* line 147, ../sass/_sub_Menu_Mobile.scss */
+/* line 151, ../sass/_sub_Menu_Mobile.scss */
 .sub_Menu_Mobile .profil_Info .sub_Menu_Content button:hover span svg {
   fill: #615dfa !important;
 }
@@ -1004,40 +1035,190 @@ a, h1, h2, h3, h4, h5, h6, p {
 
 /* line 6, ../sass/_body.scss */
 .body {
-  margin-top: 150px;
+  margin-top: 100px;
+}
+
+/* line 9, ../sass/_body.scss */
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding: 7px;
 }
 
 @media screen and (max-width: 1365px) {
-  /* line 15, ../sass/_body.scss */
+  /* line 18, ../sass/_body.scss */
   .body {
     margin-top: 100px;
   }
 }
 @media screen and (max-width: 960px) {
-  /* line 21, ../sass/_body.scss */
+  /* line 24, ../sass/_body.scss */
   .body {
     margin-top: 80px;
   }
 }
 @media screen and (max-width: 680px) {
-  /* line 27, ../sass/_body.scss */
+  /* line 30, ../sass/_body.scss */
   .body {
     margin-top: 80px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 33, ../sass/_body.scss */
+  /* line 36, ../sass/_body.scss */
   .body {
     margin-top: 80px;
   }
 }
+/* line 40, ../sass/_body.scss */
+.row {
+  margin: 0;
+}
+
+/* line 43, ../sass/_body.scss */
+.top {
+  margin-bottom: 20px;
+}
+/* line 45, ../sass/_body.scss */
+.top .top_Banner {
+  position: relative;
+  height: 150px;
+  background-image: url("/public/imgs/banners/banner-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+/* line 52, ../sass/_body.scss */
+.top .top_Banner .banner {
+  width: 100%;
+  object-fit: cover;
+}
+/* line 56, ../sass/_body.scss */
+.top .top_Banner .img_Sub_Banner {
+  position: absolute;
+  left: 0;
+  top: -12px;
+  height: 162px;
+}
+
+/* line 66, ../sass/_body.scss */
+.content_Block {
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-flex;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 4, ../sass/_editUser.scss */
+#edit_User .user_Banner_Picture {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 125px;
+}
+/* line 9, ../sass/_editUser.scss */
+#edit_User .user_Banner_Picture .banner_User {
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 75px;
+  width: 100%;
+  object-fit: cover;
+}
+/* line 19, ../sass/_editUser.scss */
+#edit_User .user_Banner_Picture .picture_user {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70px;
+  width: 70px;
+  border-radius: 40px;
+  border: 2px solid white;
+}
+/* line 30, ../sass/_editUser.scss */
+#edit_User .btn_Change_Picture {
+  border-radius: 10px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+/* line 42, ../sass/_editUser.scss */
+#edit_User .btn_Change_Picture :nth-child(1) {
+  margin: 15px;
+}
+/* line 45, ../sass/_editUser.scss */
+#edit_User .btn_Change_Picture :nth-child(2) {
+  font-weight: 900;
+}
+/* line 48, ../sass/_editUser.scss */
+#edit_User .btn_Change_Picture:hover {
+  background-color: #615dfa;
+}
+/* line 50, ../sass/_editUser.scss */
+#edit_User .btn_Change_Picture:hover p {
+  transition: 0.5s ease transform;
+  transform: scale(1.1);
+  color: white;
+}
+/* line 55, ../sass/_editUser.scss */
+#edit_User .btn_Change_Picture:hover svg {
+  transition: 0.5s ease transform;
+  transform: scale(1.1);
+  fill: white;
+}
+/* line 68, ../sass/_editUser.scss */
+#edit_User form {
+  width: 100%;
+}
+/* line 70, ../sass/_editUser.scss */
+#edit_User form p {
+  height: 43px;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+/* line 75, ../sass/_editUser.scss */
+#edit_User form input, #edit_User form select {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #5753e4;
+  padding: 5px;
+  color: white;
+  height: 50px;
+}
+/* line 85, ../sass/_editUser.scss */
+#edit_User form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #5753e4;
+  padding: 5px;
+  color: white;
+  height: 125px;
+}
+
 /* line 3, ../sass/_profil.scss */
 #profil_User {
   margin-bottom: 50px;
 }
 /* line 5, ../sass/_profil.scss */
 #profil_User .top_User_Info {
-  height: 500px;
+  height: 420px;
   border-radius: 40px;
   overflow: hidden;
 }
@@ -1050,7 +1231,7 @@ a, h1, h2, h3, h4, h5, h6, p {
 /* line 16, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info {
   position: relative;
-  height: 200px;
+  height: 120px;
   background-color: #fff;
 }
 /* line 20, ../sass/_profil.scss */
@@ -1059,12 +1240,34 @@ a, h1, h2, h3, h4, h5, h6, p {
   left: 50%;
   top: -150px;
   transform: translate(-50%);
+}
+/* line 26, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .picture_User img {
   width: 200px;
   height: 200px;
   border-radius: 100px;
   border: 5px solid #fff;
 }
-/* line 30, ../sass/_profil.scss */
+/* line 32, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .picture_User .lvl {
+  position: absolute;
+  bottom: calc(200px/16);
+  right: calc(200px/16);
+  width: calc(200px/5);
+  height: calc(200px/5);
+  border-radius: calc(200px/10);
+  background-color: #615dfa;
+  border: 3px solid #fff;
+  color: white;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-weight: 600;
+}
+/* line 48, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
   position: absolute;
   right: 20px;
@@ -1072,8 +1275,10 @@ a, h1, h2, h3, h4, h5, h6, p {
   display: -webkit-flex;
   display: flex;
 }
-/* line 35, ../sass/_profil.scss */
+/* line 53, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
+  padding: 0;
+  position: relative;
   display: -webkit-flex;
   display: flex;
   -webkit-flex-direction: row;
@@ -1088,191 +1293,614 @@ a, h1, h2, h3, h4, h5, h6, p {
   color: #fff;
   font-weight: 600;
 }
-/* line 45, ../sass/_profil.scss */
+/* line 65, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
   border-radius: 15px;
 }
-/* line 48, ../sass/_profil.scss */
+/* line 68, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button:hover {
   box-shadow: 3px 5px 20px 0px rgba(34, 33, 73, 0.582);
 }
-/* line 51, ../sass/_profil.scss */
+/* line 71, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button span {
+  display: none;
+  top: 50%;
+  left: 50%;
+}
+/* line 76, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button span svg {
+  fill: #fff;
+}
+/* line 80, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button p {
   margin: 0;
 }
-/* line 55, ../sass/_profil.scss */
+/* line 84, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action #add_Friends {
   background-color: #615dfa;
 }
-/* line 57, ../sass/_profil.scss */
+/* line 86, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action #add_Friends:hover {
   background-color: #4e4ac8;
 }
-/* line 61, ../sass/_profil.scss */
+/* line 90, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action #send_Message {
   background-color: #23d2e2;
 }
-/* line 63, ../sass/_profil.scss */
+/* line 92, ../sass/_profil.scss */
 #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action #send_Message:hover {
   background-color: #00c7d9;
 }
+/* line 98, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info {
+  padding-top: 50px;
+  margin: 0 50px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+/* line 104, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* line 109, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info {
+  margin-right: 25px;
+  text-align: center;
+  font-size: 1rem;
+}
+/* line 113, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info :first-child {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+/* line 117, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info :last-child {
+  color: #adafca;
+  font-weight: 900;
+}
+/* line 121, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info img {
+  width: 30px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+/* line 128, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_Name {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* line 133, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_Name h3 {
+  font-weight: 900;
+}
+/* line 137, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .badges_User {
+  text-align: end;
+}
+/* line 139, ../sass/_profil.scss */
+#profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .badges_User img {
+  width: 40px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+/* line 148, ../sass/_profil.scss */
+#profil_User .sub_Menu_User_Block {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  padding: 0 20px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+/* line 156, ../sass/_profil.scss */
+#profil_User .sub_Menu_User_Block button {
+  background-color: white;
+  border: none;
+  height: 70px;
+  width: 100%;
+  outline: none;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 167, ../sass/_profil.scss */
+#profil_User .sub_Menu_User_Block button .icon_Sub_Menu_User_Block {
+  visibility: visible;
+}
+/* line 170, ../sass/_profil.scss */
+#profil_User .sub_Menu_User_Block button .text_Sub_Menu_User_Block {
+  visibility: hidden;
+  display: none;
+}
+/* line 174, ../sass/_profil.scss */
+#profil_User .sub_Menu_User_Block button:hover {
+  border-bottom: 5px solid #615dfa;
+  background-color: #fcfcfd;
+}
+/* line 177, ../sass/_profil.scss */
+#profil_User .sub_Menu_User_Block button:hover .icon_Sub_Menu_User_Block {
+  transition: .5s ease-in-out visibility;
+  visibility: hidden;
+  display: none;
+}
+/* line 182, ../sass/_profil.scss */
+#profil_User .sub_Menu_User_Block button:hover .text_Sub_Menu_User_Block {
+  transition: .5s ease-in-out visibility;
+  visibility: visible;
+  display: initial;
+}
+/* line 190, ../sass/_profil.scss */
+#profil_User .body_block {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+/* line 193, ../sass/_profil.scss */
+#profil_User .body_block .aside_Block {
+  padding: 30px 20px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+/* line 198, ../sass/_profil.scss */
+#profil_User .body_block .aside_Block h5 {
+  font-weight: 900;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+/* line 204, ../sass/_profil.scss */
+#profil_User .body_block .aside_Block .list_Badge img {
+  width: 30px;
+}
+/* line 209, ../sass/_profil.scss */
+#profil_User .body_block .centre_Block {
+  padding: 10px 20px;
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+/* line 214, ../sass/_profil.scss */
+#profil_User .body_block .centre_Block .user_Info {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* line 218, ../sass/_profil.scss */
+#profil_User .body_block .centre_Block .user_Info .image_User {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #adafca;
+}
+/* line 224, ../sass/_profil.scss */
+#profil_User .body_block .centre_Block .user_Info .image_User img {
+  width: 40px;
+  height: 40px;
+}
+/* line 229, ../sass/_profil.scss */
+#profil_User .body_block .centre_Block .user_Info .info_User {
+  margin-top: 18px;
+  margin-left: 10px;
+}
+/* line 232, ../sass/_profil.scss */
+#profil_User .body_block .centre_Block .user_Info .info_User :first-child {
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+/* line 236, ../sass/_profil.scss */
+#profil_User .body_block .centre_Block .user_Info .info_User p {
+  line-height: .3em;
+}
 
 @media screen and (max-width: 1365px) {
-  /* line 79, ../sass/_profil.scss */
-  #profil_User {
-    margin-bottom: 50px;
-  }
-  /* line 83, ../sass/_profil.scss */
-  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
-    position: absolute;
-    right: 20px;
-    top: -30px;
-    display: -webkit-flex;
-    display: flex;
-  }
-  /* line 88, ../sass/_profil.scss */
-  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
-    width: 150px;
-  }
-}
-@media screen and (max-width: 960px) {
-  /* line 100, ../sass/_profil.scss */
+  /* line 253, ../sass/_profil.scss */
   #profil_User .top_User_Info {
     height: 350px;
     border-radius: 40px;
   }
-  /* line 104, ../sass/_profil.scss */
+  /* line 257, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_Info_Banner .banner_User {
     height: 200px;
   }
-  /* line 108, ../sass/_profil.scss */
+  /* line 261, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info {
     height: 150px;
   }
-  /* line 110, ../sass/_profil.scss */
+  /* line 263, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .picture_User {
     top: -90px;
+  }
+  /* line 266, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User img {
     width: 120px;
     height: 120px;
     border-radius: 100px;
     border: 2px solid #fff;
   }
-  /* line 117, ../sass/_profil.scss */
+  /* line 272, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User .lvl {
+    bottom: calc(120px/16);
+    right: calc(120px/16);
+    width: calc(120px/4);
+    height: calc(120px/4);
+    border-radius: calc(120px/8);
+    border: 2px solid #fff;
+  }
+  /* line 281, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
     right: 10px;
     top: -20px;
   }
-  /* line 120, ../sass/_profil.scss */
+  /* line 284, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
     margin-right: 10px;
     width: 120px;
     height: 30px;
   }
-  /* line 124, ../sass/_profil.scss */
+  /* line 288, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
     border-radius: 5px;
   }
+  /* line 293, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info {
+    margin: 0 10px;
+  }
+  /* line 296, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info {
+    margin-left: 20px;
+    font-size: .7rem;
+  }
+  /* line 299, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info :first-child {
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+  /* line 303, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info :last-child {
+    color: #adafca;
+    font-weight: 900;
+  }
+  /* line 307, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info img {
+    width: 30px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  /* line 314, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_Name {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  /* line 319, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_Name h3 {
+    font-size: 1.2rem;
+  }
+  /* line 323, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .badges_User {
+    text-align: center;
+    margin: 0;
+  }
+  /* line 326, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .badges_User img {
+    width: 25px;
+    margin-right: 5px;
+  }
 }
-@media screen and (max-width: 680px) {
-  /* line 148, ../sass/_profil.scss */
+@media screen and (max-width: 960px) {
+  /* line 339, ../sass/_profil.scss */
   #profil_User .top_User_Info {
-    height: 250px;
+    height: 350px;
     border-radius: 40px;
   }
-  /* line 152, ../sass/_profil.scss */
+  /* line 343, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_Info_Banner .banner_User {
-    height: 100px;
+    height: 200px;
   }
-  /* line 156, ../sass/_profil.scss */
+  /* line 347, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info {
     height: 150px;
   }
-  /* line 158, ../sass/_profil.scss */
+  /* line 349, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User {
+    top: -90px;
+  }
+  /* line 352, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    border: 2px solid #fff;
+  }
+  /* line 358, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User .lvl {
+    bottom: calc(120px/16);
+    right: calc(120px/16);
+    width: calc(120px/4);
+    height: calc(120px/4);
+    border-radius: calc(120px/8);
+    border: 2px solid #fff;
+  }
+  /* line 367, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
+    right: 10px;
+    top: -20px;
+  }
+  /* line 370, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
+    margin-right: 10px;
+    width: 120px;
+    height: 30px;
+  }
+  /* line 374, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
+    border-radius: 5px;
+  }
+  /* line 391, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info {
+    padding-top: 40px;
+  }
+  /* line 394, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat .stat_Profil_User_Info {
+    margin-left: 10px;
+    font-size: .5rem;
+  }
+  /* line 402, ../sass/_profil.scss */
+  #profil_User .sub_Menu_User_Block {
+    display: none;
+  }
+  /* line 406, ../sass/_profil.scss */
+  #profil_User .body_block aside {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  /* line 415, ../sass/_profil.scss */
+  #profil_User .top_User_Info {
+    height: 200px;
+    border-radius: 40px;
+  }
+  /* line 419, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_Info_Banner .banner_User {
+    height: 100px;
+  }
+  /* line 423, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info {
+    height: 100px;
+  }
+  /* line 425, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .picture_User {
     top: -75px;
+  }
+  /* line 428, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User img {
     width: 100px;
     height: 100px;
     border-radius: 50px;
     border: 2px solid #fff;
   }
-  /* line 165, ../sass/_profil.scss */
+  /* line 434, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User .lvl {
+    bottom: calc(100px/16);
+    right: calc(100px/16);
+    width: calc(100px/4);
+    height: calc(100px/4);
+    border-radius: calc(100px/8);
+    border: 2px solid #fff;
+    font-size: .8rem;
+  }
+  /* line 444, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
     right: 10px;
     top: -25px;
   }
-  /* line 168, ../sass/_profil.scss */
+  /* line 447, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
     margin-right: 10px;
     width: 40px;
     height: 40px;
   }
-  /* line 172, ../sass/_profil.scss */
+  /* line 451, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
     border-radius: 5px;
   }
-  /* line 177, ../sass/_profil.scss */
+  /* line 456, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button span {
+    display: -webkit-flex;
+    display: flex;
+  }
+  /* line 459, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button p {
+    display: none;
+  }
+  /* line 473, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info {
+    padding-top: 30px;
+  }
+  /* line 475, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat {
+    display: none;
+  }
+  /* line 478, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_Name {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  /* line 484, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .badges_User {
+    text-align: center;
+  }
+  /* line 486, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .badges_User img {
+    width: 25px;
+    margin-right: 5px;
+  }
+  /* line 494, ../sass/_profil.scss */
+  #profil_User .sub_Menu_User_Block {
+    display: none;
+  }
+  /* line 498, ../sass/_profil.scss */
+  #profil_User .body_block aside {
     display: none;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 199, ../sass/_profil.scss */
+  /* line 508, ../sass/_profil.scss */
   #profil_User .top_User_Info {
     height: 250px;
     border-radius: 20px;
   }
-  /* line 203, ../sass/_profil.scss */
+  /* line 512, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_Info_Banner .banner_User {
     height: 100px;
   }
-  /* line 207, ../sass/_profil.scss */
+  /* line 516, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info {
     height: 150px;
   }
-  /* line 209, ../sass/_profil.scss */
+  /* line 518, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .picture_User {
     top: -60px;
+  }
+  /* line 521, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User img {
     width: 80px;
     height: 80px;
     border-radius: 50px;
     border: 2px solid #fff;
   }
-  /* line 216, ../sass/_profil.scss */
+  /* line 527, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .picture_User .lvl {
+    bottom: calc(80px/16);
+    right: calc(80px/16);
+    width: calc(80px/3);
+    height: calc(80px/3);
+    border-radius: calc(80px/6);
+    border: 2px solid #fff;
+    font-size: 0.8em;
+  }
+  /* line 537, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action {
     right: 10px;
     top: -20px;
   }
-  /* line 219, ../sass/_profil.scss */
+  /* line 540, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button {
     margin-right: 10px;
     width: 30px;
     height: 30px;
   }
-  /* line 223, ../sass/_profil.scss */
+  /* line 544, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button.btn {
     border-radius: 5px;
   }
-  /* line 228, ../sass/_profil.scss */
+  /* line 549, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button span {
+    display: -webkit-flex;
+    display: flex;
+  }
+  /* line 552, ../sass/_profil.scss */
   #profil_User .top_User_Info .top_User_All_Info .zone_Btn_User_Action button p {
     display: none;
   }
+  /* line 566, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info {
+    margin: 0 10px;
+    padding-top: 25px;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  /* line 570, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_stat {
+    display: none;
+  }
+  /* line 573, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .top_User_Text_Info_Name {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  /* line 579, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .badges_User {
+    text-align: center;
+  }
+  /* line 581, ../sass/_profil.scss */
+  #profil_User .top_User_Info .top_User_All_Info .top_User_Text_Info .badges_User img {
+    width: 25px;
+    margin-right: 5px;
+  }
+  /* line 590, ../sass/_profil.scss */
+  #profil_User .sub_Menu_User_Block {
+    display: none;
+  }
+  /* line 594, ../sass/_profil.scss */
+  #profil_User .body_block aside {
+    display: none;
+  }
 }
-/* line 20, ../sass/main.scss */
+/* line 31, ../sass/main.scss */
 body {
   background-color: #eaeaf5;
 }
 
-/* line 23, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 .none {
   display: none;
 }
 
-/* line 26, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 .left {
   left: 0;
 }
 
-/* line 29, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 .right {
   right: 0;
 }

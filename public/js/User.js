@@ -4,6 +4,7 @@ class User{
         this.logout();
         this.register();
         this.display_form();
+        this.changePicture();
     }
     display_form(){
         $('input[name=action_login]').on('change',()=>{
@@ -83,5 +84,44 @@ class User{
             
         });
 
+    }
+    changePicture(){
+        $('#changeBanner').on('submit',function(e) {
+            e.preventDefault();
+            var form = document.getElementById('changeBanner');
+            var formData = new FormData(form);
+
+            var fileInput = document.getElementById('banner');
+            var file = fileInput.files[0];
+
+            var formData = new FormData();
+            formData.append('file', file);
+          
+            var xhr = new XMLHttpRequest();
+            // Add any event handlers here...
+            xhr.open('POST', form.getAttribute('action'), true);
+            xhr.send(formData);
+            return false; // To avoid actual submission of the form
+          }
+        );
+
+        $('#changePicture').on('submit',function (evt) { 
+            evt.preventDefault();
+            var formData = new FormData($(this)[0]);
+         $.ajax({
+             url: '/updatePicture',
+             type: 'POST',
+             data: formData,
+             async: false,
+             cache: false,
+             contentType: false,
+             enctype: 'multipart/form-data',
+             processData: false,
+             success: function (response) {
+               alert(response);
+             }
+         });    
+            debugger
+        });
     }
 }
