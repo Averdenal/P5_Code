@@ -6,6 +6,19 @@ use GOA\models\Model;
 
 class PictureManager extends Model{
 
+    private $target_dir;
+
+    public function __construct()
+    {
+        $this->target_dir = "public/imgs/upload/";
+    }
+    public function countPicture()
+    {
+        $bdd = $this->getBdd();
+        $req = $bdd->prepare('SELECT COUNT(*) FROM pictures');
+        $req->execute();
+        return $req->fetch();
+    }
     public function picture_Verif_Extends($imageFileType)
     {
         if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
@@ -17,20 +30,18 @@ class PictureManager extends Model{
     }
     public function change_Name($filename)
     {
-        //génération d'un nom
+        $name = $this->countPicture()[0];
         $file = $filename;
         $fileName = explode('.',$file);
-        $fileName[0] = '245';
+        $fileName[0] = $name +1;
         return $fileName[0].'.'.$fileName[1];
     }
-    public function uploadPicture($file)
+    public function uploadPicture($file,$author,$description,$album = null)
     {
-        $target_dir = "public/imgs/upload/";
         $file["name"] = $this->change_Name($file["name"]);
-        $target_file = $target_dir . basename($file["name"]);
+        $target_file = $this->target_dir . basename($file["name"]);
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-        var_dump($imageFileType);
         // Check if image file is a actual image or fake image
         if(isset($_POST["submit"])) {
             $check = getimagesize($file["tmp_name"]);
@@ -57,10 +68,32 @@ class PictureManager extends Model{
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($file["tmp_name"], $target_file)) {
-                echo "The file ". basename( $file["name"]). " has been uploaded.";
+                $this->setPicture($author,$this->target_dir.$file['name'],$description);
+                return $this->getPictureByUrl($this->target_dir.$file['name']);
             } else {
                 echo "Sorry, there was an error uploading your file.";
             }
         }
+    }
+
+    public function setPicture($author,$url,$description)
+    {
+        $url = '/'.$url;
+        $bdd = $this->getBdd();
+        $req = $bdd->prepare("INSERT INTO pictures (id, url, author, description) 
+        VALUES (NULL, :url, :author, :description)");
+        $req->bindParam(':url',$url,PDO::PARAM_STR);
+        $req->bindParam(':author',$author,PDO::PARAM_STR);
+        $req->bindParam(':description',$description,PDO::PARAM_STR);
+        $req->execute();
+    }
+    public function getPictureByUrl($url)
+    {
+        $url = '/'.$url;
+        $bdd = $this->getBdd();
+        $req = $bdd->prepare("SELECT id,url,description,author FROM pictures WHERE url = :url");
+        $req->bindParam(':url',$url,PDO::PARAM_STR);
+        $req->execute();
+        return $req->fetchObject('GOA\models\Picture');
     }
 }

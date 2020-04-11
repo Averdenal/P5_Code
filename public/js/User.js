@@ -85,13 +85,34 @@ class User{
         });
 
     }
+    back_page(){
+        $('#b_Page').addClass('none');
+        $('#banner_User_Form').addClass("none");
+        $('#picture_User_Form').addClass("none");
+    }
+
     changePicture(){
-        $('#changeBanner').on('submit',function(e) {
+        $('#add_Picture_User').on('click',function () { 
+            $('#b_Page').removeClass('none');
+            $('#picture_User_Form').removeClass("none");
+            $('#banner_User_Form').addClass("none");
+         })
+         $('#add_Banner_User').on('click',function () { 
+            $('#b_Page').removeClass('none');
+            $('#banner_User_Form').removeClass("none");
+            $('#picture_User_Form').addClass("none");
+         })
+         $('#b_Page').on('click',() => { 
+            this.back_page();
+          });
+
+        $('#changeBanner').on('submit',(e) => {
             e.preventDefault();
             var form = document.getElementById('changeBanner');
             var formData = new FormData(form);
 
             var fileInput = document.getElementById('banner');
+            console.log(fileInput.files);
             var file = fileInput.files[0];
 
             var formData = new FormData();
@@ -105,23 +126,22 @@ class User{
           }
         );
 
-        $('#changePicture').on('submit',function (evt) { 
-            evt.preventDefault();
-            var formData = new FormData($(this)[0]);
-         $.ajax({
-             url: '/updatePicture',
-             type: 'POST',
-             data: formData,
-             async: false,
-             cache: false,
-             contentType: false,
-             enctype: 'multipart/form-data',
-             processData: false,
-             success: function (response) {
-               alert(response);
-             }
-         });    
-            debugger
+        $('#changePicture').on('submit', (e) => { 
+            e.preventDefault();
+            var form = document.getElementById('changePicture');
+            var formData = new FormData(form);
+
+            var fileInput = document.getElementById('picture');
+            console.log(fileInput.files);
+            var file = fileInput.files[0];
+
+            var formData = new FormData();
+            formData.append('file', file);
+          
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', form.getAttribute('action'), true);
+            xhr.send(formData);         
+            return false; 
         });
     }
 }

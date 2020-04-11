@@ -50,16 +50,26 @@ class ControllerUser extends BaseController{
         }
     }
 
-    public function changePicture($picture)
+    public function changePicture()
     {
-        echo $picture;
-        $fileName = $_FILES['file']['name'];
-        $fileType = $_FILES['file']['type'];
-        $fileError = $_FILES['file']['error'];
-        $fileContent = file_get_contents($_FILES['file']['tmp_name']);
+        $picture =  $this->_pictureManager->uploadPicture($_FILES["file"],$_SESSION['auth'],'add Picture User');
+        try {
+            $this->_userManager->setPicture($picture->getId(),$picture->getAuthor());
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+        
+
     }
     public function changeBanner()
     {
-        $this->_pictureManager->uploadPicture($_FILES["file"]);
+        $picture = $this->_pictureManager->uploadPicture($_FILES["file"],$_SESSION['auth'], 'add Banner User');
+        var_dump($picture);
+        try {
+            $this->_userManager->setBanner($picture->getId(),$picture->getAuthor());
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+       
     }
 }

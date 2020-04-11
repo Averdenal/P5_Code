@@ -53,7 +53,6 @@ class HttpRequest
             break;
             case 'POST':
             case 'PUT':
-                var_dump($_POST);
                 foreach($this->route->param as $param){
                     if(!empty($_POST[$param])){
                         $this->param[] = $_POST[$param];

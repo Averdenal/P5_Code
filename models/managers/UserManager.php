@@ -6,25 +6,38 @@ use GOA\models\Model;
 
 
 class UserManager extends Model{
-
+    private $_pictureManager;
     public function __construct()
     {
-
+        $this->_pictureManager = new PictureManager();
     }
 
+    public function verifPwd($password, $verifpassword)
+    {
+        return $password === $verifpassword;
+    }
     function getUsersBylogin($login)
     {
         $bdd = $this->getBdd();
-        $req = $bdd->prepare('SELECT users.about,users.password, users.id,users.firstname,users.lastname,users.login,users.datenaissance,users.email,users.exp,users.statut, (SELECT url FROM pictures WHERE pictures.idpictures = users.pictureprofil) as pictureprofil,
-        (SELECT url FROM pictures WHERE pictures.idpictures = users.picturebanner) as picturebanner
+        $req = $bdd->prepare("SELECT users.about,users.password, users.id,users.firstname,users.lastname,users.login,users.datenaissance,users.email,users.exp,users.statut, (SELECT url FROM pictures WHERE pictures.id = users.pictureprofil) as pictureprofil,
+        (SELECT url FROM pictures WHERE pictures.id = users.picturebanner) as picturebanner
         FROM users
         JOIN pictures
-        WHERE users.login = :loginUser
-        GROUP BY users.id');
-        $req->bindParam(':loginUser', $login, PDO::PARAM_STR);
+        WHERE login = :login
+        GROUP BY users.id");
+        $req->bindParam(':login', $login, PDO::PARAM_STR);
         $req->execute();
         return $req->fetchObject('GOA\models\User');
     }
+    function searchUserByLogin($login)
+    {
+        $bdd = $this->getBdd();
+        $req = $bdd->prepare("SELECT * FROM users WHERE login = :login");
+        $req->bindParam(':login',$login,PDO::PARAM_STR);
+        $req->execute();
+        return $req->fetchObject('GOA\models\User');
+    }
+
     function searchUserByEMail($email)
     {
         $bdd = $this->getBdd();
@@ -35,11 +48,10 @@ class UserManager extends Model{
     }
 
     function bddAddUser($login,$email,$pwd){
-        
         $pwd = $this->convPwd($pwd);
         $bdd = $this->getBdd();
         $req = $bdd->prepare("INSERT INTO `users` (id, firstname, lastname, login, password, email,statut,pictureprofil,picturebanner,exp,token) 
-        VALUES (NULL, null, null, :login, :password, :email,1,6,5,0,null)");
+        VALUES (NULL, null, null, :login, :password, :email,1,2,1,0,null)");
         $req->bindParam(':login',$login,PDO::PARAM_STR);
         $req->bindParam(':password',$pwd,PDO::PARAM_STR);
         $req->bindParam(':email',$email,PDO::PARAM_STR);
@@ -50,11 +62,10 @@ class UserManager extends Model{
     {
         $user = $this->getUsersBylogin($login);
         if(!$user){
-            return [false];
+            return ['error login'];
         }else {
             if(password_verify($password,$user->getPassword())){
                 $_SESSION['auth'] = $user->getId();
-                //$_SESSION['rang'] = $user->getRang()['name'];
                 return [true,$user];
             }else{
                 return [false];
@@ -74,7 +85,6 @@ class UserManager extends Model{
     function getConnecte(){
         if(isset($_SESSION['auth'])){
             $auth = $_SESSION['auth'];
-            //$rang = $_SESSION['rang'];
             return $this->getUsersById($auth);
         }else{
             return null;
@@ -100,8 +110,8 @@ class UserManager extends Model{
     function getUsersById($id)
     {
         $bdd = $this->getBdd();
-        $req = $bdd->prepare('SELECT users.about,users.password, users.id,users.firstname,users.lastname,users.login,users.datenaissance,users.email,users.exp,users.statut, (SELECT url FROM pictures WHERE pictures.idpictures = users.pictureprofil) as pictureprofil,
-        (SELECT url FROM pictures WHERE pictures.idpictures = users.picturebanner) as picturebanner
+        $req = $bdd->prepare('SELECT users.about,users.password, users.id,users.firstname,users.lastname,users.login,users.datenaissance,users.email,users.exp,users.statut, (SELECT url FROM pictures WHERE pictures.id = users.pictureprofil) as pictureprofil,
+        (SELECT url FROM pictures WHERE pictures.id = users.picturebanner) as picturebanner
         FROM users
         JOIN pictures
         WHERE users.id = :id
@@ -120,5 +130,23 @@ class UserManager extends Model{
     }
     public function convPwd($pwd){
         return password_hash($pwd,PASSWORD_BCRYPT);
+    }
+    public function setPicture($id,$userModif)
+    {
+        $bdd = $this->getBdd();
+        $req = $bdd->prepare('UPDATE `users` SET `pictureprofil` = :id WHERE id = :user');
+        $req->bindParam(':id',$id,PDO::PARAM_INT);
+        $req->bindParam(':user',$userModif,PDO::PARAM_INT);
+        $req->execute();
+        ; 
+    }
+    public function setBanner($id,$userModif)
+    {
+        $bdd = $this->getBdd();
+        $req = $bdd->prepare('UPDATE `users` SET `picturebanner` = :id WHERE id = :user');
+        $req->bindParam(':id',$id,PDO::PARAM_INT);
+        $req->bindParam(':user',$userModif,PDO::PARAM_INT);
+        $req->execute();
+        ; 
     }
 }
