@@ -108,38 +108,28 @@ class User{
 
         $('#changeBanner').on('submit',(e) => {
             e.preventDefault();
-            var form = document.getElementById('changeBanner');
-            var formData = new FormData(form);
-
             var fileInput = document.getElementById('banner');
-            console.log(fileInput.files);
             var file = fileInput.files[0];
-
             var formData = new FormData();
             formData.append('file', file);
-          
+            
             var xhr = new XMLHttpRequest();
-            // Add any event handlers here...
-            xhr.open('POST', form.getAttribute('action'), true);
-            xhr.send(formData);
-            return false; // To avoid actual submission of the form
+            xhr.addEventListener("load", function(){location.reload();});
+            xhr.open('POST', "/updateBanner", true);
+            xhr.send(formData);    
           }
         );
 
         $('#changePicture').on('submit', (e) => { 
             e.preventDefault();
-            var form = document.getElementById('changePicture');
-            var formData = new FormData(form);
-
             var fileInput = document.getElementById('picture');
-            console.log(fileInput.files);
             var file = fileInput.files[0];
-
             var formData = new FormData();
             formData.append('file', file);
           
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', form.getAttribute('action'), true);
+            xhr.addEventListener("load", function(){location.reload();});
+            xhr.open('POST',"/updatePicture", true);
             xhr.send(formData);         
             return false; 
         });
